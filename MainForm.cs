@@ -16,5 +16,10 @@ namespace PokaYokes_app
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se ha pulsado el botón");
+        }
     }
 }

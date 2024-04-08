@@ -8,3 +8,4 @@ C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaY
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.csproj.CoreCompileInputs.cache
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.exe
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.pdb
+C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.MainForm.resources

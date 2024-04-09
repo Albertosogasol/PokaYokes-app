@@ -16,7 +16,7 @@ namespace PokaYokes_app
         {
             InitializeComponent();
         }
-
+        //Esto es un comentario general en la clase principal
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Se ha pulsado el botón");

@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace PokaYokes_app
 {
-    public partial class MainForm : Form
+    public partial class LoginForm : Form
     {
-        public MainForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
     }
 
-
+    private void llamarFuncion()
+    {
+        MessageBox.Show(MainFunctions.conStringBuilder);
+    }
 }

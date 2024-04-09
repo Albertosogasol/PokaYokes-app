@@ -9,3 +9,15 @@ C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaY
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.exe
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.pdb
 C:\Users\gonzaga\OneDrive - Bosal\Desktop\Projects\PokaYokes_app\obj\Debug\PokaYokes_app.MainForm.resources
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\bin\Debug\PokaYokes_app.exe.config
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\bin\Debug\PokaYokes_app.exe
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\bin\Debug\PokaYokes_app.pdb
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.AssemblyReference.cache
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.SuggestedBindingRedirects.cache
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.LoginForm.resources
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.MainForm.resources
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.Properties.Resources.resources
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.GenerateResource.cache
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.CoreCompileInputs.cache
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.exe
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.pdb

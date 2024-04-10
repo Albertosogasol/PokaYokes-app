@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PokaYokes_app")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PokaYokes")]
+[assembly: AssemblyDescription("App para la gestión de PokaYokes en BESZ")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("BOSAL")]
 [assembly: AssemblyProduct("PokaYokes_app")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]

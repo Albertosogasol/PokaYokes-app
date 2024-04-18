@@ -21,3 +21,4 @@ C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_a
 C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.CoreCompileInputs.cache
 C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.exe
 C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.pdb
+C:\Users\gonzaga\source\repos\Albertosogasol\PokaYokes-app\obj\Debug\PokaYokes_app.RRMainForm.resources

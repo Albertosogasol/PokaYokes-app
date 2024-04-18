@@ -2702,6 +2702,12 @@ namespace PokaYokes_app {
             
             private global::System.Data.DataColumn columnRR_Comments;
             
+            private global::System.Data.DataColumn columnRR_Machine;
+            
+            private global::System.Data.DataColumn columnRR_Calibration_Month;
+            
+            private global::System.Data.DataColumn columnRR_Calibration_Chk;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public T20RedRabbitsDataTable() {
@@ -2809,6 +2815,30 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RR_MachineColumn {
+                get {
+                    return this.columnRR_Machine;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RR_Calibration_MonthColumn {
+                get {
+                    return this.columnRR_Calibration_Month;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RR_Calibration_ChkColumn {
+                get {
+                    return this.columnRR_Calibration_Chk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2844,7 +2874,7 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow AddT20RedRabbitsRow(string RR_Number, string RR_Number_Ing, string RR_Description, System.DateTime RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments) {
+            public T20RedRabbitsRow AddT20RedRabbitsRow(string RR_Number, string RR_Number_Ing, string RR_Description, System.DateTime RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments, string RR_Machine, string RR_Calibration_Month, bool RR_Calibration_Chk) {
                 T20RedRabbitsRow rowT20RedRabbitsRow = ((T20RedRabbitsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RR_Number,
@@ -2855,7 +2885,10 @@ namespace PokaYokes_app {
                         RR_Tech,
                         RR_Reference,
                         RR_CreatedBy,
-                        RR_Comments};
+                        RR_Comments,
+                        RR_Machine,
+                        RR_Calibration_Month,
+                        RR_Calibration_Chk};
                 rowT20RedRabbitsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowT20RedRabbitsRow);
                 return rowT20RedRabbitsRow;
@@ -2887,6 +2920,9 @@ namespace PokaYokes_app {
                 this.columnRR_Reference = base.Columns["RR_Reference"];
                 this.columnRR_CreatedBy = base.Columns["RR_CreatedBy"];
                 this.columnRR_Comments = base.Columns["RR_Comments"];
+                this.columnRR_Machine = base.Columns["RR_Machine"];
+                this.columnRR_Calibration_Month = base.Columns["RR_Calibration_Month"];
+                this.columnRR_Calibration_Chk = base.Columns["RR_Calibration_Chk"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2910,6 +2946,12 @@ namespace PokaYokes_app {
                 base.Columns.Add(this.columnRR_CreatedBy);
                 this.columnRR_Comments = new global::System.Data.DataColumn("RR_Comments", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRR_Comments);
+                this.columnRR_Machine = new global::System.Data.DataColumn("RR_Machine", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRR_Machine);
+                this.columnRR_Calibration_Month = new global::System.Data.DataColumn("RR_Calibration_Month", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRR_Calibration_Month);
+                this.columnRR_Calibration_Chk = new global::System.Data.DataColumn("RR_Calibration_Chk", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRR_Calibration_Chk);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRR_Number}, false));
                 this.columnRR_Number.Unique = true;
@@ -2921,6 +2963,8 @@ namespace PokaYokes_app {
                 this.columnRR_Reference.MaxLength = 255;
                 this.columnRR_CreatedBy.MaxLength = 255;
                 this.columnRR_Comments.MaxLength = 255;
+                this.columnRR_Machine.MaxLength = 255;
+                this.columnRR_Calibration_Month.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4554,6 +4598,54 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RR_Machine {
+                get {
+                    try {
+                        return ((string)(this[this.tableT20RedRabbits.RR_MachineColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Machine\' in table \'T20RedRabbits\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableT20RedRabbits.RR_MachineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RR_Calibration_Month {
+                get {
+                    try {
+                        return ((string)(this[this.tableT20RedRabbits.RR_Calibration_MonthColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Month\' in table \'T20RedRabbits\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableT20RedRabbits.RR_Calibration_MonthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool RR_Calibration_Chk {
+                get {
+                    try {
+                        return ((bool)(this[this.tableT20RedRabbits.RR_Calibration_ChkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Chk\' in table \'T20RedRabbits\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableT20RedRabbits.RR_Calibration_ChkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_NumberNull() {
                 return this.IsNull(this.tableT20RedRabbits.RR_NumberColumn);
             }
@@ -4658,6 +4750,42 @@ namespace PokaYokes_app {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_CommentsNull() {
                 this[this.tableT20RedRabbits.RR_CommentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRR_MachineNull() {
+                return this.IsNull(this.tableT20RedRabbits.RR_MachineColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRR_MachineNull() {
+                this[this.tableT20RedRabbits.RR_MachineColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRR_Calibration_MonthNull() {
+                return this.IsNull(this.tableT20RedRabbits.RR_Calibration_MonthColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRR_Calibration_MonthNull() {
+                this[this.tableT20RedRabbits.RR_Calibration_MonthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRR_Calibration_ChkNull() {
+                return this.IsNull(this.tableT20RedRabbits.RR_Calibration_ChkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRR_Calibration_ChkNull() {
+                this[this.tableT20RedRabbits.RR_Calibration_ChkColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7963,12 +8091,13 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("RR_Reference", "RR_Reference");
             tableMapping.ColumnMappings.Add("RR_CreatedBy", "RR_CreatedBy");
             tableMapping.ColumnMappings.Add("RR_Comments", "RR_Comments");
+            tableMapping.ColumnMappings.Add("RR_Machine", "RR_Machine");
+            tableMapping.ColumnMappings.Add("RR_Calibration_Month", "RR_Calibration_Month");
+            tableMapping.ColumnMappings.Add("RR_Calibration_Chk", "RR_Calibration_Chk");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `T20RedRabbits` (`RR_Number`, `RR_Number_Ing`, `RR_Description`, `RR_" +
-                "Date`, `RR_Project`, `RR_Tech`, `RR_Reference`, `RR_CreatedBy`, `RR_Comments`) V" +
-                "ALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `T20RedRabbits` (`RR_Number`, `RR_Number_Ing`, `RR_Description`, `RR_Date`, `RR_Project`, `RR_Tech`, `RR_Reference`, `RR_CreatedBy`, `RR_Comments`, `RR_Calibration_Chk`, `RR_Calibration_Month`, `RR_Machine`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number_Ing", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Current, false, null));
@@ -7979,6 +8108,9 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Reference", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_CreatedBy", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Comments", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7995,7 +8127,8 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT RR_Number, RR_Number_Ing, RR_Description, RR_Date, RR_Project, RR_Tech, RR" +
-                "_Reference, RR_CreatedBy, RR_Comments FROM T20RedRabbits";
+                "_Reference, RR_CreatedBy, RR_Comments, RR_Calibration_Chk, RR_Calibration_Month," +
+                " RR_Machine FROM T20RedRabbits";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8056,7 +8189,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RR_Number, string RR_Number_Ing, string RR_Description, global::System.Nullable<global::System.DateTime> RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments) {
+        public virtual int Insert(string RR_Number, string RR_Number_Ing, string RR_Description, global::System.Nullable<global::System.DateTime> RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments, bool RR_Calibration_Chk, string RR_Calibration_Month, string RR_Machine) {
             if ((RR_Number == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -8110,6 +8243,19 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(RR_Comments));
+            }
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(RR_Calibration_Chk));
+            if ((RR_Calibration_Month == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(RR_Calibration_Month));
+            }
+            if ((RR_Machine == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(RR_Machine));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

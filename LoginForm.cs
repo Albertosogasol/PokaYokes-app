@@ -40,6 +40,42 @@ namespace PokaYokes_app
             // Realiza el logueo del usuario seleccionado con la contraseña
             UserVariables userData = new UserVariables();
 
+            // Conexión con la base de datos
+            using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
+            {
+                try
+                {
+                    // string sqlQuery = "SELECT * FROM T0Users WHERE Id = 1";
+                    string sqlQuery = "SELECT Id, type_Username, type_User, type_Password FROM T0Users WHERE Id = 1";
+                    using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                    {
+                        //Asignamos el parámetro a la consulta
+                        // cmd.Parameters.AddWithValue("@Username", "gonzaga");
+
+                        // Ejecutar la consulta
+                        using (OleDbDataReader reader = cmd.ExecuteReader())
+                        {
+                            // Verificar que se encontró el usuario
+                            if (reader.Read())
+                            {
+                                // Obtener los valores de las demás columnas
+                                userData.user = reader["type_User"].ToString();
+                                userData.username = reader["type_Username"].ToString();
+                                userData.password = reader["type_Password"].ToString();
+                                MessageBox.Show("Los datos son: " + userData.username + " " + userData.user + " " + userData.password);
+                            }
+                            else
+                            {
+                                MessageBox.Show("USARIO NO ENCONTRADO");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
         }
     }

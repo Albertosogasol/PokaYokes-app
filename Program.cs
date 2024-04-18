@@ -16,7 +16,9 @@ namespace PokaYokes_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Hasta que se añada la ventana de login, se carga directamente el formulario principal. Cuando se termine, quitar y descomentar LoginForm
+            Application.Run(new MainForm());
+            //Application.Run(new LoginForm()); 
         }
     }
 }

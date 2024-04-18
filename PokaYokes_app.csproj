@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <PublisherName>Alberto Gonzaga</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RRMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RRMainForm.Designer.cs">
+      <DependentUpon>RRMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserVariables.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -98,6 +104,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RRMainForm.resx">
+      <DependentUpon>RRMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="PokaYokesDataSet.xsc">
       <DependentUpon>PokaYokesDataSet.xsd</DependentUpon>
     </None>

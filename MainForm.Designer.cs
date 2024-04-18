@@ -28,20 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.MainFormRRButton = new System.Windows.Forms.Button();
+            this.RRFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // MainFormRRButton
+            // 
+            this.MainFormRRButton.Location = new System.Drawing.Point(110, 83);
+            this.MainFormRRButton.Name = "MainFormRRButton";
+            this.MainFormRRButton.Size = new System.Drawing.Size(75, 23);
+            this.MainFormRRButton.TabIndex = 0;
+            this.MainFormRRButton.Text = "RR";
+            this.MainFormRRButton.UseVisualStyleBackColor = true;
+            // 
+            // RRFormButton
+            // 
+            this.RRFormButton.Location = new System.Drawing.Point(172, 149);
+            this.RRFormButton.Name = "RRFormButton";
+            this.RRFormButton.Size = new System.Drawing.Size(75, 23);
+            this.RRFormButton.TabIndex = 0;
+            this.RRFormButton.Text = "RR";
+            this.RRFormButton.UseVisualStyleBackColor = true;
+            this.RRFormButton.Click += new System.EventHandler(this.RRFormButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(766, 563);
+            this.Controls.Add(this.RRFormButton);
             this.Name = "MainForm";
-            this.Text = "PokaYokes";
+            this.Text = "Menu";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button MainFormRRButton;
+        private System.Windows.Forms.Button RRFormButton;
     }
 }
 

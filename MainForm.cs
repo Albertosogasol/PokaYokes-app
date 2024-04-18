@@ -16,6 +16,13 @@ namespace PokaYokes_app
         {
             InitializeComponent();
         }
+
+        // Abrir formulario de modificación de RR
+        private void RRFormButton_Click(object sender, EventArgs e)
+        {
+            var RRForm = new RRMainForm();
+            RRForm.ShowDialog();
+        }
     }
 
 

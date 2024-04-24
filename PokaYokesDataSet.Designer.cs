@@ -36,7 +36,7 @@ namespace PokaYokes_app {
         
         private T15DetectoresDataTable tableT15Detectores;
         
-        private T20RedRabbitsDataTable tableT20RedRabbits;
+        private T10RedRabbitsDataTable tableT10RedRabbits;
         
         private global::System.Data.DataRelation relationT0RolesT0Users;
         
@@ -45,8 +45,6 @@ namespace PokaYokes_app {
         private global::System.Data.DataRelation relationT0VigasT10VigasLineas;
         
         private global::System.Data.DataRelation _relationT10Detector_vigaT10VigasLineas;
-        
-        private global::System.Data.DataRelation relationT20RedRabbitsT15Detectores;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -94,8 +92,8 @@ namespace PokaYokes_app {
                 if ((ds.Tables["T15Detectores"] != null)) {
                     base.Tables.Add(new T15DetectoresDataTable(ds.Tables["T15Detectores"]));
                 }
-                if ((ds.Tables["T20RedRabbits"] != null)) {
-                    base.Tables.Add(new T20RedRabbitsDataTable(ds.Tables["T20RedRabbits"]));
+                if ((ds.Tables["T10RedRabbits"] != null)) {
+                    base.Tables.Add(new T10RedRabbitsDataTable(ds.Tables["T10RedRabbits"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -179,9 +177,9 @@ namespace PokaYokes_app {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public T20RedRabbitsDataTable T20RedRabbits {
+        public T10RedRabbitsDataTable T10RedRabbits {
             get {
-                return this.tableT20RedRabbits;
+                return this.tableT10RedRabbits;
             }
         }
         
@@ -270,8 +268,8 @@ namespace PokaYokes_app {
                 if ((ds.Tables["T15Detectores"] != null)) {
                     base.Tables.Add(new T15DetectoresDataTable(ds.Tables["T15Detectores"]));
                 }
-                if ((ds.Tables["T20RedRabbits"] != null)) {
-                    base.Tables.Add(new T20RedRabbitsDataTable(ds.Tables["T20RedRabbits"]));
+                if ((ds.Tables["T10RedRabbits"] != null)) {
+                    base.Tables.Add(new T10RedRabbitsDataTable(ds.Tables["T10RedRabbits"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -342,17 +340,16 @@ namespace PokaYokes_app {
                     this.tableT15Detectores.InitVars();
                 }
             }
-            this.tableT20RedRabbits = ((T20RedRabbitsDataTable)(base.Tables["T20RedRabbits"]));
+            this.tableT10RedRabbits = ((T10RedRabbitsDataTable)(base.Tables["T10RedRabbits"]));
             if ((initTable == true)) {
-                if ((this.tableT20RedRabbits != null)) {
-                    this.tableT20RedRabbits.InitVars();
+                if ((this.tableT10RedRabbits != null)) {
+                    this.tableT10RedRabbits.InitVars();
                 }
             }
             this.relationT0RolesT0Users = this.Relations["T0RolesT0Users"];
             this.relationT0LineasT10VigasLineas = this.Relations["T0LineasT10VigasLineas"];
             this.relationT0VigasT10VigasLineas = this.Relations["T0VigasT10VigasLineas"];
             this._relationT10Detector_vigaT10VigasLineas = this.Relations["T10Detector-vigaT10VigasLineas"];
-            this.relationT20RedRabbitsT15Detectores = this.Relations["T20RedRabbitsT15Detectores"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -375,8 +372,8 @@ namespace PokaYokes_app {
             base.Tables.Add(this.tableT10utilesLineas);
             this.tableT15Detectores = new T15DetectoresDataTable();
             base.Tables.Add(this.tableT15Detectores);
-            this.tableT20RedRabbits = new T20RedRabbitsDataTable();
-            base.Tables.Add(this.tableT20RedRabbits);
+            this.tableT10RedRabbits = new T10RedRabbitsDataTable();
+            base.Tables.Add(this.tableT10RedRabbits);
             this.relationT0RolesT0Users = new global::System.Data.DataRelation("T0RolesT0Users", new global::System.Data.DataColumn[] {
                         this.tableT0Roles.type_RolColumn}, new global::System.Data.DataColumn[] {
                         this.tableT0Users.type_RolColumn}, false);
@@ -393,10 +390,6 @@ namespace PokaYokes_app {
                         this.tableT15Detectores.NumVigaColumn}, new global::System.Data.DataColumn[] {
                         this.tableT10utilesLineas.VigaColumn}, false);
             this.Relations.Add(this._relationT10Detector_vigaT10VigasLineas);
-            this.relationT20RedRabbitsT15Detectores = new global::System.Data.DataRelation("T20RedRabbitsT15Detectores", new global::System.Data.DataColumn[] {
-                        this.tableT20RedRabbits.RR_NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableT15Detectores.RR_NumberColumn}, false);
-            this.Relations.Add(this.relationT20RedRabbitsT15Detectores);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -437,7 +430,7 @@ namespace PokaYokes_app {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeT20RedRabbits() {
+        private bool ShouldSerializeT10RedRabbits() {
             return false;
         }
         
@@ -515,7 +508,7 @@ namespace PokaYokes_app {
         public delegate void T15DetectoresRowChangeEventHandler(object sender, T15DetectoresRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void T20RedRabbitsRowChangeEventHandler(object sender, T20RedRabbitsRowChangeEvent e);
+        public delegate void T10RedRabbitsRowChangeEventHandler(object sender, T10RedRabbitsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2405,7 +2398,7 @@ namespace PokaYokes_app {
                         bool _BY_PASS_VALIDACION, 
                         string CONTENCIÓN, 
                         bool _RED_RABBIT, 
-                        T20RedRabbitsRow parentT20RedRabbitsRowByT20RedRabbitsT15Detectores, 
+                        string RR_Number, 
                         bool Critico, 
                         string NºValidación, 
                         bool _validación_, 
@@ -2426,15 +2419,12 @@ namespace PokaYokes_app {
                         _BY_PASS_VALIDACION,
                         CONTENCIÓN,
                         _RED_RABBIT,
-                        null,
+                        RR_Number,
                         Critico,
                         NºValidación,
                         _validación_,
                         NºRR_extend,
                         NºRR};
-                if ((parentT20RedRabbitsRowByT20RedRabbitsT15Detectores != null)) {
-                    columnValuesArray[13] = parentT20RedRabbitsRowByT20RedRabbitsT15Detectores[0];
-                }
                 rowT15DetectoresRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowT15DetectoresRow);
                 return rowT15DetectoresRow;
@@ -2682,7 +2672,7 @@ namespace PokaYokes_app {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class T20RedRabbitsDataTable : global::System.Data.TypedTableBase<T20RedRabbitsRow> {
+        public partial class T10RedRabbitsDataTable : global::System.Data.TypedTableBase<T10RedRabbitsRow> {
             
             private global::System.Data.DataColumn columnRR_Number;
             
@@ -2700,18 +2690,18 @@ namespace PokaYokes_app {
             
             private global::System.Data.DataColumn columnRR_CreatedBy;
             
-            private global::System.Data.DataColumn columnRR_Comments;
-            
             private global::System.Data.DataColumn columnRR_Machine;
             
             private global::System.Data.DataColumn columnRR_Calibration_Month;
+            
+            private global::System.Data.DataColumn columnRR_Comments;
             
             private global::System.Data.DataColumn columnRR_Calibration_Chk;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsDataTable() {
-                this.TableName = "T20RedRabbits";
+            public T10RedRabbitsDataTable() {
+                this.TableName = "T10RedRabbits";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2719,7 +2709,7 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal T20RedRabbitsDataTable(global::System.Data.DataTable table) {
+            internal T10RedRabbitsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2736,7 +2726,7 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected T20RedRabbitsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected T10RedRabbitsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2807,14 +2797,6 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RR_CommentsColumn {
-                get {
-                    return this.columnRR_Comments;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn RR_MachineColumn {
                 get {
                     return this.columnRR_Machine;
@@ -2826,6 +2808,14 @@ namespace PokaYokes_app {
             public global::System.Data.DataColumn RR_Calibration_MonthColumn {
                 get {
                     return this.columnRR_Calibration_Month;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RR_CommentsColumn {
+                get {
+                    return this.columnRR_Comments;
                 }
             }
             
@@ -2848,34 +2838,34 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow this[int index] {
+            public T10RedRabbitsRow this[int index] {
                 get {
-                    return ((T20RedRabbitsRow)(this.Rows[index]));
+                    return ((T10RedRabbitsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event T20RedRabbitsRowChangeEventHandler T20RedRabbitsRowChanging;
+            public event T10RedRabbitsRowChangeEventHandler T10RedRabbitsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event T20RedRabbitsRowChangeEventHandler T20RedRabbitsRowChanged;
+            public event T10RedRabbitsRowChangeEventHandler T10RedRabbitsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event T20RedRabbitsRowChangeEventHandler T20RedRabbitsRowDeleting;
+            public event T10RedRabbitsRowChangeEventHandler T10RedRabbitsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event T20RedRabbitsRowChangeEventHandler T20RedRabbitsRowDeleted;
+            public event T10RedRabbitsRowChangeEventHandler T10RedRabbitsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddT20RedRabbitsRow(T20RedRabbitsRow row) {
+            public void AddT10RedRabbitsRow(T10RedRabbitsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow AddT20RedRabbitsRow(string RR_Number, string RR_Number_Ing, string RR_Description, System.DateTime RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments, string RR_Machine, string RR_Calibration_Month, bool RR_Calibration_Chk) {
-                T20RedRabbitsRow rowT20RedRabbitsRow = ((T20RedRabbitsRow)(this.NewRow()));
+            public T10RedRabbitsRow AddT10RedRabbitsRow(string RR_Number, string RR_Number_Ing, string RR_Description, System.DateTime RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Machine, string RR_Calibration_Month, string RR_Comments, bool RR_Calibration_Chk) {
+                T10RedRabbitsRow rowT10RedRabbitsRow = ((T10RedRabbitsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RR_Number,
                         RR_Number_Ing,
@@ -2885,19 +2875,26 @@ namespace PokaYokes_app {
                         RR_Tech,
                         RR_Reference,
                         RR_CreatedBy,
-                        RR_Comments,
                         RR_Machine,
                         RR_Calibration_Month,
+                        RR_Comments,
                         RR_Calibration_Chk};
-                rowT20RedRabbitsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowT20RedRabbitsRow);
-                return rowT20RedRabbitsRow;
+                rowT10RedRabbitsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowT10RedRabbitsRow);
+                return rowT10RedRabbitsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public T10RedRabbitsRow FindByRR_Number(string RR_Number) {
+                return ((T10RedRabbitsRow)(this.Rows.Find(new object[] {
+                            RR_Number})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                T20RedRabbitsDataTable cln = ((T20RedRabbitsDataTable)(base.Clone()));
+                T10RedRabbitsDataTable cln = ((T10RedRabbitsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2905,7 +2902,7 @@ namespace PokaYokes_app {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new T20RedRabbitsDataTable();
+                return new T10RedRabbitsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2919,9 +2916,9 @@ namespace PokaYokes_app {
                 this.columnRR_Tech = base.Columns["RR_Tech"];
                 this.columnRR_Reference = base.Columns["RR_Reference"];
                 this.columnRR_CreatedBy = base.Columns["RR_CreatedBy"];
-                this.columnRR_Comments = base.Columns["RR_Comments"];
                 this.columnRR_Machine = base.Columns["RR_Machine"];
                 this.columnRR_Calibration_Month = base.Columns["RR_Calibration_Month"];
+                this.columnRR_Comments = base.Columns["RR_Comments"];
                 this.columnRR_Calibration_Chk = base.Columns["RR_Calibration_Chk"];
             }
             
@@ -2944,16 +2941,17 @@ namespace PokaYokes_app {
                 base.Columns.Add(this.columnRR_Reference);
                 this.columnRR_CreatedBy = new global::System.Data.DataColumn("RR_CreatedBy", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRR_CreatedBy);
-                this.columnRR_Comments = new global::System.Data.DataColumn("RR_Comments", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRR_Comments);
                 this.columnRR_Machine = new global::System.Data.DataColumn("RR_Machine", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRR_Machine);
                 this.columnRR_Calibration_Month = new global::System.Data.DataColumn("RR_Calibration_Month", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRR_Calibration_Month);
+                this.columnRR_Comments = new global::System.Data.DataColumn("RR_Comments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRR_Comments);
                 this.columnRR_Calibration_Chk = new global::System.Data.DataColumn("RR_Calibration_Chk", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRR_Calibration_Chk);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnRR_Number}, false));
+                                this.columnRR_Number}, true));
+                this.columnRR_Number.AllowDBNull = false;
                 this.columnRR_Number.Unique = true;
                 this.columnRR_Number.MaxLength = 255;
                 this.columnRR_Number_Ing.MaxLength = 255;
@@ -2962,35 +2960,35 @@ namespace PokaYokes_app {
                 this.columnRR_Tech.MaxLength = 255;
                 this.columnRR_Reference.MaxLength = 255;
                 this.columnRR_CreatedBy.MaxLength = 255;
-                this.columnRR_Comments.MaxLength = 255;
                 this.columnRR_Machine.MaxLength = 255;
                 this.columnRR_Calibration_Month.MaxLength = 255;
+                this.columnRR_Comments.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow NewT20RedRabbitsRow() {
-                return ((T20RedRabbitsRow)(this.NewRow()));
+            public T10RedRabbitsRow NewT10RedRabbitsRow() {
+                return ((T10RedRabbitsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new T20RedRabbitsRow(builder);
+                return new T10RedRabbitsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(T20RedRabbitsRow);
+                return typeof(T10RedRabbitsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.T20RedRabbitsRowChanged != null)) {
-                    this.T20RedRabbitsRowChanged(this, new T20RedRabbitsRowChangeEvent(((T20RedRabbitsRow)(e.Row)), e.Action));
+                if ((this.T10RedRabbitsRowChanged != null)) {
+                    this.T10RedRabbitsRowChanged(this, new T10RedRabbitsRowChangeEvent(((T10RedRabbitsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2998,8 +2996,8 @@ namespace PokaYokes_app {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.T20RedRabbitsRowChanging != null)) {
-                    this.T20RedRabbitsRowChanging(this, new T20RedRabbitsRowChangeEvent(((T20RedRabbitsRow)(e.Row)), e.Action));
+                if ((this.T10RedRabbitsRowChanging != null)) {
+                    this.T10RedRabbitsRowChanging(this, new T10RedRabbitsRowChangeEvent(((T10RedRabbitsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3007,8 +3005,8 @@ namespace PokaYokes_app {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.T20RedRabbitsRowDeleted != null)) {
-                    this.T20RedRabbitsRowDeleted(this, new T20RedRabbitsRowChangeEvent(((T20RedRabbitsRow)(e.Row)), e.Action));
+                if ((this.T10RedRabbitsRowDeleted != null)) {
+                    this.T10RedRabbitsRowDeleted(this, new T10RedRabbitsRowChangeEvent(((T10RedRabbitsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3016,14 +3014,14 @@ namespace PokaYokes_app {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.T20RedRabbitsRowDeleting != null)) {
-                    this.T20RedRabbitsRowDeleting(this, new T20RedRabbitsRowChangeEvent(((T20RedRabbitsRow)(e.Row)), e.Action));
+                if ((this.T10RedRabbitsRowDeleting != null)) {
+                    this.T10RedRabbitsRowDeleting(this, new T10RedRabbitsRowChangeEvent(((T10RedRabbitsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveT20RedRabbitsRow(T20RedRabbitsRow row) {
+            public void RemoveT10RedRabbitsRow(T10RedRabbitsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3050,7 +3048,7 @@ namespace PokaYokes_app {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "T20RedRabbitsDataTable";
+                attribute2.FixedValue = "T10RedRabbitsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4201,17 +4199,6 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow T20RedRabbitsRow {
-                get {
-                    return ((T20RedRabbitsRow)(this.GetParentRow(this.Table.ParentRelations["T20RedRabbitsT15Detectores"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["T20RedRabbitsT15Detectores"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNumVigaNull() {
                 return this.IsNull(this.tableT15Detectores.NumVigaColumn);
             }
@@ -4441,30 +4428,25 @@ namespace PokaYokes_app {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class T20RedRabbitsRow : global::System.Data.DataRow {
+        public partial class T10RedRabbitsRow : global::System.Data.DataRow {
             
-            private T20RedRabbitsDataTable tableT20RedRabbits;
+            private T10RedRabbitsDataTable tableT10RedRabbits;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal T20RedRabbitsRow(global::System.Data.DataRowBuilder rb) : 
+            internal T10RedRabbitsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableT20RedRabbits = ((T20RedRabbitsDataTable)(this.Table));
+                this.tableT10RedRabbits = ((T10RedRabbitsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string RR_Number {
                 get {
-                    try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_NumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Number\' in table \'T20RedRabbits\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableT10RedRabbits.RR_NumberColumn]));
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_NumberColumn] = value;
+                    this[this.tableT10RedRabbits.RR_NumberColumn] = value;
                 }
             }
             
@@ -4473,14 +4455,14 @@ namespace PokaYokes_app {
             public string RR_Number_Ing {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_Number_IngColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_Number_IngColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Number_Ing\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Number_Ing\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_Number_IngColumn] = value;
+                    this[this.tableT10RedRabbits.RR_Number_IngColumn] = value;
                 }
             }
             
@@ -4489,14 +4471,14 @@ namespace PokaYokes_app {
             public string RR_Description {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_DescriptionColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_DescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Description\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Description\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_DescriptionColumn] = value;
+                    this[this.tableT10RedRabbits.RR_DescriptionColumn] = value;
                 }
             }
             
@@ -4505,14 +4487,14 @@ namespace PokaYokes_app {
             public System.DateTime RR_Date {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT20RedRabbits.RR_DateColumn]));
+                        return ((global::System.DateTime)(this[this.tableT10RedRabbits.RR_DateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Date\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Date\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_DateColumn] = value;
+                    this[this.tableT10RedRabbits.RR_DateColumn] = value;
                 }
             }
             
@@ -4521,14 +4503,14 @@ namespace PokaYokes_app {
             public string RR_Project {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_ProjectColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_ProjectColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Project\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Project\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_ProjectColumn] = value;
+                    this[this.tableT10RedRabbits.RR_ProjectColumn] = value;
                 }
             }
             
@@ -4537,14 +4519,14 @@ namespace PokaYokes_app {
             public string RR_Tech {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_TechColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_TechColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Tech\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Tech\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_TechColumn] = value;
+                    this[this.tableT10RedRabbits.RR_TechColumn] = value;
                 }
             }
             
@@ -4553,14 +4535,14 @@ namespace PokaYokes_app {
             public string RR_Reference {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_ReferenceColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_ReferenceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Reference\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Reference\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_ReferenceColumn] = value;
+                    this[this.tableT10RedRabbits.RR_ReferenceColumn] = value;
                 }
             }
             
@@ -4569,30 +4551,14 @@ namespace PokaYokes_app {
             public string RR_CreatedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_CreatedByColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_CreatedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_CreatedBy\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_CreatedBy\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_CreatedByColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string RR_Comments {
-                get {
-                    try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_CommentsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Comments\' in table \'T20RedRabbits\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableT20RedRabbits.RR_CommentsColumn] = value;
+                    this[this.tableT10RedRabbits.RR_CreatedByColumn] = value;
                 }
             }
             
@@ -4601,14 +4567,14 @@ namespace PokaYokes_app {
             public string RR_Machine {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_MachineColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_MachineColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Machine\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Machine\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_MachineColumn] = value;
+                    this[this.tableT10RedRabbits.RR_MachineColumn] = value;
                 }
             }
             
@@ -4617,14 +4583,30 @@ namespace PokaYokes_app {
             public string RR_Calibration_Month {
                 get {
                     try {
-                        return ((string)(this[this.tableT20RedRabbits.RR_Calibration_MonthColumn]));
+                        return ((string)(this[this.tableT10RedRabbits.RR_Calibration_MonthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Month\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Month\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_Calibration_MonthColumn] = value;
+                    this[this.tableT10RedRabbits.RR_Calibration_MonthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RR_Comments {
+                get {
+                    try {
+                        return ((string)(this[this.tableT10RedRabbits.RR_CommentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Comments\' in table \'T10RedRabbits\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableT10RedRabbits.RR_CommentsColumn] = value;
                 }
             }
             
@@ -4633,170 +4615,147 @@ namespace PokaYokes_app {
             public bool RR_Calibration_Chk {
                 get {
                     try {
-                        return ((bool)(this[this.tableT20RedRabbits.RR_Calibration_ChkColumn]));
+                        return ((bool)(this[this.tableT10RedRabbits.RR_Calibration_ChkColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Chk\' in table \'T20RedRabbits\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RR_Calibration_Chk\' in table \'T10RedRabbits\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableT20RedRabbits.RR_Calibration_ChkColumn] = value;
+                    this[this.tableT10RedRabbits.RR_Calibration_ChkColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRR_NumberNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_NumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRR_NumberNull() {
-                this[this.tableT20RedRabbits.RR_NumberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_Number_IngNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_Number_IngColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_Number_IngColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_Number_IngNull() {
-                this[this.tableT20RedRabbits.RR_Number_IngColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_Number_IngColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_DescriptionNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_DescriptionColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_DescriptionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_DescriptionNull() {
-                this[this.tableT20RedRabbits.RR_DescriptionColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_DescriptionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_DateNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_DateColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_DateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_DateNull() {
-                this[this.tableT20RedRabbits.RR_DateColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_DateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_ProjectNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_ProjectColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_ProjectColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_ProjectNull() {
-                this[this.tableT20RedRabbits.RR_ProjectColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_ProjectColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_TechNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_TechColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_TechColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_TechNull() {
-                this[this.tableT20RedRabbits.RR_TechColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_TechColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_ReferenceNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_ReferenceColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_ReferenceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_ReferenceNull() {
-                this[this.tableT20RedRabbits.RR_ReferenceColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_ReferenceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_CreatedByNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_CreatedByColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_CreatedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_CreatedByNull() {
-                this[this.tableT20RedRabbits.RR_CreatedByColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRR_CommentsNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_CommentsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRR_CommentsNull() {
-                this[this.tableT20RedRabbits.RR_CommentsColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_CreatedByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_MachineNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_MachineColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_MachineColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_MachineNull() {
-                this[this.tableT20RedRabbits.RR_MachineColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_MachineColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_Calibration_MonthNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_Calibration_MonthColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_Calibration_MonthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_Calibration_MonthNull() {
-                this[this.tableT20RedRabbits.RR_Calibration_MonthColumn] = global::System.Convert.DBNull;
+                this[this.tableT10RedRabbits.RR_Calibration_MonthColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRR_CommentsNull() {
+                return this.IsNull(this.tableT10RedRabbits.RR_CommentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRR_CommentsNull() {
+                this[this.tableT10RedRabbits.RR_CommentsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRR_Calibration_ChkNull() {
-                return this.IsNull(this.tableT20RedRabbits.RR_Calibration_ChkColumn);
+                return this.IsNull(this.tableT10RedRabbits.RR_Calibration_ChkColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRR_Calibration_ChkNull() {
-                this[this.tableT20RedRabbits.RR_Calibration_ChkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T15DetectoresRow[] GetT15DetectoresRows() {
-                if ((this.Table.ChildRelations["T20RedRabbitsT15Detectores"] == null)) {
-                    return new T15DetectoresRow[0];
-                }
-                else {
-                    return ((T15DetectoresRow[])(base.GetChildRows(this.Table.ChildRelations["T20RedRabbitsT15Detectores"])));
-                }
+                this[this.tableT10RedRabbits.RR_Calibration_ChkColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5008,22 +4967,22 @@ namespace PokaYokes_app {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class T20RedRabbitsRowChangeEvent : global::System.EventArgs {
+        public class T10RedRabbitsRowChangeEvent : global::System.EventArgs {
             
-            private T20RedRabbitsRow eventRow;
+            private T10RedRabbitsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRowChangeEvent(T20RedRabbitsRow row, global::System.Data.DataRowAction action) {
+            public T10RedRabbitsRowChangeEvent(T10RedRabbitsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T20RedRabbitsRow Row {
+            public T10RedRabbitsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7970,7 +7929,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class T20RedRabbitsTableAdapter : global::System.ComponentModel.Component {
+    public partial class T10RedRabbitsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -7984,7 +7943,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public T20RedRabbitsTableAdapter() {
+        public T10RedRabbitsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -8081,7 +8040,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "T20RedRabbits";
+            tableMapping.DataSetTable = "T10RedRabbits";
             tableMapping.ColumnMappings.Add("RR_Number", "RR_Number");
             tableMapping.ColumnMappings.Add("RR_Number_Ing", "RR_Number_Ing");
             tableMapping.ColumnMappings.Add("RR_Description", "RR_Description");
@@ -8090,14 +8049,41 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("RR_Tech", "RR_Tech");
             tableMapping.ColumnMappings.Add("RR_Reference", "RR_Reference");
             tableMapping.ColumnMappings.Add("RR_CreatedBy", "RR_CreatedBy");
-            tableMapping.ColumnMappings.Add("RR_Comments", "RR_Comments");
             tableMapping.ColumnMappings.Add("RR_Machine", "RR_Machine");
             tableMapping.ColumnMappings.Add("RR_Calibration_Month", "RR_Calibration_Month");
+            tableMapping.ColumnMappings.Add("RR_Comments", "RR_Comments");
             tableMapping.ColumnMappings.Add("RR_Calibration_Chk", "RR_Calibration_Chk");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `T10RedRabbits` WHERE ((`RR_Number` = ?) AND ((? = 1 AND `RR_Number_Ing` IS NULL) OR (`RR_Number_Ing` = ?)) AND ((? = 1 AND `RR_Description` IS NULL) OR (`RR_Description` = ?)) AND ((? = 1 AND `RR_Date` IS NULL) OR (`RR_Date` = ?)) AND ((? = 1 AND `RR_Project` IS NULL) OR (`RR_Project` = ?)) AND ((? = 1 AND `RR_Tech` IS NULL) OR (`RR_Tech` = ?)) AND ((? = 1 AND `RR_Reference` IS NULL) OR (`RR_Reference` = ?)) AND ((? = 1 AND `RR_CreatedBy` IS NULL) OR (`RR_CreatedBy` = ?)) AND ((? = 1 AND `RR_Machine` IS NULL) OR (`RR_Machine` = ?)) AND ((? = 1 AND `RR_Calibration_Month` IS NULL) OR (`RR_Calibration_Month` = ?)) AND ((? = 1 AND `RR_Comments` IS NULL) OR (`RR_Comments` = ?)) AND ((? = 1 AND `RR_Calibration_Chk` IS NULL) OR (`RR_Calibration_Chk` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Number_Ing", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Number_Ing", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Description", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Date", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Date", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Project", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Project", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Project", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Project", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Tech", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Tech", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Reference", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Reference", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_CreatedBy", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_CreatedBy", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Machine", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Calibration_Month", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Comments", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Comments", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `T20RedRabbits` (`RR_Number`, `RR_Number_Ing`, `RR_Description`, `RR_Date`, `RR_Project`, `RR_Tech`, `RR_Reference`, `RR_CreatedBy`, `RR_Comments`, `RR_Calibration_Chk`, `RR_Calibration_Month`, `RR_Machine`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `T10RedRabbits` (`RR_Number`, `RR_Number_Ing`, `RR_Description`, `RR_Date`, `RR_Project`, `RR_Tech`, `RR_Reference`, `RR_CreatedBy`, `RR_Machine`, `RR_Calibration_Month`, `RR_Comments`, `RR_Calibration_Chk`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number_Ing", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Current, false, null));
@@ -8107,10 +8093,49 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Tech", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Reference", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_CreatedBy", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Comments", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `T10RedRabbits` SET `RR_Number` = ?, `RR_Number_Ing` = ?, `RR_Description` = ?, `RR_Date` = ?, `RR_Project` = ?, `RR_Tech` = ?, `RR_Reference` = ?, `RR_CreatedBy` = ?, `RR_Machine` = ?, `RR_Calibration_Month` = ?, `RR_Comments` = ?, `RR_Calibration_Chk` = ? WHERE ((`RR_Number` = ?) AND ((? = 1 AND `RR_Number_Ing` IS NULL) OR (`RR_Number_Ing` = ?)) AND ((? = 1 AND `RR_Description` IS NULL) OR (`RR_Description` = ?)) AND ((? = 1 AND `RR_Date` IS NULL) OR (`RR_Date` = ?)) AND ((? = 1 AND `RR_Project` IS NULL) OR (`RR_Project` = ?)) AND ((? = 1 AND `RR_Tech` IS NULL) OR (`RR_Tech` = ?)) AND ((? = 1 AND `RR_Reference` IS NULL) OR (`RR_Reference` = ?)) AND ((? = 1 AND `RR_CreatedBy` IS NULL) OR (`RR_CreatedBy` = ?)) AND ((? = 1 AND `RR_Machine` IS NULL) OR (`RR_Machine` = ?)) AND ((? = 1 AND `RR_Calibration_Month` IS NULL) OR (`RR_Calibration_Month` = ?)) AND ((? = 1 AND `RR_Comments` IS NULL) OR (`RR_Comments` = ?)) AND ((? = 1 AND `RR_Calibration_Chk` IS NULL) OR (`RR_Calibration_Chk` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Number_Ing", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Description", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Date", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Project", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Project", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Tech", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Reference", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_CreatedBy", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Comments", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Number", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Number_Ing", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Number_Ing", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Number_Ing", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Description", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Date", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Date", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Project", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Project", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Project", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Project", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Tech", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Tech", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Tech", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Reference", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Reference", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Reference", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_CreatedBy", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_CreatedBy", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_CreatedBy", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Machine", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Machine", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Machine", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Calibration_Month", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Calibration_Month", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Month", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Comments", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Comments", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Comments", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RR_Calibration_Chk", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RR_Calibration_Chk", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8127,8 +8152,8 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT RR_Number, RR_Number_Ing, RR_Description, RR_Date, RR_Project, RR_Tech, RR" +
-                "_Reference, RR_CreatedBy, RR_Comments, RR_Calibration_Chk, RR_Calibration_Month," +
-                " RR_Machine FROM T20RedRabbits";
+                "_Reference, RR_CreatedBy, RR_Machine, RR_Calibration_Month, RR_Comments, RR_Cali" +
+                "bration_Chk FROM T10RedRabbits";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8136,7 +8161,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PokaYokesDataSet.T20RedRabbitsDataTable dataTable) {
+        public virtual int Fill(PokaYokesDataSet.T10RedRabbitsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8149,9 +8174,9 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PokaYokesDataSet.T20RedRabbitsDataTable GetData() {
+        public virtual PokaYokesDataSet.T10RedRabbitsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PokaYokesDataSet.T20RedRabbitsDataTable dataTable = new PokaYokesDataSet.T20RedRabbitsDataTable();
+            PokaYokesDataSet.T10RedRabbitsDataTable dataTable = new PokaYokesDataSet.T10RedRabbitsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8159,7 +8184,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PokaYokesDataSet.T20RedRabbitsDataTable dataTable) {
+        public virtual int Update(PokaYokesDataSet.T10RedRabbitsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -8167,7 +8192,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(PokaYokesDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "T20RedRabbits");
+            return this.Adapter.Update(dataSet, "T10RedRabbits");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8188,10 +8213,119 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_RR_Number, string Original_RR_Number_Ing, string Original_RR_Description, global::System.Nullable<global::System.DateTime> Original_RR_Date, string Original_RR_Project, string Original_RR_Tech, string Original_RR_Reference, string Original_RR_CreatedBy, string Original_RR_Machine, string Original_RR_Calibration_Month, string Original_RR_Comments, bool Original_RR_Calibration_Chk) {
+            if ((Original_RR_Number == null)) {
+                throw new global::System.ArgumentNullException("Original_RR_Number");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_RR_Number));
+            }
+            if ((Original_RR_Number_Ing == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_RR_Number_Ing));
+            }
+            if ((Original_RR_Description == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_RR_Description));
+            }
+            if ((Original_RR_Date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_RR_Date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_RR_Project == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_RR_Project));
+            }
+            if ((Original_RR_Tech == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_RR_Tech));
+            }
+            if ((Original_RR_Reference == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_RR_Reference));
+            }
+            if ((Original_RR_CreatedBy == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_RR_CreatedBy));
+            }
+            if ((Original_RR_Machine == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_RR_Machine));
+            }
+            if ((Original_RR_Calibration_Month == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_RR_Calibration_Month));
+            }
+            if ((Original_RR_Comments == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_RR_Comments));
+            }
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_RR_Calibration_Chk));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RR_Number, string RR_Number_Ing, string RR_Description, global::System.Nullable<global::System.DateTime> RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Comments, bool RR_Calibration_Chk, string RR_Calibration_Month, string RR_Machine) {
+        public virtual int Insert(string RR_Number, string RR_Number_Ing, string RR_Description, global::System.Nullable<global::System.DateTime> RR_Date, string RR_Project, string RR_Tech, string RR_Reference, string RR_CreatedBy, string RR_Machine, string RR_Calibration_Month, string RR_Comments, bool RR_Calibration_Chk) {
             if ((RR_Number == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("RR_Number");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(RR_Number));
@@ -8238,25 +8372,25 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(RR_CreatedBy));
             }
-            if ((RR_Comments == null)) {
+            if ((RR_Machine == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(RR_Comments));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(RR_Machine));
             }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(RR_Calibration_Chk));
             if ((RR_Calibration_Month == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(RR_Calibration_Month));
+            }
+            if ((RR_Comments == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(RR_Calibration_Month));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(RR_Comments));
             }
-            if ((RR_Machine == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(RR_Machine));
-            }
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(RR_Calibration_Chk));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8271,6 +8405,237 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string RR_Number, 
+                    string RR_Number_Ing, 
+                    string RR_Description, 
+                    global::System.Nullable<global::System.DateTime> RR_Date, 
+                    string RR_Project, 
+                    string RR_Tech, 
+                    string RR_Reference, 
+                    string RR_CreatedBy, 
+                    string RR_Machine, 
+                    string RR_Calibration_Month, 
+                    string RR_Comments, 
+                    bool RR_Calibration_Chk, 
+                    string Original_RR_Number, 
+                    string Original_RR_Number_Ing, 
+                    string Original_RR_Description, 
+                    global::System.Nullable<global::System.DateTime> Original_RR_Date, 
+                    string Original_RR_Project, 
+                    string Original_RR_Tech, 
+                    string Original_RR_Reference, 
+                    string Original_RR_CreatedBy, 
+                    string Original_RR_Machine, 
+                    string Original_RR_Calibration_Month, 
+                    string Original_RR_Comments, 
+                    bool Original_RR_Calibration_Chk) {
+            if ((RR_Number == null)) {
+                throw new global::System.ArgumentNullException("RR_Number");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(RR_Number));
+            }
+            if ((RR_Number_Ing == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(RR_Number_Ing));
+            }
+            if ((RR_Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RR_Description));
+            }
+            if ((RR_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(RR_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((RR_Project == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(RR_Project));
+            }
+            if ((RR_Tech == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(RR_Tech));
+            }
+            if ((RR_Reference == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(RR_Reference));
+            }
+            if ((RR_CreatedBy == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(RR_CreatedBy));
+            }
+            if ((RR_Machine == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(RR_Machine));
+            }
+            if ((RR_Calibration_Month == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(RR_Calibration_Month));
+            }
+            if ((RR_Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(RR_Comments));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(RR_Calibration_Chk));
+            if ((Original_RR_Number == null)) {
+                throw new global::System.ArgumentNullException("Original_RR_Number");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_RR_Number));
+            }
+            if ((Original_RR_Number_Ing == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_RR_Number_Ing));
+            }
+            if ((Original_RR_Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_RR_Description));
+            }
+            if ((Original_RR_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_RR_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_RR_Project == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_RR_Project));
+            }
+            if ((Original_RR_Tech == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_RR_Tech));
+            }
+            if ((Original_RR_Reference == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_RR_Reference));
+            }
+            if ((Original_RR_CreatedBy == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_RR_CreatedBy));
+            }
+            if ((Original_RR_Machine == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_RR_Machine));
+            }
+            if ((Original_RR_Calibration_Month == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_RR_Calibration_Month));
+            }
+            if ((Original_RR_Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_RR_Comments));
+            }
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((bool)(Original_RR_Calibration_Chk));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string RR_Number_Ing, 
+                    string RR_Description, 
+                    global::System.Nullable<global::System.DateTime> RR_Date, 
+                    string RR_Project, 
+                    string RR_Tech, 
+                    string RR_Reference, 
+                    string RR_CreatedBy, 
+                    string RR_Machine, 
+                    string RR_Calibration_Month, 
+                    string RR_Comments, 
+                    bool RR_Calibration_Chk, 
+                    string Original_RR_Number, 
+                    string Original_RR_Number_Ing, 
+                    string Original_RR_Description, 
+                    global::System.Nullable<global::System.DateTime> Original_RR_Date, 
+                    string Original_RR_Project, 
+                    string Original_RR_Tech, 
+                    string Original_RR_Reference, 
+                    string Original_RR_CreatedBy, 
+                    string Original_RR_Machine, 
+                    string Original_RR_Calibration_Month, 
+                    string Original_RR_Comments, 
+                    bool Original_RR_Calibration_Chk) {
+            return this.Update(Original_RR_Number, RR_Number_Ing, RR_Description, RR_Date, RR_Project, RR_Tech, RR_Reference, RR_CreatedBy, RR_Machine, RR_Calibration_Month, RR_Comments, RR_Calibration_Chk, Original_RR_Number, Original_RR_Number_Ing, Original_RR_Description, Original_RR_Date, Original_RR_Project, Original_RR_Tech, Original_RR_Reference, Original_RR_CreatedBy, Original_RR_Machine, Original_RR_Calibration_Month, Original_RR_Comments, Original_RR_Calibration_Chk);
         }
     }
     
@@ -8298,7 +8663,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         
         private T15DetectoresTableAdapter _t15DetectoresTableAdapter;
         
-        private T20RedRabbitsTableAdapter _t20RedRabbitsTableAdapter;
+        private T10RedRabbitsTableAdapter _t10RedRabbitsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8404,12 +8769,12 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public T20RedRabbitsTableAdapter T20RedRabbitsTableAdapter {
+        public T10RedRabbitsTableAdapter T10RedRabbitsTableAdapter {
             get {
-                return this._t20RedRabbitsTableAdapter;
+                return this._t10RedRabbitsTableAdapter;
             }
             set {
-                this._t20RedRabbitsTableAdapter = value;
+                this._t10RedRabbitsTableAdapter = value;
             }
         }
         
@@ -8456,9 +8821,9 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                             && (this._t15DetectoresTableAdapter.Connection != null))) {
                     return this._t15DetectoresTableAdapter.Connection;
                 }
-                if (((this._t20RedRabbitsTableAdapter != null) 
-                            && (this._t20RedRabbitsTableAdapter.Connection != null))) {
-                    return this._t20RedRabbitsTableAdapter.Connection;
+                if (((this._t10RedRabbitsTableAdapter != null) 
+                            && (this._t10RedRabbitsTableAdapter.Connection != null))) {
+                    return this._t10RedRabbitsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -8491,7 +8856,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                 if ((this._t15DetectoresTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._t20RedRabbitsTableAdapter != null)) {
+                if ((this._t10RedRabbitsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8505,15 +8870,6 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(PokaYokesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._t20RedRabbitsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.T20RedRabbits.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._t20RedRabbitsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._t0_UtillajesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.T0_Utillajes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -8568,6 +8924,15 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._t10RedRabbitsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.T10RedRabbits.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._t10RedRabbitsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -8578,14 +8943,6 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(PokaYokesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._t20RedRabbitsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.T20RedRabbits.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._t20RedRabbitsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._t0_UtillajesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.T0_Utillajes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -8634,6 +8991,14 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._t10RedRabbitsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.T10RedRabbits.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._t10RedRabbitsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -8644,6 +9009,14 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(PokaYokesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._t10RedRabbitsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.T10RedRabbits.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._t10RedRabbitsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._t10utilesLineasTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.T10utilesLineas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8689,14 +9062,6 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._t0_UtillajesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._t20RedRabbitsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.T20RedRabbits.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._t20RedRabbitsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8769,8 +9134,8 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._t20RedRabbitsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._t20RedRabbitsTableAdapter.Connection) == false))) {
+            if (((this._t10RedRabbitsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._t10RedRabbitsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -8860,13 +9225,13 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._t15DetectoresTableAdapter.Adapter);
                     }
                 }
-                if ((this._t20RedRabbitsTableAdapter != null)) {
-                    revertConnections.Add(this._t20RedRabbitsTableAdapter, this._t20RedRabbitsTableAdapter.Connection);
-                    this._t20RedRabbitsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._t20RedRabbitsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._t20RedRabbitsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._t20RedRabbitsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._t20RedRabbitsTableAdapter.Adapter);
+                if ((this._t10RedRabbitsTableAdapter != null)) {
+                    revertConnections.Add(this._t10RedRabbitsTableAdapter, this._t10RedRabbitsTableAdapter.Connection);
+                    this._t10RedRabbitsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._t10RedRabbitsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._t10RedRabbitsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._t10RedRabbitsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._t10RedRabbitsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -8951,9 +9316,9 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                     this._t15DetectoresTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._t15DetectoresTableAdapter]));
                     this._t15DetectoresTableAdapter.Transaction = null;
                 }
-                if ((this._t20RedRabbitsTableAdapter != null)) {
-                    this._t20RedRabbitsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._t20RedRabbitsTableAdapter]));
-                    this._t20RedRabbitsTableAdapter.Transaction = null;
+                if ((this._t10RedRabbitsTableAdapter != null)) {
+                    this._t10RedRabbitsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._t10RedRabbitsTableAdapter]));
+                    this._t10RedRabbitsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

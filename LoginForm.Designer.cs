@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.loginFormUserComboBox = new System.Windows.Forms.ComboBox();
+            this.t0UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
             this.loginFormUserLabel = new System.Windows.Forms.Label();
             this.loginFormPasswLabel = new System.Windows.Forms.Label();
             this.loginFormPasswdBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.loginFormExitButton = new System.Windows.Forms.Button();
             this.loginFormOkButton = new System.Windows.Forms.Button();
-            this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
-            this.t0UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t0UsersTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T0UsersTableAdapter();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // loginFormUserComboBox
@@ -53,6 +53,16 @@
             this.loginFormUserComboBox.Name = "loginFormUserComboBox";
             this.loginFormUserComboBox.Size = new System.Drawing.Size(121, 21);
             this.loginFormUserComboBox.TabIndex = 0;
+            // 
+            // t0UsersBindingSource
+            // 
+            this.t0UsersBindingSource.DataMember = "T0Users";
+            this.t0UsersBindingSource.DataSource = this.pokaYokesDataSet;
+            // 
+            // pokaYokesDataSet
+            // 
+            this.pokaYokesDataSet.DataSetName = "PokaYokesDataSet";
+            this.pokaYokesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // loginFormUserLabel
             // 
@@ -102,6 +112,7 @@
             this.loginFormExitButton.TabIndex = 6;
             this.loginFormExitButton.Text = "Salir";
             this.loginFormExitButton.UseVisualStyleBackColor = true;
+            this.loginFormExitButton.Click += new System.EventHandler(this.loginFormExitButton_Click);
             // 
             // loginFormOkButton
             // 
@@ -112,16 +123,6 @@
             this.loginFormOkButton.Text = "Login";
             this.loginFormOkButton.UseVisualStyleBackColor = true;
             this.loginFormOkButton.Click += new System.EventHandler(this.LoginFormOkButton_Click);
-            // 
-            // pokaYokesDataSet
-            // 
-            this.pokaYokesDataSet.DataSetName = "PokaYokesDataSet";
-            this.pokaYokesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t0UsersBindingSource
-            // 
-            this.t0UsersBindingSource.DataMember = "T0Users";
-            this.t0UsersBindingSource.DataSource = this.pokaYokesDataSet;
             // 
             // t0UsersTableAdapter
             // 
@@ -136,10 +137,10 @@
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

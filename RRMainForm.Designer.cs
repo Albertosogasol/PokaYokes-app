@@ -43,34 +43,34 @@
             this.rRMachineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rRCalibrationMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rRCalibrationChkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.t20RedRabbitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t10RedRabbitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
-            this.t20RedRabbitsTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T20RedRabbitsTableAdapter();
+            this.t10RedRabbitsTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter();
             this.RRDataGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRNumberTextBox = new System.Windows.Forms.TextBox();
-            this.RRNumberLabel = new System.Windows.Forms.Label();
-            this.RRNumberIngLabel = new System.Windows.Forms.Label();
-            this.RRNumberIngTextBox = new System.Windows.Forms.TextBox();
-            this.RRProjectLabel = new System.Windows.Forms.Label();
-            this.RRProjectTextBox = new System.Windows.Forms.TextBox();
-            this.RRDescriptionLabel = new System.Windows.Forms.Label();
-            this.RRDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.RRReferenceLabel = new System.Windows.Forms.Label();
-            this.RRRefTextBox = new System.Windows.Forms.TextBox();
-            this.RRTechLabel = new System.Windows.Forms.Label();
-            this.RRTechTextBox = new System.Windows.Forms.TextBox();
+            this.RRDatePicker = new System.Windows.Forms.DateTimePicker();
             this.RRCommentsLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RRCommentsTextBox = new System.Windows.Forms.TextBox();
             this.RRMachineLabel = new System.Windows.Forms.Label();
             this.RRMachineTextBox = new System.Windows.Forms.TextBox();
             this.RRCreatedByLabel = new System.Windows.Forms.Label();
             this.RRCreatedByTextBox = new System.Windows.Forms.TextBox();
-            this.RRDatePicker = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.RRDatePickerLabel = new System.Windows.Forms.Label();
+            this.RRReferenceLabel = new System.Windows.Forms.Label();
+            this.RRRefTextBox = new System.Windows.Forms.TextBox();
+            this.RRTechLabel = new System.Windows.Forms.Label();
+            this.RRTechTextBox = new System.Windows.Forms.TextBox();
+            this.RRProjectLabel = new System.Windows.Forms.Label();
+            this.RRProjectTextBox = new System.Windows.Forms.TextBox();
+            this.RRDescriptionLabel = new System.Windows.Forms.Label();
+            this.RRDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.RRNumberIngLabel = new System.Windows.Forms.Label();
+            this.RRNumberIngTextBox = new System.Windows.Forms.TextBox();
+            this.RRNumberLabel = new System.Windows.Forms.Label();
+            this.RRNumberTextBox = new System.Windows.Forms.TextBox();
+            this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t20RedRabbitsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
             this.RRDataGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -109,13 +109,13 @@
             this.rRMachineDataGridViewTextBoxColumn,
             this.rRCalibrationMonthDataGridViewTextBoxColumn,
             this.rRCalibrationChkDataGridViewCheckBoxColumn});
-            this.RRDataGrid.DataSource = this.t20RedRabbitsBindingSource;
+            this.RRDataGrid.DataSource = this.t10RedRabbitsBindingSource;
             this.RRDataGrid.Location = new System.Drawing.Point(7, 20);
             this.RRDataGrid.Name = "RRDataGrid";
             this.RRDataGrid.ReadOnly = true;
             this.RRDataGrid.Size = new System.Drawing.Size(1253, 280);
             this.RRDataGrid.TabIndex = 0;
-            this.RRDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.RRDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RRDataGrid_CellDoubleClick);
             // 
             // rRNumberDataGridViewTextBoxColumn
             // 
@@ -201,32 +201,32 @@
             this.rRCalibrationChkDataGridViewCheckBoxColumn.Name = "rRCalibrationChkDataGridViewCheckBoxColumn";
             this.rRCalibrationChkDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // t20RedRabbitsBindingSource
+            // t10RedRabbitsBindingSource
             // 
-            this.t20RedRabbitsBindingSource.DataMember = "T20RedRabbits";
-            this.t20RedRabbitsBindingSource.DataSource = this.pokaYokesDataSet;
+            this.t10RedRabbitsBindingSource.DataMember = "T10RedRabbits";
+            this.t10RedRabbitsBindingSource.DataSource = this.pokaYokesDataSet;
             // 
             // pokaYokesDataSet
             // 
             this.pokaYokesDataSet.DataSetName = "PokaYokesDataSet";
             this.pokaYokesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // t20RedRabbitsTableAdapter
+            // t10RedRabbitsTableAdapter
             // 
-            this.t20RedRabbitsTableAdapter.ClearBeforeFill = true;
+            this.t10RedRabbitsTableAdapter.ClearBeforeFill = true;
             // 
             // RRDataGroupBox
             // 
             this.RRDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.RRDataGroupBox.Controls.Add(this.dateTimePicker1);
+            this.RRDataGroupBox.Controls.Add(this.RRDatePicker);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsLabel);
-            this.RRDataGroupBox.Controls.Add(this.textBox1);
+            this.RRDataGroupBox.Controls.Add(this.RRCommentsTextBox);
             this.RRDataGroupBox.Controls.Add(this.RRMachineLabel);
             this.RRDataGroupBox.Controls.Add(this.RRMachineTextBox);
             this.RRDataGroupBox.Controls.Add(this.RRCreatedByLabel);
             this.RRDataGroupBox.Controls.Add(this.RRCreatedByTextBox);
-            this.RRDataGroupBox.Controls.Add(this.RRDatePicker);
+            this.RRDataGroupBox.Controls.Add(this.RRDatePickerLabel);
             this.RRDataGroupBox.Controls.Add(this.RRReferenceLabel);
             this.RRDataGroupBox.Controls.Add(this.RRRefTextBox);
             this.RRDataGroupBox.Controls.Add(this.RRTechLabel);
@@ -246,80 +246,71 @@
             this.RRDataGroupBox.TabStop = false;
             this.RRDataGroupBox.Text = "Datos";
             // 
-            // RRToolsGroupBox
+            // RRDatePicker
             // 
-            this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RRToolsGroupBox.Location = new System.Drawing.Point(1036, 12);
-            this.RRToolsGroupBox.Name = "RRToolsGroupBox";
-            this.RRToolsGroupBox.Size = new System.Drawing.Size(261, 327);
-            this.RRToolsGroupBox.TabIndex = 2;
-            this.RRToolsGroupBox.TabStop = false;
-            this.RRToolsGroupBox.Text = "Herramientas";
+            this.RRDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RRDatePicker.Location = new System.Drawing.Point(429, 28);
+            this.RRDatePicker.Name = "RRDatePicker";
+            this.RRDatePicker.Size = new System.Drawing.Size(129, 20);
+            this.RRDatePicker.TabIndex = 20;
             // 
-            // RRNumberTextBox
+            // RRCommentsLabel
             // 
-            this.RRNumberTextBox.Location = new System.Drawing.Point(86, 28);
-            this.RRNumberTextBox.Name = "RRNumberTextBox";
-            this.RRNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRNumberTextBox.TabIndex = 0;
+            this.RRCommentsLabel.AutoSize = true;
+            this.RRCommentsLabel.Location = new System.Drawing.Point(360, 130);
+            this.RRCommentsLabel.Name = "RRCommentsLabel";
+            this.RRCommentsLabel.Size = new System.Drawing.Size(65, 13);
+            this.RRCommentsLabel.TabIndex = 19;
+            this.RRCommentsLabel.Text = "Comentarios";
             // 
-            // RRNumberLabel
+            // RRCommentsTextBox
             // 
-            this.RRNumberLabel.AutoSize = true;
-            this.RRNumberLabel.Location = new System.Drawing.Point(17, 31);
-            this.RRNumberLabel.Name = "RRNumberLabel";
-            this.RRNumberLabel.Size = new System.Drawing.Size(63, 13);
-            this.RRNumberLabel.TabIndex = 1;
-            this.RRNumberLabel.Text = "Número RR";
+            this.RRCommentsTextBox.Location = new System.Drawing.Point(363, 146);
+            this.RRCommentsTextBox.Multiline = true;
+            this.RRCommentsTextBox.Name = "RRCommentsTextBox";
+            this.RRCommentsTextBox.Size = new System.Drawing.Size(195, 67);
+            this.RRCommentsTextBox.TabIndex = 18;
             // 
-            // RRNumberIngLabel
+            // RRMachineLabel
             // 
-            this.RRNumberIngLabel.AutoSize = true;
-            this.RRNumberIngLabel.Location = new System.Drawing.Point(17, 63);
-            this.RRNumberIngLabel.Name = "RRNumberIngLabel";
-            this.RRNumberIngLabel.Size = new System.Drawing.Size(62, 13);
-            this.RRNumberIngLabel.TabIndex = 3;
-            this.RRNumberIngLabel.Text = "Número Ing";
+            this.RRMachineLabel.AutoSize = true;
+            this.RRMachineLabel.Location = new System.Drawing.Point(360, 98);
+            this.RRMachineLabel.Name = "RRMachineLabel";
+            this.RRMachineLabel.Size = new System.Drawing.Size(48, 13);
+            this.RRMachineLabel.TabIndex = 17;
+            this.RRMachineLabel.Text = "Máquina";
             // 
-            // RRNumberIngTextBox
+            // RRMachineTextBox
             // 
-            this.RRNumberIngTextBox.Location = new System.Drawing.Point(86, 60);
-            this.RRNumberIngTextBox.Name = "RRNumberIngTextBox";
-            this.RRNumberIngTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRNumberIngTextBox.TabIndex = 2;
+            this.RRMachineTextBox.Location = new System.Drawing.Point(429, 95);
+            this.RRMachineTextBox.Name = "RRMachineTextBox";
+            this.RRMachineTextBox.Size = new System.Drawing.Size(129, 20);
+            this.RRMachineTextBox.TabIndex = 16;
             // 
-            // RRProjectLabel
+            // RRCreatedByLabel
             // 
-            this.RRProjectLabel.AutoSize = true;
-            this.RRProjectLabel.Location = new System.Drawing.Point(17, 130);
-            this.RRProjectLabel.Name = "RRProjectLabel";
-            this.RRProjectLabel.Size = new System.Drawing.Size(49, 13);
-            this.RRProjectLabel.TabIndex = 7;
-            this.RRProjectLabel.Text = "Proyecto";
+            this.RRCreatedByLabel.AutoSize = true;
+            this.RRCreatedByLabel.Location = new System.Drawing.Point(360, 63);
+            this.RRCreatedByLabel.Name = "RRCreatedByLabel";
+            this.RRCreatedByLabel.Size = new System.Drawing.Size(59, 13);
+            this.RRCreatedByLabel.TabIndex = 15;
+            this.RRCreatedByLabel.Text = "Creado por";
             // 
-            // RRProjectTextBox
+            // RRCreatedByTextBox
             // 
-            this.RRProjectTextBox.Location = new System.Drawing.Point(86, 127);
-            this.RRProjectTextBox.Name = "RRProjectTextBox";
-            this.RRProjectTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRProjectTextBox.TabIndex = 6;
+            this.RRCreatedByTextBox.Location = new System.Drawing.Point(429, 60);
+            this.RRCreatedByTextBox.Name = "RRCreatedByTextBox";
+            this.RRCreatedByTextBox.Size = new System.Drawing.Size(129, 20);
+            this.RRCreatedByTextBox.TabIndex = 14;
             // 
-            // RRDescriptionLabel
+            // RRDatePickerLabel
             // 
-            this.RRDescriptionLabel.AutoSize = true;
-            this.RRDescriptionLabel.Location = new System.Drawing.Point(17, 98);
-            this.RRDescriptionLabel.Name = "RRDescriptionLabel";
-            this.RRDescriptionLabel.Size = new System.Drawing.Size(63, 13);
-            this.RRDescriptionLabel.TabIndex = 5;
-            this.RRDescriptionLabel.Text = "Descripción";
-            // 
-            // RRDescriptionTextBox
-            // 
-            this.RRDescriptionTextBox.Location = new System.Drawing.Point(86, 95);
-            this.RRDescriptionTextBox.Name = "RRDescriptionTextBox";
-            this.RRDescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRDescriptionTextBox.TabIndex = 4;
+            this.RRDatePickerLabel.AutoSize = true;
+            this.RRDatePickerLabel.Location = new System.Drawing.Point(360, 31);
+            this.RRDatePickerLabel.Name = "RRDatePickerLabel";
+            this.RRDatePickerLabel.Size = new System.Drawing.Size(57, 13);
+            this.RRDatePickerLabel.TabIndex = 13;
+            this.RRDatePickerLabel.Text = "Fecha alta";
             // 
             // RRReferenceLabel
             // 
@@ -334,7 +325,7 @@
             // 
             this.RRRefTextBox.Location = new System.Drawing.Point(86, 193);
             this.RRRefTextBox.Name = "RRRefTextBox";
-            this.RRRefTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RRRefTextBox.Size = new System.Drawing.Size(239, 20);
             this.RRRefTextBox.TabIndex = 10;
             // 
             // RRTechLabel
@@ -350,74 +341,83 @@
             // 
             this.RRTechTextBox.Location = new System.Drawing.Point(86, 161);
             this.RRTechTextBox.Name = "RRTechTextBox";
-            this.RRTechTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RRTechTextBox.Size = new System.Drawing.Size(239, 20);
             this.RRTechTextBox.TabIndex = 8;
             // 
-            // RRCommentsLabel
+            // RRProjectLabel
             // 
-            this.RRCommentsLabel.AutoSize = true;
-            this.RRCommentsLabel.Location = new System.Drawing.Point(213, 130);
-            this.RRCommentsLabel.Name = "RRCommentsLabel";
-            this.RRCommentsLabel.Size = new System.Drawing.Size(49, 13);
-            this.RRCommentsLabel.TabIndex = 19;
-            this.RRCommentsLabel.Text = "Proyecto";
+            this.RRProjectLabel.AutoSize = true;
+            this.RRProjectLabel.Location = new System.Drawing.Point(17, 130);
+            this.RRProjectLabel.Name = "RRProjectLabel";
+            this.RRProjectLabel.Size = new System.Drawing.Size(49, 13);
+            this.RRProjectLabel.TabIndex = 7;
+            this.RRProjectLabel.Text = "Proyecto";
             // 
-            // textBox1
+            // RRProjectTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(216, 146);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 67);
-            this.textBox1.TabIndex = 18;
+            this.RRProjectTextBox.Location = new System.Drawing.Point(86, 127);
+            this.RRProjectTextBox.Name = "RRProjectTextBox";
+            this.RRProjectTextBox.Size = new System.Drawing.Size(239, 20);
+            this.RRProjectTextBox.TabIndex = 6;
             // 
-            // RRMachineLabel
+            // RRDescriptionLabel
             // 
-            this.RRMachineLabel.AutoSize = true;
-            this.RRMachineLabel.Location = new System.Drawing.Point(213, 98);
-            this.RRMachineLabel.Name = "RRMachineLabel";
-            this.RRMachineLabel.Size = new System.Drawing.Size(48, 13);
-            this.RRMachineLabel.TabIndex = 17;
-            this.RRMachineLabel.Text = "Máquina";
+            this.RRDescriptionLabel.AutoSize = true;
+            this.RRDescriptionLabel.Location = new System.Drawing.Point(17, 98);
+            this.RRDescriptionLabel.Name = "RRDescriptionLabel";
+            this.RRDescriptionLabel.Size = new System.Drawing.Size(63, 13);
+            this.RRDescriptionLabel.TabIndex = 5;
+            this.RRDescriptionLabel.Text = "Descripción";
             // 
-            // RRMachineTextBox
+            // RRDescriptionTextBox
             // 
-            this.RRMachineTextBox.Location = new System.Drawing.Point(282, 95);
-            this.RRMachineTextBox.Name = "RRMachineTextBox";
-            this.RRMachineTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRMachineTextBox.TabIndex = 16;
+            this.RRDescriptionTextBox.Location = new System.Drawing.Point(86, 95);
+            this.RRDescriptionTextBox.Name = "RRDescriptionTextBox";
+            this.RRDescriptionTextBox.Size = new System.Drawing.Size(239, 20);
+            this.RRDescriptionTextBox.TabIndex = 4;
             // 
-            // RRCreatedByLabel
+            // RRNumberIngLabel
             // 
-            this.RRCreatedByLabel.AutoSize = true;
-            this.RRCreatedByLabel.Location = new System.Drawing.Point(213, 63);
-            this.RRCreatedByLabel.Name = "RRCreatedByLabel";
-            this.RRCreatedByLabel.Size = new System.Drawing.Size(59, 13);
-            this.RRCreatedByLabel.TabIndex = 15;
-            this.RRCreatedByLabel.Text = "Creado por";
+            this.RRNumberIngLabel.AutoSize = true;
+            this.RRNumberIngLabel.Location = new System.Drawing.Point(17, 63);
+            this.RRNumberIngLabel.Name = "RRNumberIngLabel";
+            this.RRNumberIngLabel.Size = new System.Drawing.Size(62, 13);
+            this.RRNumberIngLabel.TabIndex = 3;
+            this.RRNumberIngLabel.Text = "Número Ing";
             // 
-            // RRCreatedByTextBox
+            // RRNumberIngTextBox
             // 
-            this.RRCreatedByTextBox.Location = new System.Drawing.Point(282, 60);
-            this.RRCreatedByTextBox.Name = "RRCreatedByTextBox";
-            this.RRCreatedByTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RRCreatedByTextBox.TabIndex = 14;
+            this.RRNumberIngTextBox.Location = new System.Drawing.Point(86, 60);
+            this.RRNumberIngTextBox.Name = "RRNumberIngTextBox";
+            this.RRNumberIngTextBox.Size = new System.Drawing.Size(239, 20);
+            this.RRNumberIngTextBox.TabIndex = 2;
             // 
-            // RRDatePicker
+            // RRNumberLabel
             // 
-            this.RRDatePicker.AutoSize = true;
-            this.RRDatePicker.Location = new System.Drawing.Point(213, 31);
-            this.RRDatePicker.Name = "RRDatePicker";
-            this.RRDatePicker.Size = new System.Drawing.Size(57, 13);
-            this.RRDatePicker.TabIndex = 13;
-            this.RRDatePicker.Text = "Fecha alta";
+            this.RRNumberLabel.AutoSize = true;
+            this.RRNumberLabel.Location = new System.Drawing.Point(17, 31);
+            this.RRNumberLabel.Name = "RRNumberLabel";
+            this.RRNumberLabel.Size = new System.Drawing.Size(63, 13);
+            this.RRNumberLabel.TabIndex = 1;
+            this.RRNumberLabel.Text = "Número RR";
             // 
-            // dateTimePicker1
+            // RRNumberTextBox
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(282, 28);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.RRNumberTextBox.Location = new System.Drawing.Point(86, 28);
+            this.RRNumberTextBox.Name = "RRNumberTextBox";
+            this.RRNumberTextBox.Size = new System.Drawing.Size(239, 20);
+            this.RRNumberTextBox.TabIndex = 0;
+            // 
+            // RRToolsGroupBox
+            // 
+            this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RRToolsGroupBox.Location = new System.Drawing.Point(1036, 12);
+            this.RRToolsGroupBox.Name = "RRToolsGroupBox";
+            this.RRToolsGroupBox.Size = new System.Drawing.Size(261, 327);
+            this.RRToolsGroupBox.TabIndex = 2;
+            this.RRToolsGroupBox.TabStop = false;
+            this.RRToolsGroupBox.Text = "Herramientas";
             // 
             // RRMainForm
             // 
@@ -433,7 +433,7 @@
             this.Load += new System.EventHandler(this.RRMainForm_Load);
             this.RRDataGridGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t20RedRabbitsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
             this.RRDataGroupBox.ResumeLayout(false);
             this.RRDataGroupBox.PerformLayout();
@@ -446,8 +446,8 @@
         private System.Windows.Forms.GroupBox RRDataGridGroupBox;
         private System.Windows.Forms.DataGridView RRDataGrid;
         private PokaYokesDataSet pokaYokesDataSet;
-        private System.Windows.Forms.BindingSource t20RedRabbitsBindingSource;
-        private PokaYokesDataSetTableAdapters.T20RedRabbitsTableAdapter t20RedRabbitsTableAdapter;
+        private System.Windows.Forms.BindingSource t10RedRabbitsBindingSource;
+        private PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter t10RedRabbitsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberIngDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRDescriptionDataGridViewTextBoxColumn;
@@ -474,13 +474,13 @@
         private System.Windows.Forms.TextBox RRProjectTextBox;
         private System.Windows.Forms.Label RRDescriptionLabel;
         private System.Windows.Forms.TextBox RRDescriptionTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker RRDatePicker;
         private System.Windows.Forms.Label RRCommentsLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox RRCommentsTextBox;
         private System.Windows.Forms.Label RRMachineLabel;
         private System.Windows.Forms.TextBox RRMachineTextBox;
         private System.Windows.Forms.Label RRCreatedByLabel;
         private System.Windows.Forms.TextBox RRCreatedByTextBox;
-        private System.Windows.Forms.Label RRDatePicker;
+        private System.Windows.Forms.Label RRDatePickerLabel;
     }
 }

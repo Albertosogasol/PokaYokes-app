@@ -16,5 +16,6 @@ namespace PokaYokes_app
         public string realPassword;
         public string username;
         public string userRol;
+
     }
 }

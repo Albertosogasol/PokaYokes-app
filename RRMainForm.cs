@@ -19,13 +19,23 @@ namespace PokaYokes_app
 
         private void RRMainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pokaYokesDataSet.T20RedRabbits' table. You can move, or remove it, as needed.
-            this.t20RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T20RedRabbits);
+            // TODO: This line of code loads data into the 'pokaYokesDataSet.T10RedRabbits' table. You can move, or remove it, as needed.
+            this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void RRDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            RRNumberTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            RRNumberIngTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            RRDescriptionTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+            RRProjectTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+            RRTechTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+            RRRefTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[6].Value.ToString();
+            RRCreatedByTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[7].Value.ToString();
+            RRCommentsTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+            RRMachineTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
+            RRDatePicker.Text = RRDataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
 
         }
     }

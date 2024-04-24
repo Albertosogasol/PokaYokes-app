@@ -12,9 +12,14 @@ namespace PokaYokes_app
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public UserVariables userData;
+
+
+        public MainForm(UserVariables userData)
         {
             InitializeComponent();
+            this.userData = userData;
+            MessageBox.Show(userData.user);
         }
 
         // Abrir formulario de modificación de RR
@@ -23,6 +28,7 @@ namespace PokaYokes_app
             var RRForm = new RRMainForm();
             RRForm.ShowDialog();
         }
+
     }
 
 

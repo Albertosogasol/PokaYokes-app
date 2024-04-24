@@ -49,6 +49,7 @@ namespace PokaYokes_app
                     string sqlQuery = "SELECT Id, type_Username, type_User, type_Password FROM T0Users WHERE Id = 1";
                     using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                     {
+                        conn.Open();
                         //Asignamos el parámetro a la consulta
                         // cmd.Parameters.AddWithValue("@Username", "gonzaga");
 
@@ -62,7 +63,20 @@ namespace PokaYokes_app
                                 userData.user = reader["type_User"].ToString();
                                 userData.username = reader["type_Username"].ToString();
                                 userData.password = reader["type_Password"].ToString();
-                                MessageBox.Show("Los datos son: " + userData.username + " " + userData.user + " " + userData.password);
+
+                                //Si las credenciales son correctas, se inicia el programa
+                                if (userData.password == loginFormPasswdBox.Text)
+                                {
+                                    this.Hide();
+                                    var mainForm = new MainForm(userData);
+                                    mainForm.Show();
+                                    //Application.Run(new MainForm());
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Contraseña incorrecta!", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    loginFormPasswdBox.Text = "";
+                                }
                             }
                             else
                             {
@@ -77,6 +91,11 @@ namespace PokaYokes_app
                 }
             }
 
+        }
+
+        private void loginFormExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

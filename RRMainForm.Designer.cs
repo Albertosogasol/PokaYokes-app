@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RRMainForm));
             this.RRDataGridGroupBox = new System.Windows.Forms.GroupBox();
             this.RRDataGrid = new System.Windows.Forms.DataGridView();
             this.rRNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +69,7 @@
             this.RRNumberLabel = new System.Windows.Forms.Label();
             this.RRNumberTextBox = new System.Windows.Forms.TextBox();
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.RRModButton = new System.Windows.Forms.Button();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
@@ -219,6 +221,7 @@
             // 
             this.RRDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.RRDataGroupBox.Controls.Add(this.RRModButton);
             this.RRDataGroupBox.Controls.Add(this.RRDatePicker);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsLabel);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsTextBox);
@@ -419,6 +422,16 @@
             this.RRToolsGroupBox.TabStop = false;
             this.RRToolsGroupBox.Text = "Herramientas";
             // 
+            // RRModButton
+            // 
+            this.RRModButton.Location = new System.Drawing.Point(617, 28);
+            this.RRModButton.Name = "RRModButton";
+            this.RRModButton.Size = new System.Drawing.Size(72, 56);
+            this.RRModButton.TabIndex = 21;
+            this.RRModButton.Text = "Modificar RR";
+            this.RRModButton.UseVisualStyleBackColor = true;
+            this.RRModButton.Click += new System.EventHandler(this.RRModButton_Click);
+            // 
             // RRMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +440,7 @@
             this.Controls.Add(this.RRToolsGroupBox);
             this.Controls.Add(this.RRDataGroupBox);
             this.Controls.Add(this.RRDataGridGroupBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(50, 50);
             this.Name = "RRMainForm";
             this.Text = "RRMainForm";
@@ -482,5 +496,6 @@
         private System.Windows.Forms.Label RRCreatedByLabel;
         private System.Windows.Forms.TextBox RRCreatedByTextBox;
         private System.Windows.Forms.Label RRDatePickerLabel;
+        private System.Windows.Forms.Button RRModButton;
     }
 }

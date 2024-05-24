@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace PokaYokes_app
 {
-    internal class RedRabbit
+    public class RedRabbit
     {
+        //Clase RedRabbit que contiene las variables generales que tiene cada RR
+        //Se crean objetos de esta clase para manejar todos los RR de forma conjunta
         public string rrNumber;
         public string rrNumberIng;
         public string rrDescription;
@@ -20,5 +22,6 @@ namespace PokaYokes_app
         public string rrCalibrationMonth;
         public string rrComments;
         public bool rrCalibrationChk;
+        public string rrMonth;
     }
 }

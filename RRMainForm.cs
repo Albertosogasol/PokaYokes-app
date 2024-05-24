@@ -12,20 +12,26 @@ namespace PokaYokes_app
 {
     public partial class RRMainForm : Form
     {
+        //Variables de clase
+        private RedRabbit RRSelected; // Crear objetos de la clase RedRabbit
+
         public RRMainForm()
         {
-            InitializeComponent();
+            InitializeComponent(); //Inicializa el formulario
         }
 
+        //Carga de DataGridView
         private void RRMainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pokaYokesDataSet.T10RedRabbits' table. You can move, or remove it, as needed.
-            this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
+            this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits); //Rellena el DataGridView con los datos de la BBDD
 
         }
 
-        private void RRDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //Doble click
+        public void RRDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Al hacer doble click en algún RR de la DataGridView se cargan los valores en las casillas correspondientes
             RRNumberTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
             RRNumberIngTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             RRDescriptionTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -37,6 +43,38 @@ namespace PokaYokes_app
             RRMachineTextBox.Text = RRDataGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
             RRDatePicker.Text = RRDataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
 
+            //Se crea un nuevo objeto de la clave RedRabbit. Es una variable de clase declarada al principio del código
+            RRSelected = new RedRabbit();
+
+            //Asignación de valores a las propiedades del objeto
+            RRSelected.rrNumber = RRDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            RRSelected.rrNumberIng = RRDataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            RRSelected.rrDescription = RRDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+            RRSelected.rrProject = RRDataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+            RRSelected.rrTech = RRDataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+            RRSelected.rrReference = RRDataGrid.Rows[e.RowIndex].Cells[6].Value.ToString();
+            RRSelected.rrCreatedBy = RRDataGrid.Rows[e.RowIndex].Cells[7].Value.ToString();
+            RRSelected.rrComments = RRDataGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+            RRSelected.rrMachine = RRDataGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
+            RRSelected.rrDate = RRDataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+            RRSelected.rrMonth = RRDataGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
+            RRSelected.rrCalibrationChk = Convert.ToBoolean(RRDataGrid.Rows[e.RowIndex].Cells[11].Value.ToString());
+
+        }
+
+
+        private void RRModButton_Click(object sender, EventArgs e)
+        {
+        if (RRSelected != null)
+            {
+                //Instancia al formulario de editar RR
+                var RRModForm = new RRModifyForm(RRSelected); //Se pasa como parámetro el objeto de la clase RedRabbit
+                RRModForm.ShowDialog();
+            }
+        else
+            {
+                MessageBox.Show("Seleccione un registro antes de modificar.", "Seleccione un registro", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+            }
         }
     }
 }

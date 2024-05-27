@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RRModifyForm));
             this.RRModifyDataGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRModNumLabel = new System.Windows.Forms.Label();
-            this.RRModNumTextBox = new System.Windows.Forms.TextBox();
+            this.RRModMonthComboBox = new System.Windows.Forms.ComboBox();
+            this.RRModMonthLabel = new System.Windows.Forms.Label();
             this.RRModDatePicker = new System.Windows.Forms.DateTimePicker();
             this.RRModCommentsLabel = new System.Windows.Forms.Label();
             this.RRModCommentsTextBox = new System.Windows.Forms.TextBox();
@@ -50,8 +50,10 @@
             this.RRModDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.RRModNumberIngLabel = new System.Windows.Forms.Label();
             this.RRModNumberIngTextBox = new System.Windows.Forms.TextBox();
-            this.RRModMonthLabel = new System.Windows.Forms.Label();
-            this.RRModMonthComboBox = new System.Windows.Forms.ComboBox();
+            this.RRModNumTextBox = new System.Windows.Forms.TextBox();
+            this.RRModNumLabel = new System.Windows.Forms.Label();
+            this.modifyButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.RRModifyDataGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,26 +83,40 @@
             this.RRModifyDataGroupBox.Controls.Add(this.RRModNumLabel);
             this.RRModifyDataGroupBox.Location = new System.Drawing.Point(12, 12);
             this.RRModifyDataGroupBox.Name = "RRModifyDataGroupBox";
-            this.RRModifyDataGroupBox.Size = new System.Drawing.Size(756, 354);
+            this.RRModifyDataGroupBox.Size = new System.Drawing.Size(579, 298);
             this.RRModifyDataGroupBox.TabIndex = 0;
             this.RRModifyDataGroupBox.TabStop = false;
             this.RRModifyDataGroupBox.Text = "Datos";
             // 
-            // RRModNumLabel
+            // RRModMonthComboBox
             // 
-            this.RRModNumLabel.AutoSize = true;
-            this.RRModNumLabel.Location = new System.Drawing.Point(6, 22);
-            this.RRModNumLabel.Name = "RRModNumLabel";
-            this.RRModNumLabel.Size = new System.Drawing.Size(26, 13);
-            this.RRModNumLabel.TabIndex = 0;
-            this.RRModNumLabel.Text = "RR-";
+            this.RRModMonthComboBox.FormattingEnabled = true;
+            this.RRModMonthComboBox.Items.AddRange(new object[] {
+            "ENERO",
+            "FEBRERO",
+            "MARZO",
+            "ABRIL",
+            "MAYOR",
+            "JUNIO",
+            "JULIO",
+            "AGOSTO",
+            "SEPTIEMBRE",
+            "OCTUBRE",
+            "NOVIEMBRE",
+            "DICIEMBRE"});
+            this.RRModMonthComboBox.Location = new System.Drawing.Point(406, 162);
+            this.RRModMonthComboBox.Name = "RRModMonthComboBox";
+            this.RRModMonthComboBox.Size = new System.Drawing.Size(129, 21);
+            this.RRModMonthComboBox.TabIndex = 43;
             // 
-            // RRModNumTextBox
+            // RRModMonthLabel
             // 
-            this.RRModNumTextBox.Location = new System.Drawing.Point(29, 19);
-            this.RRModNumTextBox.Name = "RRModNumTextBox";
-            this.RRModNumTextBox.Size = new System.Drawing.Size(33, 20);
-            this.RRModNumTextBox.TabIndex = 1;
+            this.RRModMonthLabel.AutoSize = true;
+            this.RRModMonthLabel.Location = new System.Drawing.Point(337, 162);
+            this.RRModMonthLabel.Name = "RRModMonthLabel";
+            this.RRModMonthLabel.Size = new System.Drawing.Size(59, 13);
+            this.RRModMonthLabel.TabIndex = 42;
+            this.RRModMonthLabel.Text = "Calibración";
             // 
             // RRModDatePicker
             // 
@@ -248,42 +264,51 @@
             this.RRModNumberIngTextBox.Size = new System.Drawing.Size(239, 20);
             this.RRModNumberIngTextBox.TabIndex = 23;
             // 
-            // RRModMonthLabel
+            // RRModNumTextBox
             // 
-            this.RRModMonthLabel.AutoSize = true;
-            this.RRModMonthLabel.Location = new System.Drawing.Point(337, 162);
-            this.RRModMonthLabel.Name = "RRModMonthLabel";
-            this.RRModMonthLabel.Size = new System.Drawing.Size(59, 13);
-            this.RRModMonthLabel.TabIndex = 42;
-            this.RRModMonthLabel.Text = "Calibración";
+            this.RRModNumTextBox.Location = new System.Drawing.Point(30, 20);
+            this.RRModNumTextBox.Name = "RRModNumTextBox";
+            this.RRModNumTextBox.Size = new System.Drawing.Size(33, 20);
+            this.RRModNumTextBox.TabIndex = 1;
             // 
-            // RRModMonthComboBox
+            // RRModNumLabel
             // 
-            this.RRModMonthComboBox.FormattingEnabled = true;
-            this.RRModMonthComboBox.Items.AddRange(new object[] {
-            "ENERO",
-            "FEBRERO",
-            "MARZO",
-            "ABRIL",
-            "MAYOR",
-            "JUNIO",
-            "JULIO",
-            "AGOSTO",
-            "SEPTIEMBRE",
-            "OCTUBRE",
-            "NOVIEMBRE",
-            "DICIEMBRE"});
-            this.RRModMonthComboBox.Location = new System.Drawing.Point(406, 162);
-            this.RRModMonthComboBox.Name = "RRModMonthComboBox";
-            this.RRModMonthComboBox.Size = new System.Drawing.Size(129, 21);
-            this.RRModMonthComboBox.TabIndex = 43;
+            this.RRModNumLabel.AutoSize = true;
+            this.RRModNumLabel.Location = new System.Drawing.Point(7, 23);
+            this.RRModNumLabel.Name = "RRModNumLabel";
+            this.RRModNumLabel.Size = new System.Drawing.Size(26, 13);
+            this.RRModNumLabel.TabIndex = 0;
+            this.RRModNumLabel.Text = "RR-";
+            // 
+            // modifyButton
+            // 
+            this.modifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyButton.Location = new System.Drawing.Point(638, 55);
+            this.modifyButton.Name = "modifyButton";
+            this.modifyButton.Size = new System.Drawing.Size(115, 70);
+            this.modifyButton.TabIndex = 1;
+            this.modifyButton.Text = "Modificar";
+            this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(638, 217);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(115, 70);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Text = "Cancelar";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // RRModifyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.RRModifyDataGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RRModifyForm";
@@ -319,5 +344,7 @@
         private System.Windows.Forms.TextBox RRModNumberIngTextBox;
         private System.Windows.Forms.ComboBox RRModMonthComboBox;
         private System.Windows.Forms.Label RRModMonthLabel;
+        private System.Windows.Forms.Button modifyButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

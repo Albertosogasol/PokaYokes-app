@@ -40,6 +40,16 @@ namespace PokaYokes_app
 
         }
 
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void modifyButton_Click(object sender, EventArgs e)
+        {
+            //Modifica con los nuevos valores el registro almacenado en la BBDD
+
+            //UPDATE QUERY
+        }
     }
 }

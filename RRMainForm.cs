@@ -76,5 +76,10 @@ namespace PokaYokes_app
                 MessageBox.Show("Seleccione un registro antes de modificar.", "Seleccione un registro", MessageBoxButtons.OK, MessageBoxIcon.Warning );
             }
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

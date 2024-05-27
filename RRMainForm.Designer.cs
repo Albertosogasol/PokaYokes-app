@@ -48,6 +48,7 @@
             this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
             this.t10RedRabbitsTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter();
             this.RRDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.RRModButton = new System.Windows.Forms.Button();
             this.RRDatePicker = new System.Windows.Forms.DateTimePicker();
             this.RRCommentsLabel = new System.Windows.Forms.Label();
             this.RRCommentsTextBox = new System.Windows.Forms.TextBox();
@@ -69,12 +70,13 @@
             this.RRNumberLabel = new System.Windows.Forms.Label();
             this.RRNumberTextBox = new System.Windows.Forms.TextBox();
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRModButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
             this.RRDataGroupBox.SuspendLayout();
+            this.RRToolsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // RRDataGridGroupBox
@@ -221,7 +223,6 @@
             // 
             this.RRDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.RRDataGroupBox.Controls.Add(this.RRModButton);
             this.RRDataGroupBox.Controls.Add(this.RRDatePicker);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsLabel);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsTextBox);
@@ -244,10 +245,20 @@
             this.RRDataGroupBox.Controls.Add(this.RRNumberTextBox);
             this.RRDataGroupBox.Location = new System.Drawing.Point(12, 12);
             this.RRDataGroupBox.Name = "RRDataGroupBox";
-            this.RRDataGroupBox.Size = new System.Drawing.Size(1018, 327);
+            this.RRDataGroupBox.Size = new System.Drawing.Size(615, 327);
             this.RRDataGroupBox.TabIndex = 1;
             this.RRDataGroupBox.TabStop = false;
             this.RRDataGroupBox.Text = "Datos";
+            // 
+            // RRModButton
+            // 
+            this.RRModButton.Location = new System.Drawing.Point(18, 19);
+            this.RRModButton.Name = "RRModButton";
+            this.RRModButton.Size = new System.Drawing.Size(114, 52);
+            this.RRModButton.TabIndex = 21;
+            this.RRModButton.Text = "Modificar RedRabbit";
+            this.RRModButton.UseVisualStyleBackColor = true;
+            this.RRModButton.Click += new System.EventHandler(this.RRModButton_Click);
             // 
             // RRDatePicker
             // 
@@ -415,22 +426,24 @@
             // 
             this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RRToolsGroupBox.Location = new System.Drawing.Point(1036, 12);
+            this.RRToolsGroupBox.Controls.Add(this.closeButton);
+            this.RRToolsGroupBox.Controls.Add(this.RRModButton);
+            this.RRToolsGroupBox.Location = new System.Drawing.Point(633, 12);
             this.RRToolsGroupBox.Name = "RRToolsGroupBox";
-            this.RRToolsGroupBox.Size = new System.Drawing.Size(261, 327);
+            this.RRToolsGroupBox.Size = new System.Drawing.Size(664, 327);
             this.RRToolsGroupBox.TabIndex = 2;
             this.RRToolsGroupBox.TabStop = false;
             this.RRToolsGroupBox.Text = "Herramientas";
             // 
-            // RRModButton
+            // closeButton
             // 
-            this.RRModButton.Location = new System.Drawing.Point(617, 28);
-            this.RRModButton.Name = "RRModButton";
-            this.RRModButton.Size = new System.Drawing.Size(72, 56);
-            this.RRModButton.TabIndex = 21;
-            this.RRModButton.Text = "Modificar RR";
-            this.RRModButton.UseVisualStyleBackColor = true;
-            this.RRModButton.Click += new System.EventHandler(this.RRModButton_Click);
+            this.closeButton.Location = new System.Drawing.Point(18, 259);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(114, 52);
+            this.closeButton.TabIndex = 22;
+            this.closeButton.Text = "Cerrar";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // RRMainForm
             // 
@@ -451,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
             this.RRDataGroupBox.ResumeLayout(false);
             this.RRDataGroupBox.PerformLayout();
+            this.RRToolsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -497,5 +511,6 @@
         private System.Windows.Forms.TextBox RRCreatedByTextBox;
         private System.Windows.Forms.Label RRDatePickerLabel;
         private System.Windows.Forms.Button RRModButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

@@ -68,7 +68,7 @@ public static class MainFunctions
             string rrNumberOutput = rrNumberInput.Substring(rrPrefix.Length); //Acortar con la longitud del prefijo
             return rrNumberOutput;
         }
-        else //Si no contien RR- se devuelve tal cual
+        else //Si no contien RR- se devuelve el valor pasado por parámetro
         {
             return rrNumberInput;
         }

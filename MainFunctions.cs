@@ -57,5 +57,22 @@ public static class MainFunctions
         return errorChk;
     }
 
+    public static string RRNumberTruncate(string rrNumberInput)
+    {
+        //Acorta el número de RR para dejar unicamente el número correspondiente
+
+        string rrPrefix = "RR-"; //Estandar de las numeraciones de RedRabbit
+
+        if (rrNumberInput.StartsWith(rrPrefix)) //Si el string pasado por parámetro comienza con RR- se aplica el recorte
+        {
+            string rrNumberOutput = rrNumberInput.Substring(rrPrefix.Length); //Acortar con la longitud del prefijo
+            return rrNumberOutput;
+        }
+        else //Si no contien RR- se devuelve tal cual
+        {
+            return rrNumberInput;
+        }
+
+    }
 } 
 

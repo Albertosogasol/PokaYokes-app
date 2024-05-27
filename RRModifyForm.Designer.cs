@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RRModifyForm));
             this.RRModifyDataGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRNumLabel = new System.Windows.Forms.Label();
-            this.RRNumLabelTextBox = new System.Windows.Forms.TextBox();
+            this.RRModNumLabel = new System.Windows.Forms.Label();
+            this.RRModNumTextBox = new System.Windows.Forms.TextBox();
             this.RRModDatePicker = new System.Windows.Forms.DateTimePicker();
             this.RRModCommentsLabel = new System.Windows.Forms.Label();
             this.RRModCommentsTextBox = new System.Windows.Forms.TextBox();
@@ -77,8 +77,8 @@
             this.RRModifyDataGroupBox.Controls.Add(this.RRModDescriptionTextBox);
             this.RRModifyDataGroupBox.Controls.Add(this.RRModNumberIngLabel);
             this.RRModifyDataGroupBox.Controls.Add(this.RRModNumberIngTextBox);
-            this.RRModifyDataGroupBox.Controls.Add(this.RRNumLabelTextBox);
-            this.RRModifyDataGroupBox.Controls.Add(this.RRNumLabel);
+            this.RRModifyDataGroupBox.Controls.Add(this.RRModNumTextBox);
+            this.RRModifyDataGroupBox.Controls.Add(this.RRModNumLabel);
             this.RRModifyDataGroupBox.Location = new System.Drawing.Point(12, 12);
             this.RRModifyDataGroupBox.Name = "RRModifyDataGroupBox";
             this.RRModifyDataGroupBox.Size = new System.Drawing.Size(756, 354);
@@ -86,21 +86,21 @@
             this.RRModifyDataGroupBox.TabStop = false;
             this.RRModifyDataGroupBox.Text = "Datos";
             // 
-            // RRNumLabel
+            // RRModNumLabel
             // 
-            this.RRNumLabel.AutoSize = true;
-            this.RRNumLabel.Location = new System.Drawing.Point(6, 22);
-            this.RRNumLabel.Name = "RRNumLabel";
-            this.RRNumLabel.Size = new System.Drawing.Size(26, 13);
-            this.RRNumLabel.TabIndex = 0;
-            this.RRNumLabel.Text = "RR-";
+            this.RRModNumLabel.AutoSize = true;
+            this.RRModNumLabel.Location = new System.Drawing.Point(6, 22);
+            this.RRModNumLabel.Name = "RRModNumLabel";
+            this.RRModNumLabel.Size = new System.Drawing.Size(26, 13);
+            this.RRModNumLabel.TabIndex = 0;
+            this.RRModNumLabel.Text = "RR-";
             // 
-            // RRNumLabelTextBox
+            // RRModNumTextBox
             // 
-            this.RRNumLabelTextBox.Location = new System.Drawing.Point(29, 19);
-            this.RRNumLabelTextBox.Name = "RRNumLabelTextBox";
-            this.RRNumLabelTextBox.Size = new System.Drawing.Size(33, 20);
-            this.RRNumLabelTextBox.TabIndex = 1;
+            this.RRModNumTextBox.Location = new System.Drawing.Point(29, 19);
+            this.RRModNumTextBox.Name = "RRModNumTextBox";
+            this.RRModNumTextBox.Size = new System.Drawing.Size(33, 20);
+            this.RRModNumTextBox.TabIndex = 1;
             // 
             // RRModDatePicker
             // 
@@ -297,8 +297,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox RRModifyDataGroupBox;
-        private System.Windows.Forms.TextBox RRNumLabelTextBox;
-        private System.Windows.Forms.Label RRNumLabel;
+        private System.Windows.Forms.TextBox RRModNumTextBox;
+        private System.Windows.Forms.Label RRModNumLabel;
         private System.Windows.Forms.DateTimePicker RRModDatePicker;
         private System.Windows.Forms.Label RRModCommentsLabel;
         private System.Windows.Forms.TextBox RRModCommentsTextBox;

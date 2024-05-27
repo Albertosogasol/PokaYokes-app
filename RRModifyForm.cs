@@ -19,12 +19,27 @@ namespace PokaYokes_app
         {
             InitializeComponent();
             RRModify = redRabbit;
-            PonerDatos();
+            FillBoxes(RRModify);
         }
 
-        private void PonerDatos()
+        private void FillBoxes(RedRabbit rrSent)
         {
-            MessageBox.Show(RRModify.rrReference, RRModify.rrProject);
+            //Rellena los campos correspondientes con los atributos del objeto pasado por argumento
+            RRModNumTextBox.Text = MainFunctions.RRNumberTruncate(rrSent.rrNumber); //Se acorta el número para eliminar la parte "RR-"
+            RRModNumberIngTextBox.Text = rrSent.rrNumberIng;
+            RRModDescriptionTextBox.Text = rrSent.rrDescription;
+            RRModProjectTextBox.Text = rrSent.rrProject;
+            RRModTechTextBox.Text = rrSent.rrTech;
+            RRModRefTextBox.Text = rrSent.rrTech;
+            RRModDatePicker.Text = rrSent.rrDate;
+            RRModCreatedByTextBox.Text = rrSent.rrCreatedBy;
+            RRModCommentsTextBox.Text = rrSent.rrComments;
+            RRModMachineTextBox.Text = rrSent.rrMachine;
+            RRModCommentsTextBox.Text = rrSent.rrComments;
+            RRModMonthComboBox.Text = rrSent.rrMonth;
+
         }
+
+
     }
 }

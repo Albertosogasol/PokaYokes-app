@@ -1183,6 +1183,8 @@ namespace PokaYokes_app {
             
             private global::System.Data.DataColumn columntype_ModRR;
             
+            private global::System.Data.DataColumn columnid_Rol;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public T0RolesDataTable() {
@@ -1266,6 +1268,14 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_RolColumn {
+                get {
+                    return this.columnid_Rol;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1301,7 +1311,7 @@ namespace PokaYokes_app {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public T0RolesRow AddT0RolesRow(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR) {
+            public T0RolesRow AddT0RolesRow(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR, int id_Rol) {
                 T0RolesRow rowT0RolesRow = ((T0RolesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         type_Rol,
@@ -1309,10 +1319,18 @@ namespace PokaYokes_app {
                         type_ModTools,
                         type_ModToolsLines,
                         type_ModDetectors,
-                        type_ModRR};
+                        type_ModRR,
+                        id_Rol};
                 rowT0RolesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowT0RolesRow);
                 return rowT0RolesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public T0RolesRow FindByid_Rol(int id_Rol) {
+                return ((T0RolesRow)(this.Rows.Find(new object[] {
+                            id_Rol})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1338,6 +1356,7 @@ namespace PokaYokes_app {
                 this.columntype_ModToolsLines = base.Columns["type_ModToolsLines"];
                 this.columntype_ModDetectors = base.Columns["type_ModDetectors"];
                 this.columntype_ModRR = base.Columns["type_ModRR"];
+                this.columnid_Rol = base.Columns["id_Rol"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1355,7 +1374,13 @@ namespace PokaYokes_app {
                 base.Columns.Add(this.columntype_ModDetectors);
                 this.columntype_ModRR = new global::System.Data.DataColumn("type_ModRR", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntype_ModRR);
+                this.columnid_Rol = new global::System.Data.DataColumn("id_Rol", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_Rol);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_Rol}, true));
                 this.columntype_Rol.MaxLength = 255;
+                this.columnid_Rol.AllowDBNull = false;
+                this.columnid_Rol.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3522,6 +3547,17 @@ namespace PokaYokes_app {
                 }
                 set {
                     this[this.tableT0Roles.type_ModRRColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_Rol {
+                get {
+                    return ((int)(this[this.tableT0Roles.id_RolColumn]));
+                }
+                set {
+                    this[this.tableT0Roles.id_RolColumn] = value;
                 }
             }
             
@@ -6036,11 +6072,30 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("type_ModToolsLines", "type_ModToolsLines");
             tableMapping.ColumnMappings.Add("type_ModDetectors", "type_ModDetectors");
             tableMapping.ColumnMappings.Add("type_ModRR", "type_ModRR");
+            tableMapping.ColumnMappings.Add("id_Rol", "id_Rol");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `T0Roles` WHERE (((? = 1 AND `type_Rol` IS NULL) OR (`type_Rol` = ?)) AND ((? = 1 AND `type_ModLines` IS NULL) OR (`type_ModLines` = ?)) AND ((? = 1 AND `type_ModTools` IS NULL) OR (`type_ModTools` = ?)) AND ((? = 1 AND `type_ModToolsLines` IS NULL) OR (`type_ModToolsLines` = ?)) AND ((? = 1 AND `type_ModDetectors` IS NULL) OR (`type_ModDetectors` = ?)) AND ((? = 1 AND `type_ModRR` IS NULL) OR (`type_ModRR` = ?)) AND (`id_Rol` = ?))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_Rol", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModLines", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModTools", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModTools", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModTools", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModTools", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModToolsLines", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModToolsLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModDetectors", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModDetectors", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModRR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModRR", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_Rol", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `T0Roles` (`type_Rol`, `type_ModLines`, `type_ModTools`, `type_ModToo" +
-                "lsLines`, `type_ModDetectors`, `type_ModRR`) VALUES (?, ?, ?, ?, ?, ?)";
+                "lsLines`, `type_ModDetectors`, `type_ModRR`, `id_Rol`) VALUES (?, ?, ?, ?, ?, ?," +
+                " ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_Rol", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Current, false, null));
@@ -6048,6 +6103,31 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModToolsLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModDetectors", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModRR", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("id_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_Rol", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `T0Roles` SET `type_Rol` = ?, `type_ModLines` = ?, `type_ModTools` = ?, `type_ModToolsLines` = ?, `type_ModDetectors` = ?, `type_ModRR` = ?, `id_Rol` = ? WHERE (((? = 1 AND `type_Rol` IS NULL) OR (`type_Rol` = ?)) AND ((? = 1 AND `type_ModLines` IS NULL) OR (`type_ModLines` = ?)) AND ((? = 1 AND `type_ModTools` IS NULL) OR (`type_ModTools` = ?)) AND ((? = 1 AND `type_ModToolsLines` IS NULL) OR (`type_ModToolsLines` = ?)) AND ((? = 1 AND `type_ModDetectors` IS NULL) OR (`type_ModDetectors` = ?)) AND ((? = 1 AND `type_ModRR` IS NULL) OR (`type_ModRR` = ?)) AND (`id_Rol` = ?))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_Rol", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModTools", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModTools", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModToolsLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModDetectors", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type_ModRR", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("id_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_Rol", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_Rol", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_Rol", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModLines", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModLines", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModTools", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModTools", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModTools", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModTools", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModToolsLines", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModToolsLines", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModToolsLines", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModDetectors", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModDetectors", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModDetectors", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_type_ModRR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type_ModRR", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type_ModRR", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id_Rol", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_Rol", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6064,7 +6144,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT type_Rol, type_ModLines, type_ModTools, type_ModToolsLines, type_ModDetect" +
-                "ors, type_ModRR FROM T0Roles";
+                "ors, type_ModRR, id_Rol FROM T0Roles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6124,8 +6204,48 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_type_Rol, bool Original_type_ModLines, bool Original_type_ModTools, bool Original_type_ModToolsLines, bool Original_type_ModDetectors, bool Original_type_ModRR, int Original_id_Rol) {
+            if ((Original_type_Rol == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_type_Rol));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_type_ModLines));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_type_ModTools));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_type_ModToolsLines));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_type_ModDetectors));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(Original_type_ModRR));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_id_Rol));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR) {
+        public virtual int Insert(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR, int id_Rol) {
             if ((type_Rol == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6137,6 +6257,7 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
             this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(type_ModToolsLines));
             this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(type_ModDetectors));
             this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(type_ModRR));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(id_Rol));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6151,6 +6272,66 @@ namespace PokaYokes_app.PokaYokesDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR, int id_Rol, string Original_type_Rol, bool Original_type_ModLines, bool Original_type_ModTools, bool Original_type_ModToolsLines, bool Original_type_ModDetectors, bool Original_type_ModRR, int Original_id_Rol) {
+            if ((type_Rol == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(type_Rol));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((bool)(type_ModLines));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(type_ModTools));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(type_ModToolsLines));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(type_ModDetectors));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(type_ModRR));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(id_Rol));
+            if ((Original_type_Rol == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_type_Rol));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_type_ModLines));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_type_ModTools));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_type_ModToolsLines));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_type_ModDetectors));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_type_ModRR));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_id_Rol));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string type_Rol, bool type_ModLines, bool type_ModTools, bool type_ModToolsLines, bool type_ModDetectors, bool type_ModRR, string Original_type_Rol, bool Original_type_ModLines, bool Original_type_ModTools, bool Original_type_ModToolsLines, bool Original_type_ModDetectors, bool Original_type_ModRR, int Original_id_Rol) {
+            return this.Update(type_Rol, type_ModLines, type_ModTools, type_ModToolsLines, type_ModDetectors, type_ModRR, Original_id_Rol, Original_type_Rol, Original_type_ModLines, Original_type_ModTools, Original_type_ModToolsLines, Original_type_ModDetectors, Original_type_ModRR, Original_id_Rol);
         }
     }
     

@@ -11,6 +11,7 @@ namespace PokaYokes_app
     // Vigilar si es necesario quitar static 
     public class UserVariables
     {
+        //Variables de clase
         public string user;
         public string password;
         public string realPasswor;

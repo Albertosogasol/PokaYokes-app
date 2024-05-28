@@ -36,7 +36,7 @@ namespace PokaYokes_app
                 try
                 {
                     string selectedUser = this.loginFormUserComboBox.GetItemText(this.loginFormUserComboBox.SelectedItem);
-                    string sqlQuery = "SELECT * FROM T0Users WHERE type_User = @typeUser";
+                    string sqlQuery = "SELECT T0Users.*, T0Roles.type_Rol AS RoleName FROM T0Users INNER JOIN T0Roles ON T0Users.type_Rol = T0Roles.id_Rol WHERE T0Users.type_User = @typeUser";
                     using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                     {
                         conn.Open();
@@ -52,7 +52,8 @@ namespace PokaYokes_app
                                 userData.user = reader["type_User"].ToString();
                                 userData.username = reader["type_Username"].ToString();
                                 userData.password = reader["type_Password"].ToString();
-                                // Si las credenciales son correctas, se inicia el programa
+                                userData.userRol = reader["RoleName"].ToString(); // Obtener el nombre del rol
+                                                                                  // Si las credenciales son correctas, se inicia el programa
                                 if (userData.password == loginFormPasswdBox.Text)
                                 {
                                     this.Hide();

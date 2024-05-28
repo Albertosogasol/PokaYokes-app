@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:T0 Utillajes" ZOrder="11" X="373" Y="274" Height="229" Width="209" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:T0Lineas" ZOrder="10" X="373" Y="70" Height="134" Width="195" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:T0Roles" ZOrder="9" X="973" Y="70" Height="191" Width="190" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:T0Roles" ZOrder="9" X="973" Y="70" Height="210" Width="190" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:T0Users" ZOrder="8" X="1233" Y="70" Height="210" Width="190" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:T10utilesLineas" ZOrder="7" X="70" Y="70" Height="115" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:T15Detectores" ZOrder="6" X="373" Y="573" Height="305" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />

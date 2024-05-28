@@ -49,6 +49,7 @@ namespace PokaYokes_app
         {
             //Modifica con los nuevos valores el registro almacenado en la BBDD
             MessageBox.Show(UserSession.CurrentUser.username);
+            MessageBox.Show(UserSession.CurrentUser.userRol);
             //UPDATE QUERY
         }
     }

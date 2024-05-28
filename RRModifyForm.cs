@@ -48,7 +48,7 @@ namespace PokaYokes_app
         private void modifyButton_Click(object sender, EventArgs e)
         {
             //Modifica con los nuevos valores el registro almacenado en la BBDD
-
+            MessageBox.Show(UserSession.CurrentUser.username);
             //UPDATE QUERY
         }
     }

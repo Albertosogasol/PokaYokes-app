@@ -62,7 +62,7 @@ namespace PokaYokes_app
 
         }
 
-
+        //Botón modificar
         private void RRModButton_Click(object sender, EventArgs e)
         {
         if (RRSelected != null)
@@ -77,6 +77,7 @@ namespace PokaYokes_app
             }
         }
 
+        //Botón cerrar
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();

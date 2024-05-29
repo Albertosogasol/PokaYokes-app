@@ -48,7 +48,6 @@
             this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
             this.t10RedRabbitsTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter();
             this.RRDataGroupBox = new System.Windows.Forms.GroupBox();
-            this.RRModButton = new System.Windows.Forms.Button();
             this.RRDatePicker = new System.Windows.Forms.DateTimePicker();
             this.RRCommentsLabel = new System.Windows.Forms.Label();
             this.RRCommentsTextBox = new System.Windows.Forms.TextBox();
@@ -69,8 +68,10 @@
             this.RRNumberIngTextBox = new System.Windows.Forms.TextBox();
             this.RRNumberLabel = new System.Windows.Forms.Label();
             this.RRNumberTextBox = new System.Windows.Forms.TextBox();
+            this.RRModButton = new System.Windows.Forms.Button();
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
             this.closeButton = new System.Windows.Forms.Button();
+            this.RRAddButton = new System.Windows.Forms.Button();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
@@ -250,16 +251,6 @@
             this.RRDataGroupBox.TabStop = false;
             this.RRDataGroupBox.Text = "Datos";
             // 
-            // RRModButton
-            // 
-            this.RRModButton.Location = new System.Drawing.Point(18, 19);
-            this.RRModButton.Name = "RRModButton";
-            this.RRModButton.Size = new System.Drawing.Size(114, 52);
-            this.RRModButton.TabIndex = 21;
-            this.RRModButton.Text = "Modificar RedRabbit";
-            this.RRModButton.UseVisualStyleBackColor = true;
-            this.RRModButton.Click += new System.EventHandler(this.RRModButton_Click);
-            // 
             // RRDatePicker
             // 
             this.RRDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -422,10 +413,21 @@
             this.RRNumberTextBox.Size = new System.Drawing.Size(239, 20);
             this.RRNumberTextBox.TabIndex = 0;
             // 
+            // RRModButton
+            // 
+            this.RRModButton.Location = new System.Drawing.Point(18, 98);
+            this.RRModButton.Name = "RRModButton";
+            this.RRModButton.Size = new System.Drawing.Size(114, 52);
+            this.RRModButton.TabIndex = 21;
+            this.RRModButton.Text = "Modificar RedRabbit";
+            this.RRModButton.UseVisualStyleBackColor = true;
+            this.RRModButton.Click += new System.EventHandler(this.RRModButton_Click);
+            // 
             // RRToolsGroupBox
             // 
             this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.RRToolsGroupBox.Controls.Add(this.RRAddButton);
             this.RRToolsGroupBox.Controls.Add(this.closeButton);
             this.RRToolsGroupBox.Controls.Add(this.RRModButton);
             this.RRToolsGroupBox.Location = new System.Drawing.Point(633, 12);
@@ -437,13 +439,22 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(18, 259);
+            this.closeButton.Location = new System.Drawing.Point(18, 255);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(114, 52);
             this.closeButton.TabIndex = 22;
             this.closeButton.Text = "Cerrar";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // RRAddButton
+            // 
+            this.RRAddButton.Location = new System.Drawing.Point(18, 28);
+            this.RRAddButton.Name = "RRAddButton";
+            this.RRAddButton.Size = new System.Drawing.Size(114, 52);
+            this.RRAddButton.TabIndex = 23;
+            this.RRAddButton.Text = "Añadir RedRabbit";
+            this.RRAddButton.UseVisualStyleBackColor = true;
             // 
             // RRMainForm
             // 
@@ -512,5 +523,6 @@
         private System.Windows.Forms.Label RRDatePickerLabel;
         private System.Windows.Forms.Button RRModButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button RRAddButton;
     }
 }

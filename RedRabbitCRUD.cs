@@ -33,7 +33,7 @@ namespace PokaYokes_app
                     cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
                     cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
                     cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
-                    cmd.Parameters.AddWithValue("Chk", redRabbit.rrCalibrationChk);
+                    cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
 
                     //Ejecución del comando
                     cmd.ExecuteNonQuery();
@@ -65,7 +65,7 @@ namespace PokaYokes_app
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
             {
                 conn.Open();
-                string sqlQuery = "UPDATE T10RedRabbits SET  RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @Number";
+                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @Number";
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
                 try
@@ -83,7 +83,7 @@ namespace PokaYokes_app
                         //cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
                         cmd.Parameters.AddWithValue("@Month", "ENERO");
                         cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
-                        cmd.Parameters.AddWithValue("Chk", redRabbit.rrCalibrationChk);
+                        cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
 
                         //Ejecución del comando
                         cmd.ExecuteNonQuery();

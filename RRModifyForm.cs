@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +31,11 @@ namespace PokaYokes_app
             RRModDescriptionTextBox.Text = rrSent.rrDescription;
             RRModProjectTextBox.Text = rrSent.rrProject;
             RRModTechTextBox.Text = rrSent.rrTech;
-            RRModRefTextBox.Text = rrSent.rrTech;
+            RRModRefTextBox.Text = rrSent.rrReference;
             RRModDatePicker.Text = rrSent.rrDate;
             RRModCreatedByTextBox.Text = rrSent.rrCreatedBy;
             RRModCommentsTextBox.Text = rrSent.rrComments;
             RRModMachineTextBox.Text = rrSent.rrMachine;
-            RRModCommentsTextBox.Text = rrSent.rrComments;
             RRModMonthComboBox.Text = rrSent.rrMonth;
 
         }
@@ -49,7 +49,40 @@ namespace PokaYokes_app
         {
             //Modifica con los nuevos valores el registro almacenado en la BBDD
 
-            //UPDATE QUERY
+            //Nuevo objeto de la calse RedRabbit para enviar a CRUD 
+            RedRabbit redRabbit = new RedRabbit();
+
+            //Asignación de parámetros
+            if (RRModNumTextBox!=null ) //Se comprueba que el número de RR no ha sido borrado
+            {
+                //Arreglo del prefijo para que no haya espacios y tenga la estructura correcta RR-##
+                redRabbit.rrNumber = "RR-" + RRModNumTextBox.Text; //Se añade le prefijo RR-
+                redRabbit.rrNumber = MainFunctions.RRNumberFix(redRabbit.rrNumber);
+
+                redRabbit.rrNumberIng = RRModNumberIngTextBox.Text;
+                redRabbit.rrDescription = RRModDescriptionTextBox.Text;
+                redRabbit.rrProject = RRModProjectTextBox.Text;
+                redRabbit.rrTech = RRModTechTextBox.Text;
+                redRabbit.rrReference = RRModRefTextBox.Text;
+                redRabbit.rrDate = RRModDatePicker.Text;
+                redRabbit.rrCreatedBy = RRModCreatedByTextBox.Text;
+                redRabbit.rrComments = RRModCommentsTextBox.Text;
+                redRabbit.rrMachine = RRModMachineTextBox.Text;
+                redRabbit.rrMonth = RRModMonthComboBox.Text;
+
+                //Se crea una instancia de RedRabbitCRUD 
+                // *(1)
+                RedRabbitCRUD redRabbitCRUD = new RedRabbitCRUD();
+
+                //Se ejecuta el procedimiento de modificación
+                redRabbitCRUD.UpdateRR(redRabbit);
+
+
+                //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.
+            }
+
+
+
         }
     }
 }

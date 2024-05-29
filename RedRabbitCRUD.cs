@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PokaYokes_app
 {
@@ -64,25 +65,33 @@ namespace PokaYokes_app
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
             {
                 conn.Open();
-                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number = @Number, RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk ";
+                string sqlQuery = "UPDATE T10RedRabbits SET  RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @Number";
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
-                    //Asignación de valores a las variables de la consulta
-                    cmd.Parameters.AddWithValue("@Number", redRabbit.rrNumber);
-                    cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
-                    cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
-                    cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
-                    cmd.Parameters.AddWithValue("@Project", redRabbit.rrProject);
-                    cmd.Parameters.AddWithValue("@Tech", redRabbit.rrTech);
-                    cmd.Parameters.AddWithValue("@Reference", redRabbit.rrReference);
-                    cmd.Parameters.AddWithValue("@CreatedBy", redRabbit.rrCreatedBy);
-                    cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
-                    cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
-                    cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
-                    cmd.Parameters.AddWithValue("Chk", redRabbit.rrCalibrationChk);
+                try
+                    {
+                        //Asignación de valores a las variables de la consulta
+                        cmd.Parameters.AddWithValue("@Number", redRabbit.rrNumber);
+                        cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
+                        cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
+                        cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
+                        cmd.Parameters.AddWithValue("@Project", redRabbit.rrProject);
+                        cmd.Parameters.AddWithValue("@Tech", redRabbit.rrTech);
+                        cmd.Parameters.AddWithValue("@Reference", redRabbit.rrReference);
+                        cmd.Parameters.AddWithValue("@CreatedBy", redRabbit.rrCreatedBy);
+                        cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
+                        //cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
+                        cmd.Parameters.AddWithValue("@Month", "ENERO");
+                        cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
+                        cmd.Parameters.AddWithValue("Chk", redRabbit.rrCalibrationChk);
 
-                    //Ejecución del comando
-                    cmd.ExecuteNonQuery();
+                        //Ejecución del comando
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en la ejecución de la modificación. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }

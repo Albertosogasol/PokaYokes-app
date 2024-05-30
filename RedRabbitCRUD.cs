@@ -1,6 +1,7 @@
 ﻿//Clase para gestionar las operaciones CRUD (Create, Read, Update, Delete) de la base de datos de RedRabbits. 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -15,30 +16,46 @@ namespace PokaYokes_app
         //Agregar nuevo RR
         public void CreateRR(RedRabbit redRabbit)
         {
-            using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
+            try 
             {
-                conn.Open();
-                string sqlQuery = "INSERT INTO T10RedRabbits (RR_Number, RR_Number_Ing, RR_Description, RR_Date, RR_Project, RR_Tech, RR_Reference, RR_CreatedBy, RR_Machine, RR_Calibration_Month, RR_Comments, RR_Calibration_Chk) VALUES (@RRNumber, @IngNumber, @Description, @Date, @Project, @Tech, @Reference, @CreatedBy, @Machine, @Month, @Comments, @Chk)";
-                using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
                 {
-                    //Asignación de valores a las variables de la consulta
-                    cmd.Parameters.AddWithValue("@RRNumber", redRabbit.rrNumber);
-                    cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
-                    cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
-                    cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
-                    cmd.Parameters.AddWithValue("@Project", redRabbit.rrProject);
-                    cmd.Parameters.AddWithValue("@Tech", redRabbit.rrTech);
-                    cmd.Parameters.AddWithValue("@Reference", redRabbit.rrReference);
-                    cmd.Parameters.AddWithValue("@CreatedBy", redRabbit.rrCreatedBy);
-                    cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
-                    cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
-                    cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
-                    cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
+                    conn.Open();
+                    string sqlQuery = "INSERT INTO T10RedRabbits (RR_Number, RR_Number_Ing, RR_Description, RR_Date, RR_Project, RR_Tech, RR_Reference, RR_CreatedBy, RR_Machine, RR_Calibration_Month, RR_Comments, RR_Calibration_Chk) VALUES (@RRNumber, @IngNumber, @Description, @Date, @Project, @Tech, @Reference, @CreatedBy, @Machine, @Month, @Comments, @Chk)";
+                    using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                    {
+                        //Asignación de valores a las variables de la consulta
+                        cmd.Parameters.AddWithValue("@RRNumber", redRabbit.rrNumber);
+                        cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
+                        cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
+                        cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
+                        cmd.Parameters.AddWithValue("@Project", redRabbit.rrProject);
+                        cmd.Parameters.AddWithValue("@Tech", redRabbit.rrTech);
+                        cmd.Parameters.AddWithValue("@Reference", redRabbit.rrReference);
+                        cmd.Parameters.AddWithValue("@CreatedBy", redRabbit.rrCreatedBy);
+                        cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
+                        cmd.Parameters.AddWithValue("@Month", redRabbit.rrMonth);
+                        cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
+                        cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
 
-                    //Ejecución del comando
-                    cmd.ExecuteNonQuery();
+                        //Ejecución del comando
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                if ((ex.Message.Contains("duplicado"))||(ex.Message.Contains("duplicate")))
+                {
+                    MessageBox.Show("Error. Número de RR- duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else 
+                {
+                    MessageBox.Show("Error al intentar crear el RedRabbit. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            
         }
 
         //Eliminar RR REVISAR SI ES NECESARIO COMPROBAR PARA ELIMINACIÓN EN CASCADA!!!!!!!!!!!!!
@@ -80,13 +97,17 @@ namespace PokaYokes_app
                         cmd.Parameters.AddWithValue("@Reference", redRabbit.rrReference);
                         cmd.Parameters.AddWithValue("@CreatedBy", redRabbit.rrCreatedBy);
                         cmd.Parameters.AddWithValue("@Machine", redRabbit.rrMachine);
-                        //cmd.Parameters.AddWithValue("@Month", redRabbit.rrCalibrationMonth);
-                        cmd.Parameters.AddWithValue("@Month", "ENERO");
+                        cmd.Parameters.AddWithValue("@Month", redRabbit.rrMonth);
                         cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
                         cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
 
                         //Ejecución del comando
                         cmd.ExecuteNonQuery();
+                    }
+                    //catch (Exception ex)
+                    catch (DuplicateNameException ex)
+                    {
+                        MessageBox.Show("Error al añadir el rr. Ya existe una entrada con ese valor " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception ex)
                     {

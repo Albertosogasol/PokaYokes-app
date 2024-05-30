@@ -82,5 +82,13 @@ namespace PokaYokes_app
         {
             this.Close();
         }
+
+        //Botón añadir RedRabbit
+        private void RRAddButton_Click(object sender, EventArgs e)
+        {
+            //Instancia al formulario de crear RR
+            var RRAddFOrm = new RRAddForm();
+            RRAddFOrm.ShowDialog();
+        }
     }
 }

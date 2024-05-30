@@ -49,7 +49,7 @@ namespace PokaYokes_app
         {
             //Modifica con los nuevos valores el registro almacenado en la BBDD
 
-            //Nuevo objeto de la calse RedRabbit para enviar a CRUD 
+            //Nuevo objeto de la clase RedRabbit para enviar a CRUD 
             RedRabbit redRabbit = new RedRabbit();
 
             //Asignación de parámetros

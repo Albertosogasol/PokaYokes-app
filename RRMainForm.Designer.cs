@@ -70,8 +70,8 @@
             this.RRNumberTextBox = new System.Windows.Forms.TextBox();
             this.RRModButton = new System.Windows.Forms.Button();
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
-            this.closeButton = new System.Windows.Forms.Button();
             this.RRAddButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
@@ -437,6 +437,16 @@
             this.RRToolsGroupBox.TabStop = false;
             this.RRToolsGroupBox.Text = "Herramientas";
             // 
+            // RRAddButton
+            // 
+            this.RRAddButton.Location = new System.Drawing.Point(18, 28);
+            this.RRAddButton.Name = "RRAddButton";
+            this.RRAddButton.Size = new System.Drawing.Size(114, 52);
+            this.RRAddButton.TabIndex = 23;
+            this.RRAddButton.Text = "Añadir RedRabbit";
+            this.RRAddButton.UseVisualStyleBackColor = true;
+            this.RRAddButton.Click += new System.EventHandler(this.RRAddButton_Click);
+            // 
             // closeButton
             // 
             this.closeButton.Location = new System.Drawing.Point(18, 255);
@@ -446,15 +456,6 @@
             this.closeButton.Text = "Cerrar";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // RRAddButton
-            // 
-            this.RRAddButton.Location = new System.Drawing.Point(18, 28);
-            this.RRAddButton.Name = "RRAddButton";
-            this.RRAddButton.Size = new System.Drawing.Size(114, 52);
-            this.RRAddButton.TabIndex = 23;
-            this.RRAddButton.Text = "Añadir RedRabbit";
-            this.RRAddButton.UseVisualStyleBackColor = true;
             // 
             // RRMainForm
             // 

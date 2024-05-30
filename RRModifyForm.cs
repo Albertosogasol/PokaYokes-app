@@ -15,7 +15,8 @@ namespace PokaYokes_app
     {
         //Variable de clase 
         private RedRabbit RRModify;
-        
+
+
         public RRModifyForm(RedRabbit redRabbit)
         {
             InitializeComponent();
@@ -69,6 +70,7 @@ namespace PokaYokes_app
                 redRabbit.rrComments = RRModCommentsTextBox.Text;
                 redRabbit.rrMachine = RRModMachineTextBox.Text;
                 redRabbit.rrMonth = RRModMonthComboBox.Text;
+                redRabbit.rrNumberOriginal = RRModify.rrNumberOriginal; //Número de RedRabbit original por si se modifica dicho número
 
                 //Se crea una instancia de RedRabbitCRUD 
                 // *(1)

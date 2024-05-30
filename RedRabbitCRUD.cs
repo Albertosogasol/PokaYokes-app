@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace PokaYokes_app
         //Agregar nuevo RR
         public void CreateRR(RedRabbit redRabbit)
         {
-            try 
+            try
             {
                 using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
                 {
@@ -45,17 +46,19 @@ namespace PokaYokes_app
             }
             catch (Exception ex)
             {
-                if ((ex.Message.Contains("duplicado"))||(ex.Message.Contains("duplicate")))
+                //Excepción si existe un valor de RR duplicado
+                if ((ex.Message.Contains("duplicado")) || (ex.Message.Contains("duplicate")))
                 {
-                    MessageBox.Show("Error. Número de RR- duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error. Número de 'RR-' duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else 
+                //Excepción general
+                else
                 {
                     MessageBox.Show("Error al intentar crear el RedRabbit. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
-            
+
         }
 
         //Eliminar RR REVISAR SI ES NECESARIO COMPROBAR PARA ELIMINACIÓN EN CASCADA!!!!!!!!!!!!!
@@ -75,20 +78,20 @@ namespace PokaYokes_app
                 }
             }
         }
-    
+
         //Actualiza los datos del RR pasado por parámetro en la BBDD
+        // Actualiza los datos del RR pasado por parámetro en la BBDD
         public void UpdateRR(RedRabbit redRabbit)
         {
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
             {
                 conn.Open();
-                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @Number";
+                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @OldNumber";
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
-                try
+                    try
                     {
-                        //Asignación de valores a las variables de la consulta
-                        cmd.Parameters.AddWithValue("@Number", redRabbit.rrNumber);
+                        // Asignación de valores a las variables de la consulta
                         cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
                         cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
                         cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
@@ -100,21 +103,23 @@ namespace PokaYokes_app
                         cmd.Parameters.AddWithValue("@Month", redRabbit.rrMonth);
                         cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
                         cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
-
-                        //Ejecución del comando
-                        cmd.ExecuteNonQuery();
-                    }
-                    //catch (Exception ex)
-                    catch (DuplicateNameException ex)
-                    {
-                        MessageBox.Show("Error al añadir el rr. Ya existe una entrada con ese valor " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cmd.Parameters.AddWithValue("@OldNumber", redRabbit.rrNumber);
+                        // Ejecución del comando
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected == 0)
+                        {
+                            MessageBox.Show("No se encontró ninguna fila con el número de RR especificado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("RedRabbit actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error en la ejecución de la modificación. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
             }
         }
     }

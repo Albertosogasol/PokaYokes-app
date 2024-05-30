@@ -59,6 +59,7 @@ namespace PokaYokes_app
             RRSelected.rrDate = RRDataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
             RRSelected.rrMonth = RRDataGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
             RRSelected.rrCalibrationChk = Convert.ToBoolean(RRDataGrid.Rows[e.RowIndex].Cells[11].Value.ToString());
+            RRSelected.rrNumberOriginal = RRSelected.rrNumber; //Valor oringial por si se cambia el número de RedRabbit en la modificación
 
         }
 

@@ -22,5 +22,6 @@ namespace PokaYokes_app
         public string rrComments;
         public bool rrCalibrationChk;
         public string rrMonth;
+        public string rrNumberOriginal;
     }
 }

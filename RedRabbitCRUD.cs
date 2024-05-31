@@ -62,18 +62,18 @@ namespace PokaYokes_app
         }
 
         //Eliminar RR REVISAR SI ES NECESARIO COMPROBAR PARA ELIMINACIÓN EN CASCADA!!!!!!!!!!!!!
-        public void DeleteRR(int number)
+        public void DeleteRR(int idNumber)
         {
-            //Unicamente se necesita el número de RR para eliminar
+            //Unicamente se necesita el número de ID para eliminar
 
             //Conexión con la base de datos
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
             {
                 conn.Open();
-                string sqlQuery = "DELETE FROM T10RedRabbits WHERE RRNumber = @Number";
+                string sqlQuery = "DELETE FROM T10RedRabbits WHERE RR_Id = @ID";
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Number", number);
+                    cmd.Parameters.AddWithValue("@ID", idNumber);
                     cmd.ExecuteNonQuery();
                 }
             }

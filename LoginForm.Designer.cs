@@ -40,14 +40,17 @@
             this.loginFormExitButton = new System.Windows.Forms.Button();
             this.loginFormOkButton = new System.Windows.Forms.Button();
             this.t0UsersTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T0UsersTableAdapter();
+            this.t0ActiveUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t0ActiveUsersTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T0ActiveUsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t0ActiveUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // loginFormUserComboBox
             // 
-            this.loginFormUserComboBox.DataSource = this.t0UsersBindingSource;
+            this.loginFormUserComboBox.DataSource = this.t0ActiveUsersBindingSource;
             this.loginFormUserComboBox.DisplayMember = "type_User";
             this.loginFormUserComboBox.FormattingEnabled = true;
             this.loginFormUserComboBox.Location = new System.Drawing.Point(130, 22);
@@ -129,6 +132,15 @@
             // 
             this.t0UsersTableAdapter.ClearBeforeFill = true;
             // 
+            // t0ActiveUsersBindingSource
+            // 
+            this.t0ActiveUsersBindingSource.DataMember = "T0ActiveUsers";
+            this.t0ActiveUsersBindingSource.DataSource = this.pokaYokesDataSet;
+            // 
+            // t0ActiveUsersTableAdapter
+            // 
+            this.t0ActiveUsersTableAdapter.ClearBeforeFill = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t0ActiveUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +172,7 @@
         private PokaYokesDataSet pokaYokesDataSet;
         private System.Windows.Forms.BindingSource t0UsersBindingSource;
         private PokaYokesDataSetTableAdapters.T0UsersTableAdapter t0UsersTableAdapter;
+        private System.Windows.Forms.BindingSource t0ActiveUsersBindingSource;
+        private PokaYokesDataSetTableAdapters.T0ActiveUsersTableAdapter t0ActiveUsersTableAdapter;
     }
 }

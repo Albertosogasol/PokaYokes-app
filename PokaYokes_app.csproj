@@ -96,6 +96,12 @@
     <Compile Include="RRAddForm.Designer.cs">
       <DependentUpon>RRAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RRDelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RRDelForm.Designer.cs">
+      <DependentUpon>RRDelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RRMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="RRAddForm.resx">
       <DependentUpon>RRAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RRDelForm.resx">
+      <DependentUpon>RRDelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RRMainForm.resx">
       <DependentUpon>RRMainForm.cs</DependentUpon>

@@ -15,13 +15,14 @@ namespace PokaYokes_app
     {
         //Variables de clase 
         private RedRabbit RRModify;
+        private RRMainForm currentRRMainForm;
 
-
-        public RRModifyForm(RedRabbit redRabbit)
+        public RRModifyForm(RedRabbit redRabbit, RRMainForm rrMainForm)
         {
             InitializeComponent();
             RRModify = redRabbit;
             FillBoxes(RRModify);
+            currentRRMainForm = rrMainForm;
         }
 
         //Relleno de campos
@@ -39,7 +40,7 @@ namespace PokaYokes_app
             RRModCommentsTextBox.Text = rrSent.rrComments;
             RRModMachineTextBox.Text = rrSent.rrMachine;
             RRModMonthComboBox.Text = rrSent.rrMonth;
-            RRIdTextBox.Text = rrSent.rrId;
+            RRIdTextBox.Text = rrSent.rrId.ToString();
 
         }
 
@@ -77,21 +78,29 @@ namespace PokaYokes_app
                 redRabbit.rrNumberOriginal = RRModify.rrNumberOriginal; //Número de RedRabbit original por si se modifica dicho número
                 redRabbit.rrId = RRModify.rrId;
 
-                //Se crea una instancia de RedRabbitCRUD 
-                // *(1)
-                RedRabbitCRUD redRabbitCRUD = new RedRabbitCRUD();
+                try
+                {
+                    //Se crea una instancia de RedRabbitCRUD 
+                    // *(1)
+                    RedRabbitCRUD redRabbitCRUD = new RedRabbitCRUD();
 
-                //Se ejecuta el procedimiento de modificación
-                redRabbitCRUD.UpdateRR(redRabbit);
+                    //Se ejecuta el procedimiento de modificación
+                    redRabbitCRUD.UpdateRR(redRabbit);
 
-                //Cerrar formulario
-                this.Close();
+                    //Cerrar formulario
+                    this.Close();
 
-                //Recarga del DataGridView
-                RRMainForm rrMainForm = new RRMainForm(); //Instancia a la clase RRMainForm
-                rrMainForm.RRMainFormClose(); //Se cierra el formulario
-                RRMainForm rrMainFormReload = new RRMainForm(); //Nueva instancia a la clase RRMainForm *(2)
-                rrMainFormReload.ShowDialog(); //Se muestra el formulario
+                    //Cerrar formulari RRMainForm
+                    currentRRMainForm.Close();
+
+                    ////Nueva instancia al formulario
+                    RRMainForm newRRMainForm = new RRMainForm();
+                    newRRMainForm.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error durante la ejecución de la modificación en RRModifyForm: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
                 //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.

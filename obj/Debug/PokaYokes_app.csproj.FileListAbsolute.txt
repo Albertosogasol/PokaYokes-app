@@ -53,3 +53,4 @@ C:\Users\gonzaga\Documents\Projects\PokaYokes-app\obj\Debug\PokaYokes_app.csproj
 C:\Users\gonzaga\Documents\Projects\PokaYokes-app\obj\Debug\PokaYokes_app.csproj.CoreCompileInputs.cache
 C:\Users\gonzaga\Documents\Projects\PokaYokes-app\obj\Debug\PokaYokes_app.exe
 C:\Users\gonzaga\Documents\Projects\PokaYokes-app\obj\Debug\PokaYokes_app.pdb
+C:\Users\gonzaga\Documents\Projects\PokaYokes-app\obj\Debug\PokaYokes_app.RRDelForm.resources

@@ -12,9 +12,13 @@ namespace PokaYokes_app
 {
     public partial class RRAddForm : Form
     {
-        public RRAddForm()
+        //Variables de clase
+        private RRMainForm currentRRMainForm;
+
+        public RRAddForm(RRMainForm rrMainForm)
         {
             InitializeComponent();
+            currentRRMainForm = rrMainForm;
         }
 
         //Botón añadir
@@ -47,9 +51,29 @@ namespace PokaYokes_app
                 // *(1)
                 RedRabbitCRUD redRabbitCRUD = new RedRabbitCRUD();
 
-                //Se ejecuta el procedimiento de modificación
-                redRabbitCRUD.CreateRR(redRabbit);
+                try
+                {
+                    //Se ejecuta el procedimiento de modificación
+                    redRabbitCRUD.CreateRR(redRabbit);
 
+                    //Verificación
+                    MessageBox.Show("RedRabbit añadido correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Cerrar formulario actual
+                    this.Close();
+
+                    //Cerrar formulari RRMainForm
+                    currentRRMainForm.Close();
+
+                    ////Nueva instancia al formulario
+                    RRMainForm newRRMainForm = new RRMainForm();
+                    newRRMainForm.Show();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error durante la ejecución en RRAddForms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.
             }

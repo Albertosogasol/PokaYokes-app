@@ -28,6 +28,8 @@ namespace PokaYokes_app
         //Cargar formulario
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pokaYokesDataSet.T0ActiveUsers' table. You can move, or remove it, as needed.
+            this.t0ActiveUsersTableAdapter.Fill(this.pokaYokesDataSet.T0ActiveUsers);
             // LOADER PRINCIPAL DE LA VENTANA DE LOGIN
             this.t0UsersTableAdapter.Fill(this.pokaYokesDataSet.T0Users); // Rellena la lista de usuarios
         }

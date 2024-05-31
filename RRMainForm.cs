@@ -14,6 +14,7 @@ namespace PokaYokes_app
     {
         //Variables de clase
         private RedRabbit RRSelected; // Crear objetos de la clase RedRabbit
+        public RRMainForm rrMainForm;
 
         public RRMainForm()
         {
@@ -60,6 +61,7 @@ namespace PokaYokes_app
             RRSelected.rrMonth = RRDataGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
             RRSelected.rrCalibrationChk = Convert.ToBoolean(RRDataGrid.Rows[e.RowIndex].Cells[11].Value.ToString());
             RRSelected.rrNumberOriginal = RRSelected.rrNumber; //Valor oringial por si se cambia el número de RedRabbit en la modificación
+            RRSelected.rrId = RRDataGrid.Rows[e.RowIndex].Cells[12].Value.ToString();
 
         }
 
@@ -84,12 +86,26 @@ namespace PokaYokes_app
             this.Close();
         }
 
+        //Método cerrar
+        public void RRMainFormClose()
+        {
+            //Se usa para llamar al método desde otra clase
+            this.Close();
+        }
+
         //Botón añadir RedRabbit
         private void RRAddButton_Click(object sender, EventArgs e)
         {
             //Instancia al formulario de crear RR
             var RRAddFOrm = new RRAddForm();
             RRAddFOrm.ShowDialog();
+        }
+
+        //Actualización de DataGridView
+        public void DataGridViewRefresh()
+        {
+            this.t10RedRabbitsTableAdapter.Update(this.pokaYokesDataSet.T10RedRabbits);
+            //this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
         }
     }
 }

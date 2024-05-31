@@ -7,6 +7,7 @@ using System;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Linq.Expressions;
+using PokaYokes_app;
 
 public static class MainFunctions
 {
@@ -120,6 +121,16 @@ public static class MainFunctions
         //   \d: Es un metacaracter que coincide con cualquier dígito(equivalente a `[0 - 9]`).
         //   { 1,2}: Es un cuantificador que indica que debe haber entre 1 y 2 dígitos consecutivos. Entonces `\d{ 1,2}` coincide con un número de 1 o 2 dígitos(por ejemplo, `0`, `5`, `10`, `99`).
         //4. $: Ancla el final del string.Esto significa que el patrón debe terminar justo al final del string.
+
+    }
+
+    public static void RRDataGridViewRefresh()
+    {
+        //Actualiza los datos de la DataGridView de los RR
+        //REVISASR PORQUE NO FUNCIONA
+        RRMainForm rrMainForm = new RRMainForm();
+
+        rrMainForm.DataGridViewRefresh();
 
     }
 } 

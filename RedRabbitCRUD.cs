@@ -80,18 +80,18 @@ namespace PokaYokes_app
         }
 
         //Actualiza los datos del RR pasado por parámetro en la BBDD
-        // Actualiza los datos del RR pasado por parámetro en la BBDD
         public void UpdateRR(RedRabbit redRabbit)
         {
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
             {
                 conn.Open();
-                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Number = @OldNumber";
+                string sqlQuery = "UPDATE T10RedRabbits SET RR_Number = @Number, RR_Number_Ing = @IngNumber, RR_Description = @Description, RR_Date = @Date, RR_Project = @Project, RR_Tech = @Tech, RR_Reference = @Reference, RR_CreatedBy = @CreatedBy, RR_Machine = @Machine, RR_Calibration_Month = @Month, RR_Comments = @Comments, RR_Calibration_Chk = @Chk WHERE RR_Id = @ID";
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
                     try
                     {
                         // Asignación de valores a las variables de la consulta
+                        cmd.Parameters.AddWithValue("@Number", redRabbit.rrNumber);
                         cmd.Parameters.AddWithValue("@IngNumber", redRabbit.rrNumberIng);
                         cmd.Parameters.AddWithValue("@Description", redRabbit.rrDescription);
                         cmd.Parameters.AddWithValue("@Date", redRabbit.rrDate);
@@ -103,7 +103,8 @@ namespace PokaYokes_app
                         cmd.Parameters.AddWithValue("@Month", redRabbit.rrMonth);
                         cmd.Parameters.AddWithValue("@Comments", redRabbit.rrComments);
                         cmd.Parameters.AddWithValue("@Chk", redRabbit.rrCalibrationChk);
-                        cmd.Parameters.AddWithValue("@OldNumber", redRabbit.rrNumber);
+                        cmd.Parameters.AddWithValue("@ID", redRabbit.rrId);
+                        
                         // Ejecución del comando
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected == 0)

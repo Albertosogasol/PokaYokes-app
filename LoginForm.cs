@@ -25,12 +25,14 @@ namespace PokaYokes_app
             }
         }
         
+        //Cargar formulario
         private void LoginForm_Load(object sender, EventArgs e)
         {
             // LOADER PRINCIPAL DE LA VENTANA DE LOGIN
             this.t0UsersTableAdapter.Fill(this.pokaYokesDataSet.T0Users); // Rellena la lista de usuarios
         }
         
+        //Botón OK
         private void LoginFormOkButton_Click(object sender, EventArgs e)
         {
             // REALIZA EL LOGUEO DEL USUARIO SELECCIONADO CON LA CONTRASEÑA ASIGNADA
@@ -109,9 +111,11 @@ namespace PokaYokes_app
                 }
             }
         }
+        
+        //Botón Salir
         private void loginFormExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

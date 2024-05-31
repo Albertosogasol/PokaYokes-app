@@ -13,7 +13,7 @@ namespace PokaYokes_app
 {
     public partial class RRModifyForm : Form
     {
-        //Variable de clase 
+        //Variables de clase 
         private RedRabbit RRModify;
 
 
@@ -24,6 +24,7 @@ namespace PokaYokes_app
             FillBoxes(RRModify);
         }
 
+        //Relleno de campos
         private void FillBoxes(RedRabbit rrSent)
         {
             //Rellena los campos correspondientes con los atributos del objeto pasado por argumento
@@ -38,14 +39,17 @@ namespace PokaYokes_app
             RRModCommentsTextBox.Text = rrSent.rrComments;
             RRModMachineTextBox.Text = rrSent.rrMachine;
             RRModMonthComboBox.Text = rrSent.rrMonth;
+            RRIdTextBox.Text = rrSent.rrId;
 
         }
 
+        //Botón cancelar
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Botón modificar
         private void modifyButton_Click(object sender, EventArgs e)
         {
             //Modifica con los nuevos valores el registro almacenado en la BBDD
@@ -59,7 +63,7 @@ namespace PokaYokes_app
                 //Arreglo del prefijo para que no haya espacios y tenga la estructura correcta RR-##
                 redRabbit.rrNumber = "RR-" + RRModNumTextBox.Text; //Se añade le prefijo RR-
                 redRabbit.rrNumber = MainFunctions.RRNumberFix(redRabbit.rrNumber);
-
+                //Asignación de datos al objeto redRabbit
                 redRabbit.rrNumberIng = RRModNumberIngTextBox.Text;
                 redRabbit.rrDescription = RRModDescriptionTextBox.Text;
                 redRabbit.rrProject = RRModProjectTextBox.Text;
@@ -71,6 +75,7 @@ namespace PokaYokes_app
                 redRabbit.rrMachine = RRModMachineTextBox.Text;
                 redRabbit.rrMonth = RRModMonthComboBox.Text;
                 redRabbit.rrNumberOriginal = RRModify.rrNumberOriginal; //Número de RedRabbit original por si se modifica dicho número
+                redRabbit.rrId = RRModify.rrId;
 
                 //Se crea una instancia de RedRabbitCRUD 
                 // *(1)
@@ -79,8 +84,19 @@ namespace PokaYokes_app
                 //Se ejecuta el procedimiento de modificación
                 redRabbitCRUD.UpdateRR(redRabbit);
 
+                //Cerrar formulario
+                this.Close();
+
+                //Recarga del DataGridView
+                RRMainForm rrMainForm = new RRMainForm(); //Instancia a la clase RRMainForm
+                rrMainForm.RRMainFormClose(); //Se cierra el formulario
+                RRMainForm rrMainFormReload = new RRMainForm(); //Nueva instancia a la clase RRMainForm *(2)
+                rrMainFormReload.ShowDialog(); //Se muestra el formulario
+
 
                 //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.
+
+                //*(2) Se hace así para facilitar la carga del formulario nuevamente. Cuando se ejecuta el método .Close() se liberan todos los recursos del objeto cerrado, por ello es necesario volver a crear una nueva instancia.
             }
 
 

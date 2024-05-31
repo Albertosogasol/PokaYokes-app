@@ -17,11 +17,7 @@ namespace PokaYokes_app
             InitializeComponent();
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        //Botón añadir
         private void addButton_Click(object sender, EventArgs e)
         {
             //Añade a la base de datos el RR creado
@@ -58,6 +54,11 @@ namespace PokaYokes_app
                 //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.
             }
 
+        }
+        //Botón Cancelar
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

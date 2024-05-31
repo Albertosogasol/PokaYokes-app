@@ -32,18 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RRMainForm));
             this.RRDataGridGroupBox = new System.Windows.Forms.GroupBox();
             this.RRDataGrid = new System.Windows.Forms.DataGridView();
-            this.rRNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRNumberIngDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRProjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRTechDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRCreatedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRCommentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRMachineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRCalibrationMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rRCalibrationChkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.t10RedRabbitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
             this.t10RedRabbitsTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter();
@@ -72,6 +60,19 @@
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
             this.RRAddButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.rRNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRNumberIngDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRProjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRTechDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRCreatedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRCommentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRMachineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRCalibrationMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rRCalibrationChkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.RR_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
@@ -113,7 +114,8 @@
             this.rRCommentsDataGridViewTextBoxColumn,
             this.rRMachineDataGridViewTextBoxColumn,
             this.rRCalibrationMonthDataGridViewTextBoxColumn,
-            this.rRCalibrationChkDataGridViewCheckBoxColumn});
+            this.rRCalibrationChkDataGridViewCheckBoxColumn,
+            this.RR_Id});
             this.RRDataGrid.DataSource = this.t10RedRabbitsBindingSource;
             this.RRDataGrid.Location = new System.Drawing.Point(7, 20);
             this.RRDataGrid.Name = "RRDataGrid";
@@ -121,90 +123,6 @@
             this.RRDataGrid.Size = new System.Drawing.Size(1253, 280);
             this.RRDataGrid.TabIndex = 0;
             this.RRDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RRDataGrid_CellDoubleClick);
-            // 
-            // rRNumberDataGridViewTextBoxColumn
-            // 
-            this.rRNumberDataGridViewTextBoxColumn.DataPropertyName = "RR_Number";
-            this.rRNumberDataGridViewTextBoxColumn.HeaderText = "RR_Number";
-            this.rRNumberDataGridViewTextBoxColumn.Name = "rRNumberDataGridViewTextBoxColumn";
-            this.rRNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRNumberIngDataGridViewTextBoxColumn
-            // 
-            this.rRNumberIngDataGridViewTextBoxColumn.DataPropertyName = "RR_Number_Ing";
-            this.rRNumberIngDataGridViewTextBoxColumn.HeaderText = "RR_Number_Ing";
-            this.rRNumberIngDataGridViewTextBoxColumn.Name = "rRNumberIngDataGridViewTextBoxColumn";
-            this.rRNumberIngDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRDescriptionDataGridViewTextBoxColumn
-            // 
-            this.rRDescriptionDataGridViewTextBoxColumn.DataPropertyName = "RR_Description";
-            this.rRDescriptionDataGridViewTextBoxColumn.HeaderText = "RR_Description";
-            this.rRDescriptionDataGridViewTextBoxColumn.Name = "rRDescriptionDataGridViewTextBoxColumn";
-            this.rRDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRDateDataGridViewTextBoxColumn
-            // 
-            this.rRDateDataGridViewTextBoxColumn.DataPropertyName = "RR_Date";
-            this.rRDateDataGridViewTextBoxColumn.HeaderText = "RR_Date";
-            this.rRDateDataGridViewTextBoxColumn.Name = "rRDateDataGridViewTextBoxColumn";
-            this.rRDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRProjectDataGridViewTextBoxColumn
-            // 
-            this.rRProjectDataGridViewTextBoxColumn.DataPropertyName = "RR_Project";
-            this.rRProjectDataGridViewTextBoxColumn.HeaderText = "RR_Project";
-            this.rRProjectDataGridViewTextBoxColumn.Name = "rRProjectDataGridViewTextBoxColumn";
-            this.rRProjectDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRTechDataGridViewTextBoxColumn
-            // 
-            this.rRTechDataGridViewTextBoxColumn.DataPropertyName = "RR_Tech";
-            this.rRTechDataGridViewTextBoxColumn.HeaderText = "RR_Tech";
-            this.rRTechDataGridViewTextBoxColumn.Name = "rRTechDataGridViewTextBoxColumn";
-            this.rRTechDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRReferenceDataGridViewTextBoxColumn
-            // 
-            this.rRReferenceDataGridViewTextBoxColumn.DataPropertyName = "RR_Reference";
-            this.rRReferenceDataGridViewTextBoxColumn.HeaderText = "RR_Reference";
-            this.rRReferenceDataGridViewTextBoxColumn.Name = "rRReferenceDataGridViewTextBoxColumn";
-            this.rRReferenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRCreatedByDataGridViewTextBoxColumn
-            // 
-            this.rRCreatedByDataGridViewTextBoxColumn.DataPropertyName = "RR_CreatedBy";
-            this.rRCreatedByDataGridViewTextBoxColumn.HeaderText = "RR_CreatedBy";
-            this.rRCreatedByDataGridViewTextBoxColumn.Name = "rRCreatedByDataGridViewTextBoxColumn";
-            this.rRCreatedByDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRCommentsDataGridViewTextBoxColumn
-            // 
-            this.rRCommentsDataGridViewTextBoxColumn.DataPropertyName = "RR_Comments";
-            this.rRCommentsDataGridViewTextBoxColumn.HeaderText = "RR_Comments";
-            this.rRCommentsDataGridViewTextBoxColumn.Name = "rRCommentsDataGridViewTextBoxColumn";
-            this.rRCommentsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRMachineDataGridViewTextBoxColumn
-            // 
-            this.rRMachineDataGridViewTextBoxColumn.DataPropertyName = "RR_Machine";
-            this.rRMachineDataGridViewTextBoxColumn.HeaderText = "RR_Machine";
-            this.rRMachineDataGridViewTextBoxColumn.Name = "rRMachineDataGridViewTextBoxColumn";
-            this.rRMachineDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRCalibrationMonthDataGridViewTextBoxColumn
-            // 
-            this.rRCalibrationMonthDataGridViewTextBoxColumn.DataPropertyName = "RR_Calibration_Month";
-            this.rRCalibrationMonthDataGridViewTextBoxColumn.HeaderText = "RR_Calibration_Month";
-            this.rRCalibrationMonthDataGridViewTextBoxColumn.Name = "rRCalibrationMonthDataGridViewTextBoxColumn";
-            this.rRCalibrationMonthDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rRCalibrationChkDataGridViewCheckBoxColumn
-            // 
-            this.rRCalibrationChkDataGridViewCheckBoxColumn.DataPropertyName = "RR_Calibration_Chk";
-            this.rRCalibrationChkDataGridViewCheckBoxColumn.HeaderText = "RR_Calibration_Chk";
-            this.rRCalibrationChkDataGridViewCheckBoxColumn.Name = "rRCalibrationChkDataGridViewCheckBoxColumn";
-            this.rRCalibrationChkDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // t10RedRabbitsBindingSource
             // 
@@ -457,6 +375,98 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // rRNumberDataGridViewTextBoxColumn
+            // 
+            this.rRNumberDataGridViewTextBoxColumn.DataPropertyName = "RR_Number";
+            this.rRNumberDataGridViewTextBoxColumn.HeaderText = "RR_Number";
+            this.rRNumberDataGridViewTextBoxColumn.Name = "rRNumberDataGridViewTextBoxColumn";
+            this.rRNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRNumberIngDataGridViewTextBoxColumn
+            // 
+            this.rRNumberIngDataGridViewTextBoxColumn.DataPropertyName = "RR_Number_Ing";
+            this.rRNumberIngDataGridViewTextBoxColumn.HeaderText = "RR_Number_Ing";
+            this.rRNumberIngDataGridViewTextBoxColumn.Name = "rRNumberIngDataGridViewTextBoxColumn";
+            this.rRNumberIngDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRDescriptionDataGridViewTextBoxColumn
+            // 
+            this.rRDescriptionDataGridViewTextBoxColumn.DataPropertyName = "RR_Description";
+            this.rRDescriptionDataGridViewTextBoxColumn.HeaderText = "RR_Description";
+            this.rRDescriptionDataGridViewTextBoxColumn.Name = "rRDescriptionDataGridViewTextBoxColumn";
+            this.rRDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRDateDataGridViewTextBoxColumn
+            // 
+            this.rRDateDataGridViewTextBoxColumn.DataPropertyName = "RR_Date";
+            this.rRDateDataGridViewTextBoxColumn.HeaderText = "RR_Date";
+            this.rRDateDataGridViewTextBoxColumn.Name = "rRDateDataGridViewTextBoxColumn";
+            this.rRDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRProjectDataGridViewTextBoxColumn
+            // 
+            this.rRProjectDataGridViewTextBoxColumn.DataPropertyName = "RR_Project";
+            this.rRProjectDataGridViewTextBoxColumn.HeaderText = "RR_Project";
+            this.rRProjectDataGridViewTextBoxColumn.Name = "rRProjectDataGridViewTextBoxColumn";
+            this.rRProjectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRTechDataGridViewTextBoxColumn
+            // 
+            this.rRTechDataGridViewTextBoxColumn.DataPropertyName = "RR_Tech";
+            this.rRTechDataGridViewTextBoxColumn.HeaderText = "RR_Tech";
+            this.rRTechDataGridViewTextBoxColumn.Name = "rRTechDataGridViewTextBoxColumn";
+            this.rRTechDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRReferenceDataGridViewTextBoxColumn
+            // 
+            this.rRReferenceDataGridViewTextBoxColumn.DataPropertyName = "RR_Reference";
+            this.rRReferenceDataGridViewTextBoxColumn.HeaderText = "RR_Reference";
+            this.rRReferenceDataGridViewTextBoxColumn.Name = "rRReferenceDataGridViewTextBoxColumn";
+            this.rRReferenceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRCreatedByDataGridViewTextBoxColumn
+            // 
+            this.rRCreatedByDataGridViewTextBoxColumn.DataPropertyName = "RR_CreatedBy";
+            this.rRCreatedByDataGridViewTextBoxColumn.HeaderText = "RR_CreatedBy";
+            this.rRCreatedByDataGridViewTextBoxColumn.Name = "rRCreatedByDataGridViewTextBoxColumn";
+            this.rRCreatedByDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRCommentsDataGridViewTextBoxColumn
+            // 
+            this.rRCommentsDataGridViewTextBoxColumn.DataPropertyName = "RR_Comments";
+            this.rRCommentsDataGridViewTextBoxColumn.HeaderText = "RR_Comments";
+            this.rRCommentsDataGridViewTextBoxColumn.Name = "rRCommentsDataGridViewTextBoxColumn";
+            this.rRCommentsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRMachineDataGridViewTextBoxColumn
+            // 
+            this.rRMachineDataGridViewTextBoxColumn.DataPropertyName = "RR_Machine";
+            this.rRMachineDataGridViewTextBoxColumn.HeaderText = "RR_Machine";
+            this.rRMachineDataGridViewTextBoxColumn.Name = "rRMachineDataGridViewTextBoxColumn";
+            this.rRMachineDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRCalibrationMonthDataGridViewTextBoxColumn
+            // 
+            this.rRCalibrationMonthDataGridViewTextBoxColumn.DataPropertyName = "RR_Calibration_Month";
+            this.rRCalibrationMonthDataGridViewTextBoxColumn.HeaderText = "RR_Calibration_Month";
+            this.rRCalibrationMonthDataGridViewTextBoxColumn.Name = "rRCalibrationMonthDataGridViewTextBoxColumn";
+            this.rRCalibrationMonthDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rRCalibrationChkDataGridViewCheckBoxColumn
+            // 
+            this.rRCalibrationChkDataGridViewCheckBoxColumn.DataPropertyName = "RR_Calibration_Chk";
+            this.rRCalibrationChkDataGridViewCheckBoxColumn.HeaderText = "RR_Calibration_Chk";
+            this.rRCalibrationChkDataGridViewCheckBoxColumn.Name = "rRCalibrationChkDataGridViewCheckBoxColumn";
+            this.rRCalibrationChkDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // RR_Id
+            // 
+            this.RR_Id.DataPropertyName = "RR_Id";
+            this.RR_Id.HeaderText = "RR_Id";
+            this.RR_Id.Name = "RR_Id";
+            this.RR_Id.ReadOnly = true;
+            this.RR_Id.Visible = false;
+            // 
             // RRMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,18 +498,6 @@
         private PokaYokesDataSet pokaYokesDataSet;
         private System.Windows.Forms.BindingSource t10RedRabbitsBindingSource;
         private PokaYokesDataSetTableAdapters.T10RedRabbitsTableAdapter t10RedRabbitsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberIngDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRProjectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRTechDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRReferenceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRCreatedByDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRCommentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRMachineDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rRCalibrationMonthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn rRCalibrationChkDataGridViewCheckBoxColumn;
         private System.Windows.Forms.GroupBox RRDataGroupBox;
         private System.Windows.Forms.GroupBox RRToolsGroupBox;
         private System.Windows.Forms.Label RRNumberIngLabel;
@@ -525,5 +523,18 @@
         private System.Windows.Forms.Button RRModButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button RRAddButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberIngDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRDescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRProjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRTechDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRReferenceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRCreatedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRCommentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRMachineDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rRCalibrationMonthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn rRCalibrationChkDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RR_Id;
     }
 }

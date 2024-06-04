@@ -90,6 +90,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedRabbit.cs" />
     <Compile Include="RedRabbitCRUD.cs" />
+    <Compile Include="RoleVariables.cs" />
     <Compile Include="RRAddForm.cs">
       <SubType>Form</SubType>
     </Compile>

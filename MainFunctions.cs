@@ -133,5 +133,13 @@ public static class MainFunctions
         rrMainForm.DataGridViewRefresh();
 
     }
+
+    public static void RolePermissions(string Role)
+    {
+        //Asigna los valores del Rol del usuario actual en la clase RoleVariables.cs
+        RoleSession.CurrentRole.role = Role;
+
+
+    }
 } 
 

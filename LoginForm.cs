@@ -40,6 +40,7 @@ namespace PokaYokes_app
             // REALIZA EL LOGUEO DEL USUARIO SELECCIONADO CON LA CONTRASEÑA ASIGNADA
 
             UserVariables userData = new UserVariables(); //Creación objeto de la clase UserVariables donde se almacenará la informacion del usuario
+            RoleVariables rolePermissions = new RoleVariables(); //Creación objeto de la clase RolPermissions para almacenar los permisos del usuario
 
             // Conexión con la base de datos
             using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
@@ -86,7 +87,11 @@ namespace PokaYokes_app
                                 userData.username = reader["type_Username"].ToString();
                                 userData.password = reader["type_Password"].ToString();
                                 userData.userRol = reader["RoleName"].ToString(); // Obtener el nombre del rol
-                                                                                  // Si las credenciales son correctas, se inicia el programa
+                                
+                                //Obtener permisos del rol
+
+
+                                // Si las credenciales son correctas, se inicia el programa
                                 if (userData.password == loginFormPasswdBox.Text)
                                 {
                                     this.Hide();

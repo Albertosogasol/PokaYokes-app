@@ -125,5 +125,10 @@ namespace PokaYokes_app
             //this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
         }
 
+        //Activación / Desactivación en función del ROL
+        public void ButtonActivation()
+        {
+
+        }
     }
 }

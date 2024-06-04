@@ -74,7 +74,7 @@ namespace PokaYokes_app
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error durante la ejecución en RRAddForms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error durante la ejecución en RRAddForms: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     //*(1) Esto se hace porque sino estariamos intentando llamar a un método de instancia (UpdateRR) de la clase RedRabbitCRUD como si fuera un método estático. En C# los metodos de instancia requieren que crees una instancia de la clase antes de poder llamarlos.

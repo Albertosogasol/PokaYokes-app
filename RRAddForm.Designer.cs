@@ -104,7 +104,7 @@
             "OCTUBRE",
             "NOVIEMBRE",
             "DICIEMBRE"});
-            this.MonthComboBox.Location = new System.Drawing.Point(406, 162);
+            this.MonthComboBox.Location = new System.Drawing.Point(406, 159);
             this.MonthComboBox.Name = "MonthComboBox";
             this.MonthComboBox.Size = new System.Drawing.Size(129, 21);
             this.MonthComboBox.TabIndex = 43;
@@ -112,7 +112,7 @@
             // MonthLabel
             // 
             this.MonthLabel.AutoSize = true;
-            this.MonthLabel.Location = new System.Drawing.Point(337, 162);
+            this.MonthLabel.Location = new System.Drawing.Point(337, 159);
             this.MonthLabel.Name = "MonthLabel";
             this.MonthLabel.Size = new System.Drawing.Size(59, 13);
             this.MonthLabel.TabIndex = 42;
@@ -121,7 +121,7 @@
             // DatePicker
             // 
             this.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DatePicker.Location = new System.Drawing.Point(406, 58);
+            this.DatePicker.Location = new System.Drawing.Point(406, 55);
             this.DatePicker.Name = "DatePicker";
             this.DatePicker.Size = new System.Drawing.Size(129, 20);
             this.DatePicker.TabIndex = 40;
@@ -146,7 +146,7 @@
             // MachineLabel
             // 
             this.MachineLabel.AutoSize = true;
-            this.MachineLabel.Location = new System.Drawing.Point(337, 128);
+            this.MachineLabel.Location = new System.Drawing.Point(337, 125);
             this.MachineLabel.Name = "MachineLabel";
             this.MachineLabel.Size = new System.Drawing.Size(48, 13);
             this.MachineLabel.TabIndex = 37;
@@ -154,7 +154,7 @@
             // 
             // MachineTextBox
             // 
-            this.MachineTextBox.Location = new System.Drawing.Point(406, 125);
+            this.MachineTextBox.Location = new System.Drawing.Point(406, 122);
             this.MachineTextBox.Name = "MachineTextBox";
             this.MachineTextBox.Size = new System.Drawing.Size(129, 20);
             this.MachineTextBox.TabIndex = 36;
@@ -178,7 +178,7 @@
             // DatePickerLabel
             // 
             this.DatePickerLabel.AutoSize = true;
-            this.DatePickerLabel.Location = new System.Drawing.Point(337, 61);
+            this.DatePickerLabel.Location = new System.Drawing.Point(337, 58);
             this.DatePickerLabel.Name = "DatePickerLabel";
             this.DatePickerLabel.Size = new System.Drawing.Size(57, 13);
             this.DatePickerLabel.TabIndex = 33;
@@ -305,12 +305,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 450);
+            this.ClientSize = new System.Drawing.Size(618, 441);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.DataGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(634, 480);
+            this.MinimumSize = new System.Drawing.Size(634, 480);
             this.Name = "RRAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir RR";
             this.DataGroupBox.ResumeLayout(false);
             this.DataGroupBox.PerformLayout();

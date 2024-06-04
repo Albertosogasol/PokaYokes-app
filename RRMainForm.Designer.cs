@@ -71,9 +71,9 @@
             this.RRNumberTextBox = new System.Windows.Forms.TextBox();
             this.RRModButton = new System.Windows.Forms.Button();
             this.RRToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.RRDelButton = new System.Windows.Forms.Button();
             this.RRAddButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.RRDelButton = new System.Windows.Forms.Button();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
@@ -84,12 +84,13 @@
             // 
             // RRDataGridGroupBox
             // 
-            this.RRDataGridGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.RRDataGridGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RRDataGridGroupBox.Controls.Add(this.RRDataGrid);
-            this.RRDataGridGroupBox.Location = new System.Drawing.Point(12, 345);
+            this.RRDataGridGroupBox.Location = new System.Drawing.Point(12, 312);
             this.RRDataGridGroupBox.Name = "RRDataGridGroupBox";
-            this.RRDataGridGroupBox.Size = new System.Drawing.Size(1285, 306);
+            this.RRDataGridGroupBox.Size = new System.Drawing.Size(1285, 351);
             this.RRDataGridGroupBox.TabIndex = 0;
             this.RRDataGridGroupBox.TabStop = false;
             this.RRDataGridGroupBox.Text = "Red Rabbits";
@@ -121,91 +122,92 @@
             this.RRDataGrid.Location = new System.Drawing.Point(7, 20);
             this.RRDataGrid.Name = "RRDataGrid";
             this.RRDataGrid.ReadOnly = true;
-            this.RRDataGrid.Size = new System.Drawing.Size(1253, 280);
+            this.RRDataGrid.Size = new System.Drawing.Size(1253, 325);
             this.RRDataGrid.TabIndex = 0;
             this.RRDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RRDataGrid_CellDoubleClick);
             // 
             // rRNumberDataGridViewTextBoxColumn
             // 
             this.rRNumberDataGridViewTextBoxColumn.DataPropertyName = "RR_Number";
-            this.rRNumberDataGridViewTextBoxColumn.HeaderText = "RR_Number";
+            this.rRNumberDataGridViewTextBoxColumn.HeaderText = "Número";
             this.rRNumberDataGridViewTextBoxColumn.Name = "rRNumberDataGridViewTextBoxColumn";
             this.rRNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRNumberIngDataGridViewTextBoxColumn
             // 
             this.rRNumberIngDataGridViewTextBoxColumn.DataPropertyName = "RR_Number_Ing";
-            this.rRNumberIngDataGridViewTextBoxColumn.HeaderText = "RR_Number_Ing";
+            this.rRNumberIngDataGridViewTextBoxColumn.HeaderText = "Número Ing.";
             this.rRNumberIngDataGridViewTextBoxColumn.Name = "rRNumberIngDataGridViewTextBoxColumn";
             this.rRNumberIngDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRDescriptionDataGridViewTextBoxColumn
             // 
             this.rRDescriptionDataGridViewTextBoxColumn.DataPropertyName = "RR_Description";
-            this.rRDescriptionDataGridViewTextBoxColumn.HeaderText = "RR_Description";
+            this.rRDescriptionDataGridViewTextBoxColumn.HeaderText = "Descripción";
             this.rRDescriptionDataGridViewTextBoxColumn.Name = "rRDescriptionDataGridViewTextBoxColumn";
             this.rRDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRDateDataGridViewTextBoxColumn
             // 
             this.rRDateDataGridViewTextBoxColumn.DataPropertyName = "RR_Date";
-            this.rRDateDataGridViewTextBoxColumn.HeaderText = "RR_Date";
+            this.rRDateDataGridViewTextBoxColumn.HeaderText = "Fecha alta";
             this.rRDateDataGridViewTextBoxColumn.Name = "rRDateDataGridViewTextBoxColumn";
             this.rRDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRProjectDataGridViewTextBoxColumn
             // 
             this.rRProjectDataGridViewTextBoxColumn.DataPropertyName = "RR_Project";
-            this.rRProjectDataGridViewTextBoxColumn.HeaderText = "RR_Project";
+            this.rRProjectDataGridViewTextBoxColumn.HeaderText = "Proyecto";
             this.rRProjectDataGridViewTextBoxColumn.Name = "rRProjectDataGridViewTextBoxColumn";
             this.rRProjectDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRTechDataGridViewTextBoxColumn
             // 
             this.rRTechDataGridViewTextBoxColumn.DataPropertyName = "RR_Tech";
-            this.rRTechDataGridViewTextBoxColumn.HeaderText = "RR_Tech";
+            this.rRTechDataGridViewTextBoxColumn.HeaderText = "Tecnología";
             this.rRTechDataGridViewTextBoxColumn.Name = "rRTechDataGridViewTextBoxColumn";
             this.rRTechDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRReferenceDataGridViewTextBoxColumn
             // 
             this.rRReferenceDataGridViewTextBoxColumn.DataPropertyName = "RR_Reference";
-            this.rRReferenceDataGridViewTextBoxColumn.HeaderText = "RR_Reference";
+            this.rRReferenceDataGridViewTextBoxColumn.HeaderText = "Referencias";
             this.rRReferenceDataGridViewTextBoxColumn.Name = "rRReferenceDataGridViewTextBoxColumn";
             this.rRReferenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRCreatedByDataGridViewTextBoxColumn
             // 
             this.rRCreatedByDataGridViewTextBoxColumn.DataPropertyName = "RR_CreatedBy";
-            this.rRCreatedByDataGridViewTextBoxColumn.HeaderText = "RR_CreatedBy";
+            this.rRCreatedByDataGridViewTextBoxColumn.HeaderText = "Creado por";
             this.rRCreatedByDataGridViewTextBoxColumn.Name = "rRCreatedByDataGridViewTextBoxColumn";
             this.rRCreatedByDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRCommentsDataGridViewTextBoxColumn
             // 
+            this.rRCommentsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.rRCommentsDataGridViewTextBoxColumn.DataPropertyName = "RR_Comments";
-            this.rRCommentsDataGridViewTextBoxColumn.HeaderText = "RR_Comments";
+            this.rRCommentsDataGridViewTextBoxColumn.HeaderText = "Comentarios";
             this.rRCommentsDataGridViewTextBoxColumn.Name = "rRCommentsDataGridViewTextBoxColumn";
             this.rRCommentsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRMachineDataGridViewTextBoxColumn
             // 
             this.rRMachineDataGridViewTextBoxColumn.DataPropertyName = "RR_Machine";
-            this.rRMachineDataGridViewTextBoxColumn.HeaderText = "RR_Machine";
+            this.rRMachineDataGridViewTextBoxColumn.HeaderText = "Máquina";
             this.rRMachineDataGridViewTextBoxColumn.Name = "rRMachineDataGridViewTextBoxColumn";
             this.rRMachineDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRCalibrationMonthDataGridViewTextBoxColumn
             // 
             this.rRCalibrationMonthDataGridViewTextBoxColumn.DataPropertyName = "RR_Calibration_Month";
-            this.rRCalibrationMonthDataGridViewTextBoxColumn.HeaderText = "RR_Calibration_Month";
+            this.rRCalibrationMonthDataGridViewTextBoxColumn.HeaderText = "Mes Calibración";
             this.rRCalibrationMonthDataGridViewTextBoxColumn.Name = "rRCalibrationMonthDataGridViewTextBoxColumn";
             this.rRCalibrationMonthDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rRCalibrationChkDataGridViewCheckBoxColumn
             // 
             this.rRCalibrationChkDataGridViewCheckBoxColumn.DataPropertyName = "RR_Calibration_Chk";
-            this.rRCalibrationChkDataGridViewCheckBoxColumn.HeaderText = "RR_Calibration_Chk";
+            this.rRCalibrationChkDataGridViewCheckBoxColumn.HeaderText = "Calibrado OK";
             this.rRCalibrationChkDataGridViewCheckBoxColumn.Name = "rRCalibrationChkDataGridViewCheckBoxColumn";
             this.rRCalibrationChkDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
@@ -233,8 +235,6 @@
             // 
             // RRDataGroupBox
             // 
-            this.RRDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.RRDataGroupBox.Controls.Add(this.RRDatePicker);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsLabel);
             this.RRDataGroupBox.Controls.Add(this.RRCommentsTextBox);
@@ -257,7 +257,7 @@
             this.RRDataGroupBox.Controls.Add(this.RRNumberTextBox);
             this.RRDataGroupBox.Location = new System.Drawing.Point(12, 12);
             this.RRDataGroupBox.Name = "RRDataGroupBox";
-            this.RRDataGroupBox.Size = new System.Drawing.Size(615, 327);
+            this.RRDataGroupBox.Size = new System.Drawing.Size(615, 294);
             this.RRDataGroupBox.TabIndex = 1;
             this.RRDataGroupBox.TabStop = false;
             this.RRDataGroupBox.Text = "Datos";
@@ -436,18 +436,27 @@
             // 
             // RRToolsGroupBox
             // 
-            this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RRToolsGroupBox.Controls.Add(this.RRDelButton);
             this.RRToolsGroupBox.Controls.Add(this.RRAddButton);
             this.RRToolsGroupBox.Controls.Add(this.closeButton);
             this.RRToolsGroupBox.Controls.Add(this.RRModButton);
             this.RRToolsGroupBox.Location = new System.Drawing.Point(633, 12);
             this.RRToolsGroupBox.Name = "RRToolsGroupBox";
-            this.RRToolsGroupBox.Size = new System.Drawing.Size(664, 327);
+            this.RRToolsGroupBox.Size = new System.Drawing.Size(664, 294);
             this.RRToolsGroupBox.TabIndex = 2;
             this.RRToolsGroupBox.TabStop = false;
             this.RRToolsGroupBox.Text = "Herramientas";
+            // 
+            // RRDelButton
+            // 
+            this.RRDelButton.Location = new System.Drawing.Point(18, 157);
+            this.RRDelButton.Name = "RRDelButton";
+            this.RRDelButton.Size = new System.Drawing.Size(114, 52);
+            this.RRDelButton.TabIndex = 24;
+            this.RRDelButton.Text = "Eliminar RedRabbit";
+            this.RRDelButton.UseVisualStyleBackColor = true;
+            this.RRDelButton.Click += new System.EventHandler(this.RRDelButton_Click);
             // 
             // RRAddButton
             // 
@@ -461,23 +470,13 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(18, 255);
+            this.closeButton.Location = new System.Drawing.Point(18, 224);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(114, 52);
             this.closeButton.TabIndex = 22;
             this.closeButton.Text = "Cerrar";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // RRDelButton
-            // 
-            this.RRDelButton.Location = new System.Drawing.Point(18, 157);
-            this.RRDelButton.Name = "RRDelButton";
-            this.RRDelButton.Size = new System.Drawing.Size(114, 52);
-            this.RRDelButton.TabIndex = 24;
-            this.RRDelButton.Text = "Eliminar RedRabbit";
-            this.RRDelButton.UseVisualStyleBackColor = true;
-            this.RRDelButton.Click += new System.EventHandler(this.RRDelButton_Click);
             // 
             // RRMainForm
             // 
@@ -490,6 +489,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(50, 50);
             this.Name = "RRMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RRMainForm";
             this.Load += new System.EventHandler(this.RRMainForm_Load);
             this.RRDataGridGroupBox.ResumeLayout(false);
@@ -535,6 +535,7 @@
         private System.Windows.Forms.Button RRModButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button RRAddButton;
+        private System.Windows.Forms.Button RRDelButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRNumberIngDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rRDescriptionDataGridViewTextBoxColumn;
@@ -548,6 +549,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rRCalibrationMonthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rRCalibrationChkDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RR_Id;
-        private System.Windows.Forms.Button RRDelButton;
     }
 }

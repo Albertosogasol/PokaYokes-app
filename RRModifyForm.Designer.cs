@@ -327,11 +327,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(609, 450);
+            this.ClientSize = new System.Drawing.Size(618, 441);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.RRModifyDataGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(634, 480);
+            this.MinimumSize = new System.Drawing.Size(634, 480);
             this.Name = "RRModifyForm";
             this.Text = "Modificar RedRabbit";
             this.RRModifyDataGroupBox.ResumeLayout(false);

@@ -32,6 +32,8 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.delButton = new System.Windows.Forms.Button();
             this.DataGroupBox = new System.Windows.Forms.GroupBox();
+            this.RRIdTextBox = new System.Windows.Forms.TextBox();
+            this.RRIdLabel = new System.Windows.Forms.Label();
             this.MonthComboBox = new System.Windows.Forms.ComboBox();
             this.MonthLabel = new System.Windows.Forms.Label();
             this.DatePicker = new System.Windows.Forms.DateTimePicker();
@@ -54,8 +56,6 @@
             this.NumberIngTextBox = new System.Windows.Forms.TextBox();
             this.NumTextBox = new System.Windows.Forms.TextBox();
             this.NumLabel = new System.Windows.Forms.Label();
-            this.RRIdTextBox = new System.Windows.Forms.TextBox();
-            this.RRIdLabel = new System.Windows.Forms.Label();
             this.DataGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +112,23 @@
             this.DataGroupBox.TabIndex = 5;
             this.DataGroupBox.TabStop = false;
             this.DataGroupBox.Text = "Datos";
+            // 
+            // RRIdTextBox
+            // 
+            this.RRIdTextBox.Location = new System.Drawing.Point(502, 23);
+            this.RRIdTextBox.Name = "RRIdTextBox";
+            this.RRIdTextBox.ReadOnly = true;
+            this.RRIdTextBox.Size = new System.Drawing.Size(33, 20);
+            this.RRIdTextBox.TabIndex = 47;
+            // 
+            // RRIdLabel
+            // 
+            this.RRIdLabel.AutoSize = true;
+            this.RRIdLabel.Location = new System.Drawing.Point(479, 26);
+            this.RRIdLabel.Name = "RRIdLabel";
+            this.RRIdLabel.Size = new System.Drawing.Size(18, 13);
+            this.RRIdLabel.TabIndex = 46;
+            this.RRIdLabel.Text = "ID";
             // 
             // MonthComboBox
             // 
@@ -305,33 +322,20 @@
             this.NumLabel.TabIndex = 0;
             this.NumLabel.Text = "RR-";
             // 
-            // RRIdTextBox
-            // 
-            this.RRIdTextBox.Location = new System.Drawing.Point(502, 23);
-            this.RRIdTextBox.Name = "RRIdTextBox";
-            this.RRIdTextBox.ReadOnly = true;
-            this.RRIdTextBox.Size = new System.Drawing.Size(33, 20);
-            this.RRIdTextBox.TabIndex = 47;
-            // 
-            // RRIdLabel
-            // 
-            this.RRIdLabel.AutoSize = true;
-            this.RRIdLabel.Location = new System.Drawing.Point(479, 26);
-            this.RRIdLabel.Name = "RRIdLabel";
-            this.RRIdLabel.Size = new System.Drawing.Size(18, 13);
-            this.RRIdLabel.TabIndex = 46;
-            this.RRIdLabel.Text = "ID";
-            // 
             // RRDelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 452);
+            this.ClientSize = new System.Drawing.Size(618, 441);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.delButton);
             this.Controls.Add(this.DataGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(634, 480);
+            this.MinimumSize = new System.Drawing.Size(634, 480);
             this.Name = "RRDelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar RedRabbit";
             this.DataGroupBox.ResumeLayout(false);
             this.DataGroupBox.PerformLayout();

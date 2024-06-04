@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.loginFormUserComboBox = new System.Windows.Forms.ComboBox();
-            this.t0UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t0ActiveUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pokaYokesDataSet = new PokaYokes_app.PokaYokesDataSet();
+            this.t0UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginFormUserLabel = new System.Windows.Forms.Label();
             this.loginFormPasswLabel = new System.Windows.Forms.Label();
             this.loginFormPasswdBox = new System.Windows.Forms.TextBox();
@@ -40,12 +41,11 @@
             this.loginFormExitButton = new System.Windows.Forms.Button();
             this.loginFormOkButton = new System.Windows.Forms.Button();
             this.t0UsersTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T0UsersTableAdapter();
-            this.t0ActiveUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t0ActiveUsersTableAdapter = new PokaYokes_app.PokaYokesDataSetTableAdapters.T0ActiveUsersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t0ActiveUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // loginFormUserComboBox
@@ -58,15 +58,20 @@
             this.loginFormUserComboBox.Size = new System.Drawing.Size(121, 21);
             this.loginFormUserComboBox.TabIndex = 0;
             // 
-            // t0UsersBindingSource
+            // t0ActiveUsersBindingSource
             // 
-            this.t0UsersBindingSource.DataMember = "T0Users";
-            this.t0UsersBindingSource.DataSource = this.pokaYokesDataSet;
+            this.t0ActiveUsersBindingSource.DataMember = "T0ActiveUsers";
+            this.t0ActiveUsersBindingSource.DataSource = this.pokaYokesDataSet;
             // 
             // pokaYokesDataSet
             // 
             this.pokaYokesDataSet.DataSetName = "PokaYokesDataSet";
             this.pokaYokesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t0UsersBindingSource
+            // 
+            this.t0UsersBindingSource.DataMember = "T0Users";
+            this.t0UsersBindingSource.DataSource = this.pokaYokesDataSet;
             // 
             // loginFormUserLabel
             // 
@@ -132,11 +137,6 @@
             // 
             this.t0UsersTableAdapter.ClearBeforeFill = true;
             // 
-            // t0ActiveUsersBindingSource
-            // 
-            this.t0ActiveUsersBindingSource.DataMember = "T0ActiveUsers";
-            this.t0ActiveUsersBindingSource.DataSource = this.pokaYokesDataSet;
-            // 
             // t0ActiveUsersTableAdapter
             // 
             this.t0ActiveUsersTableAdapter.ClearBeforeFill = true;
@@ -151,11 +151,11 @@
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t0ActiveUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t0UsersBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.t0ActiveUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

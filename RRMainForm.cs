@@ -14,6 +14,7 @@ namespace PokaYokes_app
     {
         //Variables de clase
         private RedRabbit RRSelected; // Crear objetos de la clase RedRabbit
+        public RRMainForm rrMainForm;
 
         public RRMainForm()
         {
@@ -26,6 +27,8 @@ namespace PokaYokes_app
             // TODO: This line of code loads data into the 'pokaYokesDataSet.T10RedRabbits' table. You can move, or remove it, as needed.
             this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits); //Rellena el DataGridView con los datos de la BBDD
 
+            // Activación/desactivación de botones según roles
+            //RRModButton.
         }
 
         //Doble click
@@ -59,16 +62,18 @@ namespace PokaYokes_app
             RRSelected.rrDate = RRDataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
             RRSelected.rrMonth = RRDataGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
             RRSelected.rrCalibrationChk = Convert.ToBoolean(RRDataGrid.Rows[e.RowIndex].Cells[11].Value.ToString());
+            RRSelected.rrNumberOriginal = RRSelected.rrNumber; //Valor oringial por si se cambia el número de RedRabbit en la modificación
+            RRSelected.rrId = Convert.ToInt32(RRDataGrid.Rows[e.RowIndex].Cells[12].Value);
 
         }
 
-
+        //Botón modificar
         private void RRModButton_Click(object sender, EventArgs e)
         {
         if (RRSelected != null)
             {
                 //Instancia al formulario de editar RR
-                var RRModForm = new RRModifyForm(RRSelected); //Se pasa como parámetro el objeto de la clase RedRabbit
+                var RRModForm = new RRModifyForm(RRSelected, this); //Se pasa como parámetro el objeto de la clase RedRabbit
                 RRModForm.ShowDialog();
             }
         else
@@ -77,9 +82,48 @@ namespace PokaYokes_app
             }
         }
 
+        //Botón eliminar
+        private void RRDelButton_Click(object sender, EventArgs e)
+        {
+            if (RRSelected != null)
+            {
+                //Instancia al formulario de eliminar
+                var rrDelForm = new RRDelForm(RRSelected);
+                rrDelForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro antes de eliminar.", "Seleccione un registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        
+        //Botón cerrar
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        //Método cerrar
+        public void RRMainFormClose()
+        {
+            //Se usa para llamar al método desde otra clase
+            this.Close();
+        }
+
+        //Botón añadir RedRabbit
+        private void RRAddButton_Click(object sender, EventArgs e)
+        {
+            //Instancia al formulario de crear RR
+            var RRAddFOrm = new RRAddForm(this);
+            RRAddFOrm.ShowDialog();
+        }
+
+        //Actualización de DataGridView
+        public void DataGridViewRefresh()
+        {
+            this.t10RedRabbitsTableAdapter.Update(this.pokaYokesDataSet.T10RedRabbits);
+            //this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
+        }
+
     }
 }

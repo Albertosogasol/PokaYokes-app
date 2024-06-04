@@ -12,14 +12,14 @@ namespace PokaYokes_app
 {
     public partial class MainForm : Form
     {
+        //Variables de clase
         public UserVariables userData;
 
-
+        //Formulario principal
         public MainForm(UserVariables userData)
         {
             InitializeComponent();
             this.userData = userData;
-            MessageBox.Show(userData.user);
         }
 
         // Abrir formulario de modificación de RR
@@ -29,6 +29,19 @@ namespace PokaYokes_app
             RRForm.ShowDialog();
         }
 
+        //Cierra todo el programa
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //Cambiar usuario Botón
+        private void changeUserButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
     }
 
 

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RRModifyForm));
             this.RRModifyDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.RRIdTextBox = new System.Windows.Forms.TextBox();
+            this.RRIdLabel = new System.Windows.Forms.Label();
             this.RRModMonthComboBox = new System.Windows.Forms.ComboBox();
             this.RRModMonthLabel = new System.Windows.Forms.Label();
             this.RRModDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -59,6 +61,8 @@
             // 
             // RRModifyDataGroupBox
             // 
+            this.RRModifyDataGroupBox.Controls.Add(this.RRIdTextBox);
+            this.RRModifyDataGroupBox.Controls.Add(this.RRIdLabel);
             this.RRModifyDataGroupBox.Controls.Add(this.RRModMonthComboBox);
             this.RRModifyDataGroupBox.Controls.Add(this.RRModMonthLabel);
             this.RRModifyDataGroupBox.Controls.Add(this.RRModDatePicker);
@@ -87,6 +91,23 @@
             this.RRModifyDataGroupBox.TabIndex = 0;
             this.RRModifyDataGroupBox.TabStop = false;
             this.RRModifyDataGroupBox.Text = "Datos";
+            // 
+            // RRIdTextBox
+            // 
+            this.RRIdTextBox.Location = new System.Drawing.Point(500, 24);
+            this.RRIdTextBox.Name = "RRIdTextBox";
+            this.RRIdTextBox.ReadOnly = true;
+            this.RRIdTextBox.Size = new System.Drawing.Size(33, 20);
+            this.RRIdTextBox.TabIndex = 45;
+            // 
+            // RRIdLabel
+            // 
+            this.RRIdLabel.AutoSize = true;
+            this.RRIdLabel.Location = new System.Drawing.Point(477, 27);
+            this.RRIdLabel.Name = "RRIdLabel";
+            this.RRIdLabel.Size = new System.Drawing.Size(18, 13);
+            this.RRIdLabel.TabIndex = 44;
+            this.RRIdLabel.Text = "ID";
             // 
             // RRModMonthComboBox
             // 
@@ -283,7 +304,7 @@
             // modifyButton
             // 
             this.modifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyButton.Location = new System.Drawing.Point(638, 55);
+            this.modifyButton.Location = new System.Drawing.Point(115, 316);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(115, 70);
             this.modifyButton.TabIndex = 1;
@@ -293,7 +314,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(638, 217);
+            this.cancelButton.Location = new System.Drawing.Point(331, 316);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(115, 70);
             this.cancelButton.TabIndex = 2;
@@ -306,11 +327,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(618, 441);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.RRModifyDataGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(634, 480);
+            this.MinimumSize = new System.Drawing.Size(634, 480);
             this.Name = "RRModifyForm";
             this.Text = "Modificar RedRabbit";
             this.RRModifyDataGroupBox.ResumeLayout(false);
@@ -346,5 +370,7 @@
         private System.Windows.Forms.Label RRModMonthLabel;
         private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.TextBox RRIdTextBox;
+        private System.Windows.Forms.Label RRIdLabel;
     }
 }

@@ -19,9 +19,10 @@ namespace PokaYokes_app
         public string rrReference;
         public string rrCreatedBy;
         public string rrMachine;
-        public string rrCalibrationMonth;
         public string rrComments;
         public bool rrCalibrationChk;
         public string rrMonth;
+        public string rrNumberOriginal;
+        public int rrId;
     }
 }

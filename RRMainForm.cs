@@ -19,6 +19,7 @@ namespace PokaYokes_app
         public RRMainForm()
         {
             InitializeComponent(); //Inicializa el formulario
+            ChkButtons(); // Actualiza el estado de los botones
         }
 
         //Carga de DataGridView
@@ -125,10 +126,12 @@ namespace PokaYokes_app
             //this.t10RedRabbitsTableAdapter.Fill(this.pokaYokesDataSet.T10RedRabbits);
         }
 
-        //Activación / Desactivación en función del ROL
-        public void ButtonActivation()
+        //Activar / Desactivar botones en función del Rol
+        private void ChkButtons()
         {
-
+            RRAddButton.Enabled = RoleSession.CurrentRole.rrAdd;
+            RRModButton.Enabled = RoleSession.CurrentRole.rrMod;
+            RRDelButton.Enabled = RoleSession.CurrentRole.rrDel;
         }
     }
 }

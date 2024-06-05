@@ -22,6 +22,7 @@ namespace PokaYokes_app
             {
                 // Si error = FALSE se continúa con la inicialización
                 InitializeComponent();
+                this.StartPosition = FormStartPosition.CenterScreen;
             }
         }
         

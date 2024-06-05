@@ -23,6 +23,7 @@ namespace PokaYokes_app
             RRModify = redRabbit;
             FillBoxes(RRModify);
             currentRRMainForm = rrMainForm;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         //Relleno de campos

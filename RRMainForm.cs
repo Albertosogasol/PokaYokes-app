@@ -20,6 +20,7 @@ namespace PokaYokes_app
         {
             InitializeComponent(); //Inicializa el formulario
             ChkButtons(); // Actualiza el estado de los botones
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         //Carga de DataGridView

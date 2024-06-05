@@ -336,6 +336,7 @@
             this.MaximumSize = new System.Drawing.Size(634, 480);
             this.MinimumSize = new System.Drawing.Size(634, 480);
             this.Name = "RRModifyForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar RedRabbit";
             this.RRModifyDataGroupBox.ResumeLayout(false);
             this.RRModifyDataGroupBox.PerformLayout();

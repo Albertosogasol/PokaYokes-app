@@ -53,7 +53,7 @@
             this.loginFormUserComboBox.DataSource = this.t0ActiveUsersBindingSource;
             this.loginFormUserComboBox.DisplayMember = "type_User";
             this.loginFormUserComboBox.FormattingEnabled = true;
-            this.loginFormUserComboBox.Location = new System.Drawing.Point(130, 22);
+            this.loginFormUserComboBox.Location = new System.Drawing.Point(162, 41);
             this.loginFormUserComboBox.Name = "loginFormUserComboBox";
             this.loginFormUserComboBox.Size = new System.Drawing.Size(121, 21);
             this.loginFormUserComboBox.TabIndex = 0;
@@ -76,7 +76,7 @@
             // loginFormUserLabel
             // 
             this.loginFormUserLabel.AutoSize = true;
-            this.loginFormUserLabel.Location = new System.Drawing.Point(6, 25);
+            this.loginFormUserLabel.Location = new System.Drawing.Point(38, 44);
             this.loginFormUserLabel.Name = "loginFormUserLabel";
             this.loginFormUserLabel.Size = new System.Drawing.Size(43, 13);
             this.loginFormUserLabel.TabIndex = 1;
@@ -85,7 +85,7 @@
             // loginFormPasswLabel
             // 
             this.loginFormPasswLabel.AutoSize = true;
-            this.loginFormPasswLabel.Location = new System.Drawing.Point(6, 67);
+            this.loginFormPasswLabel.Location = new System.Drawing.Point(38, 86);
             this.loginFormPasswLabel.Name = "loginFormPasswLabel";
             this.loginFormPasswLabel.Size = new System.Drawing.Size(61, 13);
             this.loginFormPasswLabel.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             // loginFormPasswdBox
             // 
-            this.loginFormPasswdBox.Location = new System.Drawing.Point(130, 59);
+            this.loginFormPasswdBox.Location = new System.Drawing.Point(162, 78);
             this.loginFormPasswdBox.Name = "loginFormPasswdBox";
             this.loginFormPasswdBox.PasswordChar = '*';
             this.loginFormPasswdBox.Size = new System.Drawing.Size(121, 20);
@@ -115,7 +115,7 @@
             // 
             // loginFormExitButton
             // 
-            this.loginFormExitButton.Location = new System.Drawing.Point(194, 107);
+            this.loginFormExitButton.Location = new System.Drawing.Point(179, 128);
             this.loginFormExitButton.Name = "loginFormExitButton";
             this.loginFormExitButton.Size = new System.Drawing.Size(75, 23);
             this.loginFormExitButton.TabIndex = 6;
@@ -125,7 +125,7 @@
             // 
             // loginFormOkButton
             // 
-            this.loginFormOkButton.Location = new System.Drawing.Point(73, 107);
+            this.loginFormOkButton.Location = new System.Drawing.Point(58, 128);
             this.loginFormOkButton.Name = "loginFormOkButton";
             this.loginFormOkButton.Size = new System.Drawing.Size(75, 23);
             this.loginFormOkButton.TabIndex = 5;

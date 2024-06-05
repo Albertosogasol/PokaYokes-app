@@ -139,6 +139,47 @@ public static class MainFunctions
         //Asigna los valores del Rol del usuario actual en la clase RoleVariables.cs
         RoleSession.CurrentRole.role = Role;
 
+        //Consulta a la base de datos para comprobar los persmisos del Rol dado
+        using (OleDbConnection conn = new OleDbConnection(MainFunctions.ConStringBuilder()))
+        {
+            try
+            {
+                // Consulta SQL 
+                string sqlQuery = "SELECT * FROM T0Roles WHERE type_Rol = @Role";
+
+                //Comando de la base de datos
+                using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                {
+                    conn.Open();
+
+                    //Asignación del valor al parámetro
+                    cmd.Parameters.AddWithValue("@Role", Role);
+
+                    //Ejecutar la consulta
+                    using(OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            //Obtener los valores de las columnas
+                            RoleSession.CurrentRole.idRole = Convert.ToInt32(reader["id_Rol"]);
+                            RoleSession.CurrentRole.modLines = Convert.ToBoolean(reader["type_ModLines"].ToString());
+                            RoleSession.CurrentRole.modTools = Convert.ToBoolean(reader["type_ModTools"].ToString());
+                            RoleSession.CurrentRole.modToolsLine = Convert.ToBoolean(reader["type_ModToolsLines"].ToString());
+                            RoleSession.CurrentRole.modDetectors = Convert.ToBoolean(reader["type_ModDetectors"].ToString());
+                            RoleSession.CurrentRole.rrMod = Convert.ToBoolean(reader["type_RRMod"].ToString());
+                            RoleSession.CurrentRole.rrAdd = Convert.ToBoolean(reader["type_RRAdd"].ToString());
+                            RoleSession.CurrentRole.rrDel = Convert.ToBoolean(reader["type_RRDel"].ToString());
+                        }
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los roles de la base de datos: " + ex.Message, "Error en MainFunctions", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
+        }
+
 
     }
 } 

@@ -98,6 +98,7 @@ namespace PokaYokes_app
                                     var mainForm = new MainForm(userData);
                                     mainForm.Show();
                                     UserSession.CurrentUser = userData;
+                                    MainFunctions.RolePermissions(userData.userRol);
                                 }
                                 else
                                 {

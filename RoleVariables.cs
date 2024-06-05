@@ -24,6 +24,12 @@ namespace PokaYokes_app
     public static class RoleSession
     {
         public static RoleVariables CurrentRole;
+
+        static RoleSession()
+        {
+            CurrentRole = new RoleVariables();
+        }
     }
 
 }
+

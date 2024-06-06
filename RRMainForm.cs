@@ -15,12 +15,14 @@ namespace PokaYokes_app
         //Variables de clase
         private RedRabbit RRSelected; // Crear objetos de la clase RedRabbit
         public RRMainForm rrMainForm;
+        private UserVariables userVariables;
 
         public RRMainForm()
         {
             InitializeComponent(); //Inicializa el formulario
             ChkButtons(); // Actualiza el estado de los botones
             this.StartPosition = FormStartPosition.CenterScreen;
+            FillUserBox();
         }
 
         //Carga de DataGridView
@@ -133,6 +135,14 @@ namespace PokaYokes_app
             RRAddButton.Enabled = RoleSession.CurrentRole.rrAdd;
             RRModButton.Enabled = RoleSession.CurrentRole.rrMod;
             RRDelButton.Enabled = RoleSession.CurrentRole.rrDel;
+        }
+
+        //Datos usuario actual
+        private void FillUserBox()
+        {
+            //Rellena los datos de los TextBoxes del formulario con el usuario actual
+            userTextBox.Text = UserSession.CurrentUser.user;
+            roleTextBox.Text = UserSession.CurrentUser.userRol;
         }
     }
 }

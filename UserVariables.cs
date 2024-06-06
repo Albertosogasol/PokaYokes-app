@@ -14,15 +14,25 @@ namespace PokaYokes_app
         //Variables de clase
         public string user;
         public string password;
-        public string realPasswor;
+        public string realPassword;
         public string username;
         public string userRol;
 
     }
 
+    //public static class UserSession
+    //{
+    //    public static UserVariables CurrentUser;
+    //}
+
     public static class UserSession
     {
         public static UserVariables CurrentUser;
+
+        static UserSession()
+        {
+            CurrentUser = new UserVariables();
+        }
     }
 
 }

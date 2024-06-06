@@ -74,12 +74,16 @@
             this.RRDelButton = new System.Windows.Forms.Button();
             this.RRAddButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.userDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.roleTextBox = new System.Windows.Forms.TextBox();
+            this.userTextBox = new System.Windows.Forms.TextBox();
             this.RRDataGridGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t10RedRabbitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pokaYokesDataSet)).BeginInit();
             this.RRDataGroupBox.SuspendLayout();
             this.RRToolsGroupBox.SuspendLayout();
+            this.userDataGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // RRDataGridGroupBox
@@ -437,6 +441,7 @@
             // RRToolsGroupBox
             // 
             this.RRToolsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RRToolsGroupBox.Controls.Add(this.userDataGroupBox);
             this.RRToolsGroupBox.Controls.Add(this.RRDelButton);
             this.RRToolsGroupBox.Controls.Add(this.RRAddButton);
             this.RRToolsGroupBox.Controls.Add(this.closeButton);
@@ -478,6 +483,34 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // userDataGroupBox
+            // 
+            this.userDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userDataGroupBox.Controls.Add(this.roleTextBox);
+            this.userDataGroupBox.Controls.Add(this.userTextBox);
+            this.userDataGroupBox.Location = new System.Drawing.Point(477, 0);
+            this.userDataGroupBox.Name = "userDataGroupBox";
+            this.userDataGroupBox.Size = new System.Drawing.Size(187, 48);
+            this.userDataGroupBox.TabIndex = 5;
+            this.userDataGroupBox.TabStop = false;
+            this.userDataGroupBox.Text = "Usuario";
+            // 
+            // roleTextBox
+            // 
+            this.roleTextBox.Location = new System.Drawing.Point(112, 19);
+            this.roleTextBox.Name = "roleTextBox";
+            this.roleTextBox.ReadOnly = true;
+            this.roleTextBox.Size = new System.Drawing.Size(68, 20);
+            this.roleTextBox.TabIndex = 1;
+            // 
+            // userTextBox
+            // 
+            this.userTextBox.Location = new System.Drawing.Point(6, 19);
+            this.userTextBox.Name = "userTextBox";
+            this.userTextBox.ReadOnly = true;
+            this.userTextBox.Size = new System.Drawing.Size(100, 20);
+            this.userTextBox.TabIndex = 0;
+            // 
             // RRMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,6 +532,8 @@
             this.RRDataGroupBox.ResumeLayout(false);
             this.RRDataGroupBox.PerformLayout();
             this.RRToolsGroupBox.ResumeLayout(false);
+            this.userDataGroupBox.ResumeLayout(false);
+            this.userDataGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +584,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rRCalibrationMonthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rRCalibrationChkDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RR_Id;
+        private System.Windows.Forms.GroupBox userDataGroupBox;
+        private System.Windows.Forms.TextBox roleTextBox;
+        private System.Windows.Forms.TextBox userTextBox;
     }
 }

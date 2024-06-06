@@ -20,6 +20,8 @@ namespace PokaYokes_app
         {
             InitializeComponent();
             this.userData = userData;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            FillUserBox();
         }
 
         // Abrir formulario de modificación de RR
@@ -41,6 +43,14 @@ namespace PokaYokes_app
             this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
+        }
+
+        //Datos usuario actual
+        private void FillUserBox()
+        {
+            //Rellena los datos de los TextBoxes del formulario con el usuario actual
+            userTextBox.Text = userData.user;
+            roleTextBox.Text = userData.userRol;
         }
     }
 

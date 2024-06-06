@@ -33,6 +33,12 @@
             this.RRFormButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.changeUserButton = new System.Windows.Forms.Button();
+            this.bosalLogo = new System.Windows.Forms.PictureBox();
+            this.userDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.userTextBox = new System.Windows.Forms.TextBox();
+            this.roleTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bosalLogo)).BeginInit();
+            this.userDataGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormRRButton
@@ -66,7 +72,7 @@
             // 
             // changeUserButton
             // 
-            this.changeUserButton.Location = new System.Drawing.Point(646, 36);
+            this.changeUserButton.Location = new System.Drawing.Point(586, 149);
             this.changeUserButton.Name = "changeUserButton";
             this.changeUserButton.Size = new System.Drawing.Size(82, 64);
             this.changeUserButton.TabIndex = 2;
@@ -74,17 +80,60 @@
             this.changeUserButton.UseVisualStyleBackColor = true;
             this.changeUserButton.Click += new System.EventHandler(this.changeUserButton_Click);
             // 
+            // bosalLogo
+            // 
+            this.bosalLogo.Image = global::PokaYokes_app.Properties.Resources.BOSAL_logo;
+            this.bosalLogo.Location = new System.Drawing.Point(12, 12);
+            this.bosalLogo.Name = "bosalLogo";
+            this.bosalLogo.Size = new System.Drawing.Size(201, 48);
+            this.bosalLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bosalLogo.TabIndex = 3;
+            this.bosalLogo.TabStop = false;
+            // 
+            // userDataGroupBox
+            // 
+            this.userDataGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userDataGroupBox.Controls.Add(this.roleTextBox);
+            this.userDataGroupBox.Controls.Add(this.userTextBox);
+            this.userDataGroupBox.Location = new System.Drawing.Point(567, 12);
+            this.userDataGroupBox.Name = "userDataGroupBox";
+            this.userDataGroupBox.Size = new System.Drawing.Size(187, 48);
+            this.userDataGroupBox.TabIndex = 4;
+            this.userDataGroupBox.TabStop = false;
+            this.userDataGroupBox.Text = "Usuario";
+            // 
+            // userTextBox
+            // 
+            this.userTextBox.Location = new System.Drawing.Point(6, 19);
+            this.userTextBox.Name = "userTextBox";
+            this.userTextBox.ReadOnly = true;
+            this.userTextBox.Size = new System.Drawing.Size(100, 20);
+            this.userTextBox.TabIndex = 0;
+            // 
+            // roleTextBox
+            // 
+            this.roleTextBox.Location = new System.Drawing.Point(112, 19);
+            this.roleTextBox.Name = "roleTextBox";
+            this.roleTextBox.ReadOnly = true;
+            this.roleTextBox.Size = new System.Drawing.Size(68, 20);
+            this.roleTextBox.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 563);
+            this.Controls.Add(this.userDataGroupBox);
+            this.Controls.Add(this.bosalLogo);
             this.Controls.Add(this.changeUserButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.RRFormButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.bosalLogo)).EndInit();
+            this.userDataGroupBox.ResumeLayout(false);
+            this.userDataGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -95,6 +144,10 @@
         private System.Windows.Forms.Button RRFormButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button changeUserButton;
+        private System.Windows.Forms.PictureBox bosalLogo;
+        private System.Windows.Forms.GroupBox userDataGroupBox;
+        private System.Windows.Forms.TextBox roleTextBox;
+        private System.Windows.Forms.TextBox userTextBox;
     }
 }
 

@@ -115,6 +115,12 @@
     <Compile Include="RRModifyForm.Designer.cs">
       <DependentUpon>RRModifyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SensorsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorsMainForm.Designer.cs">
+      <DependentUpon>SensorsMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserVariables.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -130,7 +130,7 @@
             this.Controls.Add(this.RRFormButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Menu";
+            this.Text = "Menu Principal";
             ((System.ComponentModel.ISupportInitialize)(this.bosalLogo)).EndInit();
             this.userDataGroupBox.ResumeLayout(false);
             this.userDataGroupBox.PerformLayout();

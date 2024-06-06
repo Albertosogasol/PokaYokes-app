@@ -92,7 +92,7 @@ namespace PokaYokes_app
             if (RRSelected != null)
             {
                 //Instancia al formulario de eliminar
-                var rrDelForm = new RRDelForm(RRSelected);
+                var rrDelForm = new RRDelForm(RRSelected, this);
                 rrDelForm.ShowDialog();
             }
             else

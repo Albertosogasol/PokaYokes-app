@@ -91,7 +91,7 @@ namespace PokaYokes_app
                     //Cerrar formulario
                     this.Close();
 
-                    //Cerrar formulari RRMainForm
+                    //Cerrar formulario RRMainForm
                     currentRRMainForm.Close();
 
                     ////Nueva instancia al formulario

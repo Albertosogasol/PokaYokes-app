@@ -15,11 +15,13 @@ namespace PokaYokes_app
     {
         //Variables de clase
         private int idNumber;
-        
-        public RRDelForm(RedRabbit redRabbit)
+        private RRMainForm currentRRMainForm;
+
+        public RRDelForm(RedRabbit redRabbit, RRMainForm rrMainForm)
         {
             InitializeComponent();
             FillBoxes(redRabbit);
+            currentRRMainForm = rrMainForm;
         }
 
         //Rellena las textbox del formulario
@@ -59,12 +61,12 @@ namespace PokaYokes_app
                         //Cerrar formulario
                         this.Close();
 
-                        //Recarga del DataGridView
-                        RRMainForm rrMainForm = new RRMainForm(); //Instancia a la clase RRMainForm
-                        rrMainForm.RRMainFormClose(); //Se cierra el formulario
-                        System.Threading.Thread.Sleep(2000);
-                        RRMainForm rrMainFormReload = new RRMainForm(); //Nueva instancia a la clase RRMainForm
-                        rrMainFormReload.ShowDialog(); //Se muestra el formulario
+                        //Cerrar formulario RRMainForm
+                        currentRRMainForm.Close();
+
+                        ////Nueva instancia al formulario
+                        RRMainForm newRRMainForm = new RRMainForm();
+                        newRRMainForm.Show();
                     }
                     catch (Exception ex)
                     {

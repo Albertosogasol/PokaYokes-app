@@ -520,10 +520,10 @@
             this.Controls.Add(this.RRDataGroupBox);
             this.Controls.Add(this.RRDataGridGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(50, 50);
+            this.MinimumSize = new System.Drawing.Size(1324, 702);
             this.Name = "RRMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RRMainForm";
+            this.Text = "Red Rabbits";
             this.Load += new System.EventHandler(this.RRMainForm_Load);
             this.RRDataGridGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RRDataGrid)).EndInit();

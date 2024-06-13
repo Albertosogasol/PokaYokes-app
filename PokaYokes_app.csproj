@@ -150,6 +150,9 @@
     <EmbeddedResource Include="RRModifyForm.resx">
       <DependentUpon>RRModifyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SensorsMainForm.resx">
+      <DependentUpon>SensorsMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="PokaYokesDataSet.xsc">
       <DependentUpon>PokaYokesDataSet.xsd</DependentUpon>
     </None>

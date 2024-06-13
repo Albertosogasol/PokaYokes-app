@@ -86,7 +86,7 @@ public static class MainFunctions
             //1º Eliminar espacios en blanco
             rrNumberInput = rrNumberInput.Replace(" ", "");
 
-            //2º Verificar si el string coincide con el patrón
+            //2º Verificar si el string coincide con el patrón mediante expresión regular
             string pattern = @"^RR-(\d{1,2})$";
             Regex regex = new Regex(pattern);
 
